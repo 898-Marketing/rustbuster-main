@@ -1,1 +1,1515 @@
-{"sections":{"quick_filter_XTFBQD":{"type":"quick-filter","blocks":{"heading_MRCybJ":{"type":"heading","settings":{"heading":"<em>Find<\/em> parts<em> for your <\/em>[Jeep|Chevy|GMC|Ford|Toyota|Dodge|Cadillac]","heading_italic_convert":"light","heading_size":"custom","heading_size_custom":2.6,"heading_line_height_custom":1.1,"heading_tag":"h2"}},"text_aChXFK":{"type":"text","settings":{"text":"<p>Product discovery can be difficult. Let's make it easier for you. <a href=\"https:\/\/benchmarkthemes.com\/help-center\/ignite\/sections\/quick-filter\/\" target=\"_blank\" title=\"https:\/\/benchmarkthemes.com\/help-center\/ignite\/sections\/quick-filter\/\"><strong>Read more<\/strong><\/a>.<\/p>","text_size":"t3"}},"quick_filter_bhJntH":{"type":"quick_filter","settings":{"filter_menu":"main-menu","text_size":"t4","preselect":true,"min_items_for_search":9,"auto_open_next_dropdown":true,"select1_label":"Shop By Vehicle","select2_label":"Make","select3_label":"Model","button_label":"Search","hide_label":true,"button_icon":"chevron_right","icon_alignment":"right"}}},"block_order":["heading_MRCybJ","text_aChXFK","quick_filter_bhJntH"],"disabled":true,"custom_css":[".button:disabled {opacity: 1;}"],"settings":{"quick_filter_max_width":450,"vertical_padding":6.1,"image":"shopify:\/\/shop_images\/shutterstock_2496113551_1dcec289-1246-4d6d-91b3-d77ef0d847c0.jpg","image_overlay_opacity":0,"image_link":"","fix_image":false,"skew_images":false,"stack_images_on_mobile":true,"image_ratio":"custom","desktop_section_height":700,"mobile_section_height":300,"desktop_content_position":"md:justify-start md:items-center","mobile_content_position":"justify-center items-center","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"always","color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","container_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","line_separator":"","visibility":"","hide_when_empty":false}},"slideshow_9pXPcN":{"type":"slideshow","blocks":{"slide_DqxcLr":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/the-car-s-wheels-on-the-dirt-road-2025-02-21-05-06-21-utc_Large_b2f37ec7-807d-4127-829d-6a3b80d7f804.jpg","image_overlay_opacity":38,"image_link":"","horizontal_offset":0,"vertical_offset":0,"desktop_content_position":"md:justify-end md:items-center","mobile_content_position":"justify-end items-center","content_max_width":"m","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"desktop","caption":"","caption_text_style":"caption-with-letter-spacing","caption_text_size":"t6","heading":"Find the Right Kit for Your Vehicle","heading_italic_convert":"","heading_size":"h1","heading_size_custom":2.6,"heading_line_height_custom":1.2,"heading_tag":"h2","text":"","text_size":"t4","button_text_size":"t6","button_label_1":"Shop Frame Repair Kits","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false,"color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"}},"slide_gQbqPm":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/shutterstock_2250316671_Large_62f3626d-6d82-4b3b-91bc-e564ed40fccf.jpg","image_overlay_opacity":38,"image_link":"","horizontal_offset":0,"vertical_offset":0,"desktop_content_position":"md:justify-end md:items-center","mobile_content_position":"justify-end items-center","content_max_width":"m","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"desktop","caption":"","caption_text_style":"caption-with-letter-spacing","caption_text_size":"t6","heading":"Find the Right Kit for Your Vehicle","heading_italic_convert":"","heading_size":"h1","heading_size_custom":2.6,"heading_line_height_custom":1.2,"heading_tag":"h2","text":"","text_size":"t4","button_text_size":"t6","button_label_1":"Shop Frame Repair Kits","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false,"color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"}},"slide_3JEwFz":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/shutterstock_2496113551_1dcec289-1246-4d6d-91b3-d77ef0d847c0.jpg","image_overlay_opacity":38,"image_link":"","horizontal_offset":-3,"vertical_offset":-10,"desktop_content_position":"md:justify-start md:items-center","mobile_content_position":"justify-end items-center","content_max_width":"m","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"desktop","caption":"","caption_text_style":"caption-with-letter-spacing","caption_text_size":"t6","heading":"Find the Right Kit for Your Vehicle","heading_italic_convert":"","heading_size":"h1","heading_size_custom":2.6,"heading_line_height_custom":1.2,"heading_tag":"h2","text":"","text_size":"t4","button_text_size":"t6","button_label_1":"Shop Frame Repair Kits","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false,"color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"}}},"block_order":["slide_DqxcLr","slide_gQbqPm","slide_3JEwFz"],"name":"Slideshow","settings":{"slide_animation":"wipe","slider_visual":"counter","pagination_position":"center","autoplay":"autoplay_with_pause","change_slides_speed":6,"image_ratio":"landscape_wider","desktop_section_height":500,"mobile_section_height":400,"full_width":"on","show_text_below":false,"color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79","line_separator":"","top_padding":"pt-s","bottom_padding":"pb-s","hide_when_empty":false,"visibility":"","accessibility_info":"Slideshow about our brand"}},"quick_filter_EjbqHd":{"type":"quick-filter","blocks":{"heading_xdwTWa":{"type":"heading","settings":{"heading":"Shop For Your Vehicle","heading_italic_convert":"","heading_size":"h3","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"text_rV9C7G":{"type":"text","settings":{"text":"","text_size":"t3"}},"quick_filter_GVDRxn":{"type":"quick_filter","settings":{"filter_menu":"main-menu","text_size":"t4","preselect":true,"min_items_for_search":15,"auto_open_next_dropdown":false,"select1_label":"Option 1","select2_label":"Make","select3_label":"Model","button_label":"Search","hide_label":true,"button_icon":"search","icon_alignment":"left"}}},"block_order":["heading_xdwTWa","text_rV9C7G","quick_filter_GVDRxn"],"custom_css":[".image-banner-section {background-color: #852a2c;}"],"name":"Quick filter (YMM)","settings":{"quick_filter_max_width":1350,"vertical_padding":4,"image":"shopify:\/\/shop_images\/18.png","image_overlay_opacity":0,"image_link":"","fix_image":false,"skew_images":false,"stack_images_on_mobile":true,"image_ratio":"custom","desktop_section_height":100,"mobile_section_height":300,"desktop_content_position":"md:justify-center md:items-center","mobile_content_position":"justify-center items-center","desktop_content_alignment":"center","mobile_content_alignment":"center","show_text_box":"always","color_scheme":"scheme-30070904-3bfb-41dd-9192-415bc6674672","container_color_scheme":"scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e","line_separator":"","visibility":"","hide_when_empty":false}},"icons_with_text_A8P3h4":{"type":"icons-with-text","blocks":{"icon_with_text_Qi374n":{"type":"icon_with_text","settings":{"icon":"cog","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>WELL TRUSTED<\/strong>","text":"75 years of expertise","card_link":""}},"icon_with_text_PtjAX6":{"type":"icon_with_text","settings":{"icon":"truck","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>SUPER FAST<\/strong>","text":"With Express delivery","card_link":""}},"icon_with_text_BPQ4eh":{"type":"icon_with_text","settings":{"icon":"chat_bubbles","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>EXPERT HELP<\/strong>","text":"Seven days a week","card_link":""}},"icon_with_text_VMaqgr":{"type":"icon_with_text","settings":{"icon":"price_tags","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>BEST PRICES<\/strong>","text":"Unbeatable value","card_link":""}}},"block_order":["icon_with_text_Qi374n","icon_with_text_PtjAX6","icon_with_text_BPQ4eh","icon_with_text_VMaqgr"],"settings":{"placement":"beside","content_vertical_alignment":"items-start","column_alignment":"left","vertical_padding":2,"icon_size":2.8,"heading_size":"t6","text_size":"t6","mobile_layout":"grid","columns_mobile":"2","color_scheme":"scheme-1","line_separator":"border-bottom","visibility":"","hide_when_empty":false}},"gallery_ViHcnz":{"type":"gallery","blocks":{"gallery_item_xmiG6p":{"type":"gallery_item","settings":{"tall":true,"wide":true,"column_alignment":"left","text_vertical_alignment":"justify-end","content_max_width":"l","image":"shopify:\/\/shop_images\/close-up-detail-bottom-pov-view-of-4x4-awd-suv-veh-2025-01-10-12-41-07-utc.jpg","image_overlay_opacity":36,"icon":"","icon_container":"none","icon_size":3.4,"icon_color":"","icon_background_color":"#010101","background_gradient":"","title":"Built in the Rust Belt","heading_size":"h3","heading_size_custom":2.4,"text":"<p><strong>Forged in Youngstown, Ohio – Where Rust Meets Its Match<\/strong><br\/>From our roots in steel country, we’ve spent decades crafting solutions to outlast the harshest conditions. <\/p>","text_size":"t3","button_text_size":"t4","button_label":"Explore Our Story","button_link":"shopify:\/\/pages\/about","button_style":"primary","button_style_show_arrow":true,"card_link":"","card_color_scheme":"scheme-30070904-3bfb-41dd-9192-415bc6674672"}},"gallery_item_9iKtrz":{"type":"gallery_item","settings":{"tall":false,"wide":true,"column_alignment":"left","text_vertical_alignment":"justify-end","content_max_width":"l","image":"shopify:\/\/shop_images\/IMG_7235_302e0f2a-1557-42d9-825c-683da271bc33.jpg","image_overlay_opacity":50,"icon":"","icon_container":"none","icon_size":3.4,"icon_color":"","icon_background_color":"#ededed","background_gradient":"","title":"Frame Repair Kits That Last","heading_size":"h3","heading_size_custom":2.4,"text":"<p><strong>Engineered for Strength. Designed for Fit.<\/strong><br\/>Our precision-made kits are built to restore safety and extend the life of your vehicle — without breaking the bank.<\/p>","text_size":"t3","button_text_size":"t4","button_label":"Shop Frame Repair Kits","button_link":"shopify:\/\/collections","button_style":"secondary","button_style_show_arrow":true,"card_link":"","card_color_scheme":"scheme-3"}},"gallery_item_AxXyhR":{"type":"gallery_item","settings":{"tall":false,"wide":true,"column_alignment":"left","text_vertical_alignment":"justify-end","content_max_width":"l","image":"shopify:\/\/shop_images\/young-engineer-looking-closely-at-turbine-project-2025-02-20-07-06-39-utc_Large_04b903a0-b4d4-4ce2-b73d-f07c1a6d1973.jpg","image_overlay_opacity":46,"icon":"","icon_container":"none","icon_size":3.4,"icon_color":"","icon_background_color":"#ededed","background_gradient":"","title":"Innovation in Every Inch","heading_size":"h3","heading_size_custom":2.8,"text":"<p><strong>CAD Precision Meets Real-World Durability<\/strong><br\/>Our investment in 3D scanning and OE-level quality control means a better fit, every time — and repairs that hold up.<\/p>","text_size":"t3","button_text_size":"t3","button_label":"Learn Our Process","button_link":"shopify:\/\/pages\/about","button_style":"secondary","button_style_show_arrow":true,"card_link":"","card_color_scheme":"scheme-3"}}},"block_order":["gallery_item_xmiG6p","gallery_item_9iKtrz","gallery_item_AxXyhR"],"name":"Gallery","settings":{"columns_desktop":4,"spacing_grid":16,"spacing_grid_mobile":16,"corner_rounding":"inner","content_padding":3,"desktop_section_height":310,"mobile_section_height":220,"mobile_layout":"carousel","full_width":false,"content_max_width":"m","desktop_heading_alignment":"left","mobile_heading_alignment":"left","title":"","italic_convert":"","heading_size":"h2","text":"","text_size":"t3","view_all_link":"","view_all_text":"","view_all_text_size":"t3","section_color_scheme":"","line_separator":"","top_padding":"pt-s05","bottom_padding":"pb-s05","visibility":"","hide_when_empty":false}},"logo_list_YbACA4":{"type":"logo-list","blocks":{"column_standard_UWyVez":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/Jeep.png","image_scale":80,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/jeep-1"}},"column_standard_RPdJpW":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/Ford_4b0fdaea-b695-4cc0-92da-a9f24a31be18.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/ford-1"}},"column_standard_XKbiQb":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/Toyota_44adba77-5401-44e8-aaeb-6ca3119b4f47.png","image_scale":80,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/test"}},"column_standard_mcgYgm":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/chevy_deb06396-9469-4cd2-90f9-9d560960f95e.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/chevy-gmc-1"}},"column_standard_tawXXC":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/GMC.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/chevy-gmc-1"}},"column_standard_h77G3e":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/Dodge.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/dodge"}},"column_standard_eUcktJ":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/Cadillac.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/cadillac"}},"column_standard_fE6dUG":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/lexus.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/rust-buster-frame-repair-kits-for-lexus-models"}},"column_standard_eAgqeV":{"type":"column_standard","settings":{"image":"shopify:\/\/shop_images\/hummer.png","image_scale":100,"text":"","text_size":"t1","card_link":"shopify:\/\/collections\/hummer"}}},"block_order":["column_standard_UWyVez","column_standard_RPdJpW","column_standard_XKbiQb","column_standard_mcgYgm","column_standard_tawXXC","column_standard_h77G3e","column_standard_eUcktJ","column_standard_fE6dUG","column_standard_eAgqeV"],"custom_css":[".slider-scrollbar__indicator {height: 6px; background-color: #ba0c2f;}"],"name":"Logo list","settings":{"column_alignment":"center","image_ratio":"square","spacing_grid":10,"content_padding":0,"desktop_layout":"grid","mobile_layout":"grid","columns_desktop":"5","columns_mobile":"2","full_width":true,"image_overlay_opacity":0,"content_max_width":"m","desktop_heading_alignment":"center","mobile_heading_alignment":"center","title":"Shop By Make","italic_convert":"","heading_size":"h1","text":"","text_size":"t3","view_all_link":"","view_all_text":"","view_all_text_size":"t3","color_scheme":"scheme-8428ed0c-d69b-4967-bfd4-9fa8c948298f","card_color_scheme":"scheme-2","color_scheme_bg_fix":false,"card_shadow":true,"line_separator":"","top_padding":"pt-s05","bottom_padding":"pb-s","visibility":"","hide_when_empty":false,"heading_tag":"h2"}},"rich_text_wLpXDQ":{"type":"rich-text","blocks":{"heading_ymeB6n":{"type":"heading","settings":{"heading":"Is My Vehicle Fixable?","heading_italic_convert":"","heading_size":"h1","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"text_fQKBr3":{"type":"text","settings":{"text":"<p><strong>Not sure if your rusted frame can be brought back to life? Let our team take a look. Send us your vehicle info and photos, and we’ll help you figure out the best repair path. Whether it’s a small patch or a full frame section, we’ll let you know what’s possible — and which Rust Buster kits are built to get the job done.<\/strong><\/p>","text_size":"t2"}},"buttons_kXMjdp":{"type":"buttons","settings":{"button_text_size":"t4","button_label_1":"Send Us Your Vehicle","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":true,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false}}},"block_order":["heading_ymeB6n","text_fQKBr3","buttons_kXMjdp"],"custom_css":[".rich-text {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0529\/7445\/2920\/files\/TireTexture-02-Large.png?v=1755200946);}"],"name":"Rich text","settings":{"desktop_content_position":"center","content_max_width":"l","desktop_content_alignment":"left","mobile_content_alignment":"center","section_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","container_color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79","show_content_shadow":false,"line_separator":"","top_padding":"pt-s05","bottom_padding":"pb-s05","visibility":"","hide_when_empty":false}},"video_banner_W4W3gd":{"type":"video-banner","blocks":{"heading_fNTGxY":{"type":"heading","settings":{"heading":"Tested in the Elements.  Trusted by Enthusiasts.","heading_italic_convert":"","heading_size":"custom","heading_size_custom":3.8,"heading_line_height_custom":1,"heading_tag":"h2"}},"text_kUVARU":{"type":"text","settings":{"text":"","text_size":"t3"}},"buttons_y4erff":{"type":"buttons","settings":{"button_text_size":"t3","button_label_1":"","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false}}},"block_order":["heading_fNTGxY","text_kUVARU","buttons_y4erff"],"name":"Video banner","settings":{"video":"shopify:\/\/files\/videos\/002.mp4","video_url":"https:\/\/vimeo.com\/1102261612\/c44538835f?share=copy","show_play_pause":false,"reveal_content_timer":0,"playback_end":"loop","section_ratio":"custom","desktop_section_height":400,"mobile_section_height":260,"full_width":true,"full_width_animate":false,"desktop_content_position":"md:justify-start md:items-center","mobile_content_position":"justify-start items-center","content_max_width":"l","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"off","show_text_below":true,"color_scheme":"","container_color_scheme":"scheme-1f7dc79f-46cd-457c-8515-2a2e9656bdf5","color_overlay":"#000000","video_overlay_opacity":30,"line_separator":"","top_padding":"pt-s","bottom_padding":"pb-s","visibility":"","hide_when_empty":false,"lazy_load":true,"heading_tag":"h2","description":"","video_aspect_ratio":"1.77"}},"rich_text_EeaxFY":{"type":"rich-text","blocks":{"heading_GqBxTt":{"type":"heading","settings":{"heading":"<strong>Offering  <\/strong><em><strong>affordable solutions<\/strong><\/em><strong> for rust issues on++ truck and Jeep<\/strong>®<strong> frames<\/strong>","heading_italic_convert":"accent_color","heading_size":"h0","heading_size_custom":3.6,"heading_line_height_custom":1,"heading_tag":"h2"}},"spacer_9xQQWA":{"type":"spacer","settings":{"show_line_separator":false,"spacing_top":2.4,"spacing_bottom":2.4,"spacer_visibility":"desktop","line_color":""}}},"block_order":["heading_GqBxTt","spacer_9xQQWA"],"settings":{"desktop_content_position":"center","content_max_width":"l","desktop_content_alignment":"center","mobile_content_alignment":"center","section_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","container_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","show_content_shadow":false,"line_separator":"","top_padding":"pt-s05","bottom_padding":"pb-s05","visibility":"","hide_when_empty":false}},"174913377853274376":{"type":"apps","blocks":{"lookfy_gallery_lookfy_gallery_cXN6wC":{"type":"shopify:\/\/apps\/lookfy-gallery\/blocks\/lookfy-gallery\/596af5f6-9933-4730-95c2-f7d8d52a0c3e","disabled":true,"settings":{"gallery_id":25913,"dynamic_source":"","title":"","subtitle":"","heading_size":"1","heading_color":"","heading_align":"left","desc_style":"subtitle","desc_color":"","custom_class":"","background_color":"","padding_top":36,"padding_bottom":36,"padding_left_right":0}}},"block_order":["lookfy_gallery_lookfy_gallery_cXN6wC"],"disabled":true,"settings":{"include_margins":true,"color_scheme":"","line_separator":"","top_padding":"pt-0","bottom_padding":"pb-0","visibility":""}},"featured_collection_GQEYiP":{"type":"featured-collection","disabled":true,"settings":{"collection":"body-bushing-kits","products_to_show":6,"desktop_layout":"carousel","mobile_layout":"carousel","columns_desktop":"5","columns_mobile":"1","full_width":false,"content_max_width":"s","desktop_heading_alignment":"left","mobile_heading_alignment":"left","title":"Featured collection","italic_convert":"","heading_size":"h2","text":"<p>Each section can have its own color scheme. Scroll to the end of the cards to see the <strong>View more<\/strong> card.<\/p>","text_size":"t1","show_view_all_link":false,"view_all_text":"View more","view_all_text_size":"t5","view_all_card_visibility":"","view_all_card_text":"There's plenty more","color_scheme":"scheme-8","view_all_color_scheme":"scheme-8","line_separator":"","top_padding":"pt-s15","bottom_padding":"pb-s05","visibility":"","hide_when_empty":false,"heading_tag":"h2"}},"newsletter_JjUqmd":{"type":"newsletter","blocks":{"heading_bJWyQN":{"type":"heading","settings":{"visibility":"before","heading":"Email Signup","heading_italic_convert":"","heading_size":"h3","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"text_MR9izT":{"type":"text","settings":{"visibility":"before","text":"<p>Featuring completely customizable success messages. Check the <strong>Preview successful sign up<\/strong> setting to see what we mean.<\/p>","text_size":"t2"}},"email_form_xrzb7Q":{"type":"email_form","settings":{"visibility":"before"}},"icon_FmTbWh":{"type":"icon","settings":{"visibility":"success","icon":"heart","icon_container":"none","icon_size":3,"icon_color":"#dd1d1d","icon_background_color":"#ededed","background_gradient":""}},"heading_ebQqNg":{"type":"heading","settings":{"visibility":"success","heading":"Thank you!","heading_italic_convert":"","heading_size":"h3","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"text_rtKjNL":{"type":"text","settings":{"visibility":"success","text":"<p>You're signed up to get the all the latest deals from us.<\/p>","text_size":"t1"}},"spacer_tjQycK":{"type":"spacer","settings":{"visibility":"success","show_line_separator":true,"spacing_top":0.2,"spacing_bottom":0.2,"spacer_visibility":"both","line_color":""}},"text_3VCjtt":{"type":"text","settings":{"visibility":"success","text":"<p>In the meantime, here's a 10% off code for your first purchase.<\/p>","text_size":"t3"}},"discount_z7AqD8":{"type":"discount","settings":{"visibility":"success","discount_code":"GET10OFF","text_size":"t3","discount_gated":false,"color_peel_background":"#f57309","color_peel_foreground":"#ffffff"}}},"block_order":["heading_bJWyQN","text_MR9izT","email_form_xrzb7Q","icon_FmTbWh","heading_ebQqNg","text_rtKjNL","spacer_tjQycK","text_3VCjtt","discount_z7AqD8"],"settings":{"preview_success":false,"show_image":true,"image":"shopify:\/\/shop_images\/Screenshot_2025-05-28_100249.png","image_overlay_opacity":14,"fix_image":false,"image_ratio":"landscape_wide","desktop_section_height":500,"mobile_section_height":500,"full_width":false,"desktop_content_position":"md:justify-center md:items-center","mobile_content_position":"justify-center items-center","content_max_width":"m","desktop_content_alignment":"center","mobile_content_alignment":"left","show_text_box":"desktop","show_text_below":true,"color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","container_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","line_separator":"","top_padding":"pt-0","bottom_padding":"pb-s05","visibility":"","hide_when_empty":false}},"1752087555f64c33a3":{"type":"apps","blocks":{"judge_me_reviews_featured_carousel_mMHtJi":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1080}}},"block_order":["judge_me_reviews_featured_carousel_mMHtJi"],"disabled":true,"settings":{"include_margins":true,"color_scheme":"","line_separator":"","top_padding":"pt-0","bottom_padding":"pb-0","visibility":""}},"image_with_text_RhRMfE":{"type":"image-with-text","blocks":{"heading_4EGrzc":{"type":"heading","settings":{"heading":"Frame Repair Kits Built for the Trail Ahead.","heading_italic_convert":"","heading_size":"h3","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"text_E94BbN":{"type":"text","settings":{"text":"<p>Our USA-made repair kits are precision-designed for a perfect fit, using high-quality steel and CAD-driven accuracy. Don’t let corrosion win bring your vehicle back to life with gear that’s built to take a beating.<\/p>","text_size":"t3"}},"buttons_eaqpbh":{"type":"buttons","settings":{"button_text_size":"t3","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/all","button_style_1":"primary","button_style_1_show_arrow":true,"button_label_2":"","button_link_2":"","button_style_2":"secondary","button_style_2_show_arrow":false}}},"block_order":["heading_4EGrzc","text_E94BbN","buttons_eaqpbh"],"name":"Image with text","settings":{"image":"shopify:\/\/shop_images\/IMG_7237_Large_3dd4a8c0-2bcd-4933-847f-dbc52526ccca.jpg","desktop_section_height":500,"mobile_section_height":400,"desktop_media_width":50,"desktop_media_scale":100,"layout":"media_first","image_cover":true,"desktop_content_alignment":"left","mobile_content_alignment":"left","text_max_width":"xs","content_layout":"no-overlap","section_color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","color_scheme":"scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2","show_content_shadow":false,"line_separator":"","top_padding":"pt-s05","bottom_padding":"pb-s","visibility":"","hide_when_empty":false}},"testimonials_UCrJ6F":{"type":"testimonials","blocks":{"column_standard_aAQejg":{"type":"column_standard","settings":{"image_ratio":"adapt","image_width":100,"rating_stars":5,"title":"Testimonial","heading_tag":"h3","text":"<p>Include a customer review of a product, collection, or your company.<\/p>","author_name":"Jane Doe","author_caption":"Director, Company name","card_link":"","card_color_scheme":"","color_scheme_bg_fix":false}},"column_standard_BmYAUK":{"type":"column_standard","settings":{"image_ratio":"adapt","image_width":100,"rating_stars":5,"title":"Testimonial","heading_tag":"h3","text":"<p>Include a customer review of a product, collection, or your company.<\/p>","author_name":"Jane Doe","author_caption":"Director, Company name","card_link":"","card_color_scheme":"","color_scheme_bg_fix":false}},"column_standard_GHUCdj":{"type":"column_standard","settings":{"image_ratio":"adapt","image_width":100,"rating_stars":5,"title":"Testimonial","heading_tag":"h3","text":"<p>Include a customer review of a product, collection, or your company.<\/p>","author_name":"Jane Doe","author_caption":"Director, Company name","card_link":"","card_color_scheme":"","color_scheme_bg_fix":false}}},"block_order":["column_standard_aAQejg","column_standard_BmYAUK","column_standard_GHUCdj"],"disabled":true,"custom_css":[".multicolumn {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0529\/7445\/2920\/files\/TireTexture-02-Large.png?v=1755200946);}"],"settings":{"review_style":"star","rating_size":3,"heading_style":"text-body","card_heading_size":"t0","card_text_size":"t3","author_line":true,"desktop_section_height":200,"mobile_section_height":200,"column_alignment":"left","text_vertical_alignment":"justify-start","content_padding":4,"desktop_layout":"grid","mobile_layout":"carousel","columns_desktop":"3","columns_desktop_scale":false,"full_width":false,"image_overlay_opacity":0,"content_max_width":"m","desktop_heading_alignment":"center","mobile_heading_alignment":"left","title":"Why choose Rust Buster?","italic_convert":"","heading_size":"h2","text":"<p>Over 20 years experience.<\/p>","text_size":"t1","view_all_link":"","view_all_text":"","view_all_text_size":"t3","color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79","star_color":"#f5e121","card_shadow":true,"line_separator":"","top_padding":"pt-s15","bottom_padding":"pb-s","visibility":"","hide_when_empty":false,"heading_tag":"h2"}},"175795671405bb4c2a":{"type":"apps","blocks":{"judge_me_reviews_featured_carousel_QnbiBh":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1600}}},"block_order":["judge_me_reviews_featured_carousel_QnbiBh"],"custom_css":[".shopify-block {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0529\/7445\/2920\/files\/TireTexture-02-Large.png?v=1755200946);}"],"settings":{"include_margins":true,"color_scheme":"scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79","line_separator":"","top_padding":"pt-0","bottom_padding":"pb-0","visibility":""}},"collapsible_content_zUAt9h":{"type":"collapsible-content","blocks":{"collapsible_row_eaamgk":{"type":"collapsible_row","settings":{"row_open":true,"heading":"What type of welder is best for truck frame repair?","icon":"","image_width":20,"row_heading_tag":"h3","row_content":"<p>A MIG welder is probably the easiest to operate, as you will not have to worry about striking an arc in a tight area.<\/p>","page":"","content_embed":"","button_text_size":"t3","button_label_1":"","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false}},"collapsible_row_374nM8":{"type":"collapsible_row","settings":{"row_open":true,"heading":"How powerful does my welder need to be for frame repair?","icon":"","image_width":20,"row_heading_tag":"h3","row_content":"<p>Your welder should have a max output of at least 140 amps.<\/p>","page":"","content_embed":"","button_text_size":"t3","button_label_1":"","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false}},"collapsible_row_thrg78":{"type":"collapsible_row","settings":{"row_open":true,"heading":"What Welding Rod should I use?","icon":"","image_width":20,"row_heading_tag":"h3","row_content":"<p>We recommend E7018 Welding Rods.  Our personal favorite is the Lincoln Electric Carbon Steel E7018 H4R, 1\/8” x 14”.<\/p>","page":"","content_embed":"","button_text_size":"t3","button_label_1":"","button_link_1":"\/","button_style_1":"primary","button_style_1_show_arrow":false}},"text_aTk8RT":{"type":"text","settings":{"text":"<p>Still got a question? <a href=\"\/pages\/contact\" title=\"CONTACT\">Get in touch<\/a><\/p>","text_size":"t3"}}},"block_order":["collapsible_row_eaamgk","collapsible_row_374nM8","collapsible_row_thrg78","text_aTk8RT"],"settings":{"one_row_at_a_time":true,"show_line_separator":true,"row_heading_size":"t1","row_text_size":"t4","show_header_beside":true,"desktop_media_width":40,"layout":"media_first","show_search_box":false,"content_max_width":"l","desktop_heading_alignment":"left","mobile_heading_alignment":"center","title":"Got a question?","italic_convert":"","heading_size":"h3","text":"<p>Answer common questions with the collapsible content section.<\/p>","text_size":"t3","button_label":"View FAQs","button_link":"shopify:\/\/pages\/faq","button_style":"primary","button_text_size":"t4","button_style_show_arrow":true,"section_color_scheme":"scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e","color_scheme":"scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e","show_content_shadow":true,"line_separator":"","top_padding":"pt-s","bottom_padding":"pb-s","heading_tag":"h3","visibility":"","hide_when_empty":false,"render_schema":false}},"image_banner_jfDgUP":{"type":"image-banner","blocks":{"heading_UJV3bx":{"type":"heading","settings":{"heading":"Need Help? Contact Us","heading_italic_convert":"","heading_size":"h1","heading_size_custom":2.4,"heading_line_height_custom":1.2,"heading_tag":"h2"}},"buttons_kCfWLy":{"type":"buttons","settings":{"button_text_size":"t3","button_label_1":"Contact Us","button_link_1":"shopify:\/\/pages\/contact","button_style_1":"primary","button_style_1_show_arrow":true,"button_label_2":"","button_link_2":"shopify:\/\/pages\/locate-a-dealer","button_style_2":"primary","button_style_2_show_arrow":false}}},"block_order":["heading_UJV3bx","buttons_kCfWLy"],"name":"Image banner","settings":{"image":"shopify:\/\/shop_images\/IMG_7236.jpg","image_overlay_opacity":40,"image_link":"","fix_image":false,"skew_images":false,"stack_images_on_mobile":false,"image_ratio":"custom","desktop_section_height":400,"mobile_section_height":200,"full_width":true,"full_width_animate":false,"desktop_content_position":"md:justify-start md:items-center","mobile_content_position":"justify-center items-center","content_max_width":"m","desktop_content_alignment":"left","mobile_content_alignment":"left","show_text_box":"off","show_text_below":false,"color_scheme":"scheme-30070904-3bfb-41dd-9192-415bc6674672","container_color_scheme":"scheme-30070904-3bfb-41dd-9192-415bc6674672","line_separator":"","top_padding":"pt-s","bottom_padding":"pb-s","visibility":"","hide_when_empty":false}},"icons_with_text_ELUgNB":{"type":"icons-with-text","blocks":{"icon_with_text_AhRy9e":{"type":"icon_with_text","settings":{"icon":"shield_checkmark","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>WELL TRUSTED<\/strong>","text":"Over 100k customers","card_link":""}},"icon_with_text_WKrJVC":{"type":"icon_with_text","settings":{"icon":"truck","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>SUPER FAST<\/strong>","text":"With Express delivery","card_link":""}},"icon_with_text_d6Bpr6":{"type":"icon_with_text","settings":{"icon":"chat_bubbles","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>EXPERT HELP<\/strong>","text":"Seven days a week","card_link":""}},"icon_with_text_E3URNx":{"type":"icon_with_text","settings":{"icon":"price_tags","icon_container":"none","icon_color":"","icon_background_color":"#ededed","background_gradient":"","image_width":40,"title":"<strong>BEST PRICES<\/strong>","text":"Unbeatable value","card_link":""}}},"block_order":["icon_with_text_AhRy9e","icon_with_text_WKrJVC","icon_with_text_d6Bpr6","icon_with_text_E3URNx"],"disabled":true,"settings":{"placement":"beside","content_vertical_alignment":"items-center","column_alignment":"left","vertical_padding":2.4,"icon_size":3.2,"heading_size":"t4","text_size":"t5","mobile_layout":"carousel","columns_mobile":"2","color_scheme":"scheme-3","line_separator":"border-bottom","visibility":"","hide_when_empty":false}}},"order":["quick_filter_XTFBQD","slideshow_9pXPcN","quick_filter_EjbqHd","icons_with_text_A8P3h4","gallery_ViHcnz","logo_list_YbACA4","rich_text_wLpXDQ","video_banner_W4W3gd","rich_text_EeaxFY","174913377853274376","featured_collection_GQEYiP","newsletter_JjUqmd","1752087555f64c33a3","image_with_text_RhRMfE","testimonials_UCrJ6F","175795671405bb4c2a","collapsible_content_zUAt9h","image_banner_jfDgUP","icons_with_text_ELUgNB"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "quick_filter_XTFBQD": {
+      "type": "quick-filter",
+      "blocks": {
+        "heading_MRCybJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Find</em> parts<em> for your </em>[Jeep|Chevy|GMC|Ford|Toyota|Dodge|Cadillac]",
+            "heading_italic_convert": "light",
+            "heading_size": "custom",
+            "heading_size_custom": 2.6,
+            "heading_line_height_custom": 1.1,
+            "heading_tag": "h2"
+          }
+        },
+        "text_aChXFK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Product discovery can be difficult. Let's make it easier for you. <a href=\"https://benchmarkthemes.com/help-center/ignite/sections/quick-filter/\" target=\"_blank\" title=\"https://benchmarkthemes.com/help-center/ignite/sections/quick-filter/\"><strong>Read more</strong></a>.</p>",
+            "text_size": "t3"
+          }
+        },
+        "quick_filter_bhJntH": {
+          "type": "quick_filter",
+          "settings": {
+            "filter_menu": "main-menu",
+            "text_size": "t4",
+            "preselect": true,
+            "min_items_for_search": 9,
+            "auto_open_next_dropdown": true,
+            "select1_label": "Shop By Vehicle",
+            "select2_label": "Make",
+            "select3_label": "Model",
+            "button_label": "Search",
+            "hide_label": true,
+            "button_icon": "chevron_right",
+            "icon_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MRCybJ",
+        "text_aChXFK",
+        "quick_filter_bhJntH"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button:disabled {opacity: 1;}"
+      ],
+      "settings": {
+        "quick_filter_max_width": 450,
+        "vertical_padding": 6.1,
+        "image": "shopify://shop_images/shutterstock_2496113551_1dcec289-1246-4d6d-91b3-d77ef0d847c0.jpg",
+        "image_overlay_opacity": 0,
+        "image_link": "",
+        "fix_image": false,
+        "skew_images": false,
+        "stack_images_on_mobile": true,
+        "image_ratio": "custom",
+        "desktop_section_height": 700,
+        "mobile_section_height": 300,
+        "desktop_content_position": "md:justify-start md:items-center",
+        "mobile_content_position": "justify-center items-center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_box": "always",
+        "color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "container_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "line_separator": "",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "slideshow_9pXPcN": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_DqxcLr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/the-car-s-wheels-on-the-dirt-road-2025-02-21-05-06-21-utc_Large_b2f37ec7-807d-4127-829d-6a3b80d7f804.jpg",
+            "image_overlay_opacity": 38,
+            "image_link": "",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "desktop_content_position": "md:justify-end md:items-center",
+            "mobile_content_position": "justify-end items-center",
+            "content_max_width": "m",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "show_text_box": "desktop",
+            "caption": "",
+            "caption_text_style": "caption-with-letter-spacing",
+            "caption_text_size": "t6",
+            "heading": "Find the Right Kit for Your Vehicle",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.6,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "t4",
+            "button_text_size": "t6",
+            "button_label_1": "Shop Frame Repair Kits",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false,
+            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"
+          }
+        },
+        "slide_gQbqPm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock_2250316671_Large_62f3626d-6d82-4b3b-91bc-e564ed40fccf.jpg",
+            "image_overlay_opacity": 38,
+            "image_link": "",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "desktop_content_position": "md:justify-end md:items-center",
+            "mobile_content_position": "justify-end items-center",
+            "content_max_width": "m",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "show_text_box": "desktop",
+            "caption": "",
+            "caption_text_style": "caption-with-letter-spacing",
+            "caption_text_size": "t6",
+            "heading": "Test",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.6,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "t4",
+            "button_text_size": "t6",
+            "button_label_1": "Shop Frame Repair Kits",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false,
+            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"
+          }
+        },
+        "slide_3JEwFz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock_2496113551_1dcec289-1246-4d6d-91b3-d77ef0d847c0.jpg",
+            "image_overlay_opacity": 38,
+            "image_link": "",
+            "horizontal_offset": -3,
+            "vertical_offset": -10,
+            "desktop_content_position": "md:justify-start md:items-center",
+            "mobile_content_position": "justify-end items-center",
+            "content_max_width": "m",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "show_text_box": "desktop",
+            "caption": "",
+            "caption_text_style": "caption-with-letter-spacing",
+            "caption_text_size": "t6",
+            "heading": "Find the Right Kit for Your Vehicle",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.6,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "t4",
+            "button_text_size": "t6",
+            "button_label_1": "Shop Frame Repair Kits",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false,
+            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79"
+          }
+        }
+      },
+      "block_order": [
+        "slide_DqxcLr",
+        "slide_gQbqPm",
+        "slide_3JEwFz"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "slide_animation": "wipe",
+        "slider_visual": "counter",
+        "pagination_position": "center",
+        "autoplay": "autoplay_with_pause",
+        "change_slides_speed": 6,
+        "image_ratio": "landscape_wider",
+        "desktop_section_height": 500,
+        "mobile_section_height": 400,
+        "full_width": "on",
+        "show_text_below": false,
+        "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "hide_when_empty": false,
+        "visibility": "",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "quick_filter_EjbqHd": {
+      "type": "quick-filter",
+      "blocks": {
+        "heading_xdwTWa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop For Your Vehicle",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_rV9C7G": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "t3"
+          }
+        },
+        "quick_filter_GVDRxn": {
+          "type": "quick_filter",
+          "settings": {
+            "filter_menu": "main-menu",
+            "text_size": "t4",
+            "preselect": true,
+            "min_items_for_search": 15,
+            "auto_open_next_dropdown": false,
+            "select1_label": "Option 1",
+            "select2_label": "Make",
+            "select3_label": "Model",
+            "button_label": "Search",
+            "hide_label": true,
+            "button_icon": "search",
+            "icon_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xdwTWa",
+        "text_rV9C7G",
+        "quick_filter_GVDRxn"
+      ],
+      "custom_css": [
+        ".image-banner-section {background-color: #852a2c;}"
+      ],
+      "name": "Quick filter (YMM)",
+      "settings": {
+        "quick_filter_max_width": 1350,
+        "vertical_padding": 4,
+        "image": "shopify://shop_images/18.png",
+        "image_overlay_opacity": 0,
+        "image_link": "",
+        "fix_image": false,
+        "skew_images": false,
+        "stack_images_on_mobile": true,
+        "image_ratio": "custom",
+        "desktop_section_height": 100,
+        "mobile_section_height": 300,
+        "desktop_content_position": "md:justify-center md:items-center",
+        "mobile_content_position": "justify-center items-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "show_text_box": "always",
+        "color_scheme": "scheme-30070904-3bfb-41dd-9192-415bc6674672",
+        "container_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "line_separator": "",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "icons_with_text_A8P3h4": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icon_with_text_Qi374n": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "cog",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>WELL TRUSTED</strong>",
+            "text": "75 years of expertise",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_PtjAX6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "truck",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>SUPER FAST</strong>",
+            "text": "With Express delivery",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_BPQ4eh": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "chat_bubbles",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>EXPERT HELP</strong>",
+            "text": "Seven days a week",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_VMaqgr": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "price_tags",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>BEST PRICES</strong>",
+            "text": "Unbeatable value",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_Qi374n",
+        "icon_with_text_PtjAX6",
+        "icon_with_text_BPQ4eh",
+        "icon_with_text_VMaqgr"
+      ],
+      "settings": {
+        "placement": "beside",
+        "content_vertical_alignment": "items-start",
+        "column_alignment": "left",
+        "vertical_padding": 2,
+        "icon_size": 2.8,
+        "heading_size": "t6",
+        "text_size": "t6",
+        "mobile_layout": "grid",
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "line_separator": "border-bottom",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "gallery_ViHcnz": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_item_xmiG6p": {
+          "type": "gallery_item",
+          "settings": {
+            "tall": true,
+            "wide": true,
+            "column_alignment": "left",
+            "text_vertical_alignment": "justify-end",
+            "content_max_width": "l",
+            "image": "shopify://shop_images/close-up-detail-bottom-pov-view-of-4x4-awd-suv-veh-2025-01-10-12-41-07-utc.jpg",
+            "image_overlay_opacity": 36,
+            "icon": "",
+            "icon_container": "none",
+            "icon_size": 3.4,
+            "icon_color": "",
+            "icon_background_color": "#010101",
+            "background_gradient": "",
+            "title": "Built in the Rust Belt",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "text": "<p><strong>Forged in Youngstown, Ohio – Where Rust Meets Its Match</strong><br/>From our roots in steel country, we’ve spent decades crafting solutions to outlast the harshest conditions. </p>",
+            "text_size": "t3",
+            "button_text_size": "t4",
+            "button_label": "Explore Our Story",
+            "button_link": "shopify://pages/about",
+            "button_style": "primary",
+            "button_style_show_arrow": true,
+            "card_link": "",
+            "card_color_scheme": "scheme-30070904-3bfb-41dd-9192-415bc6674672"
+          }
+        },
+        "gallery_item_9iKtrz": {
+          "type": "gallery_item",
+          "settings": {
+            "tall": false,
+            "wide": true,
+            "column_alignment": "left",
+            "text_vertical_alignment": "justify-end",
+            "content_max_width": "l",
+            "image": "shopify://shop_images/IMG_7235_302e0f2a-1557-42d9-825c-683da271bc33.jpg",
+            "image_overlay_opacity": 50,
+            "icon": "",
+            "icon_container": "none",
+            "icon_size": 3.4,
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "title": "Frame Repair Kits That Last",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "text": "<p><strong>Engineered for Strength. Designed for Fit.</strong><br/>Our precision-made kits are built to restore safety and extend the life of your vehicle — without breaking the bank.</p>",
+            "text_size": "t3",
+            "button_text_size": "t4",
+            "button_label": "Shop Frame Repair Kits",
+            "button_link": "shopify://collections",
+            "button_style": "secondary",
+            "button_style_show_arrow": true,
+            "card_link": "",
+            "card_color_scheme": "scheme-3"
+          }
+        },
+        "gallery_item_AxXyhR": {
+          "type": "gallery_item",
+          "settings": {
+            "tall": false,
+            "wide": true,
+            "column_alignment": "left",
+            "text_vertical_alignment": "justify-end",
+            "content_max_width": "l",
+            "image": "shopify://shop_images/young-engineer-looking-closely-at-turbine-project-2025-02-20-07-06-39-utc_Large_04b903a0-b4d4-4ce2-b73d-f07c1a6d1973.jpg",
+            "image_overlay_opacity": 46,
+            "icon": "",
+            "icon_container": "none",
+            "icon_size": 3.4,
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "title": "Innovation in Every Inch",
+            "heading_size": "h3",
+            "heading_size_custom": 2.8,
+            "text": "<p><strong>CAD Precision Meets Real-World Durability</strong><br/>Our investment in 3D scanning and OE-level quality control means a better fit, every time — and repairs that hold up.</p>",
+            "text_size": "t3",
+            "button_text_size": "t3",
+            "button_label": "Learn Our Process",
+            "button_link": "shopify://pages/about",
+            "button_style": "secondary",
+            "button_style_show_arrow": true,
+            "card_link": "",
+            "card_color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_xmiG6p",
+        "gallery_item_9iKtrz",
+        "gallery_item_AxXyhR"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "columns_desktop": 4,
+        "spacing_grid": 16,
+        "spacing_grid_mobile": 16,
+        "corner_rounding": "inner",
+        "content_padding": 3,
+        "desktop_section_height": 310,
+        "mobile_section_height": 220,
+        "mobile_layout": "carousel",
+        "full_width": false,
+        "content_max_width": "m",
+        "desktop_heading_alignment": "left",
+        "mobile_heading_alignment": "left",
+        "title": "",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "",
+        "text_size": "t3",
+        "view_all_link": "",
+        "view_all_text": "",
+        "view_all_text_size": "t3",
+        "section_color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "logo_list_YbACA4": {
+      "type": "logo-list",
+      "blocks": {
+        "column_standard_UWyVez": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Jeep.png",
+            "image_scale": 80,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/jeep-1"
+          }
+        },
+        "column_standard_RPdJpW": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Ford_4b0fdaea-b695-4cc0-92da-a9f24a31be18.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/ford-1"
+          }
+        },
+        "column_standard_XKbiQb": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Toyota_44adba77-5401-44e8-aaeb-6ca3119b4f47.png",
+            "image_scale": 80,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/test"
+          }
+        },
+        "column_standard_mcgYgm": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/chevy_deb06396-9469-4cd2-90f9-9d560960f95e.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/chevy-gmc-1"
+          }
+        },
+        "column_standard_tawXXC": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/GMC.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/chevy-gmc-1"
+          }
+        },
+        "column_standard_h77G3e": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Dodge.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/dodge"
+          }
+        },
+        "column_standard_eUcktJ": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Cadillac.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/cadillac"
+          }
+        },
+        "column_standard_fE6dUG": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/lexus.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/rust-buster-frame-repair-kits-for-lexus-models"
+          }
+        },
+        "column_standard_eAgqeV": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/hummer.png",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/hummer"
+          }
+        }
+      },
+      "block_order": [
+        "column_standard_UWyVez",
+        "column_standard_RPdJpW",
+        "column_standard_XKbiQb",
+        "column_standard_mcgYgm",
+        "column_standard_tawXXC",
+        "column_standard_h77G3e",
+        "column_standard_eUcktJ",
+        "column_standard_fE6dUG",
+        "column_standard_eAgqeV"
+      ],
+      "custom_css": [
+        ".slider-scrollbar__indicator {height: 6px; background-color: #ba0c2f;}"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "column_alignment": "center",
+        "image_ratio": "square",
+        "spacing_grid": 10,
+        "content_padding": 0,
+        "desktop_layout": "grid",
+        "mobile_layout": "grid",
+        "columns_desktop": "5",
+        "columns_mobile": "2",
+        "full_width": true,
+        "image_overlay_opacity": 0,
+        "content_max_width": "m",
+        "desktop_heading_alignment": "center",
+        "mobile_heading_alignment": "center",
+        "title": "Shop By Make",
+        "italic_convert": "",
+        "heading_size": "h1",
+        "text": "",
+        "text_size": "t3",
+        "view_all_link": "",
+        "view_all_text": "",
+        "view_all_text_size": "t3",
+        "color_scheme": "scheme-8428ed0c-d69b-4967-bfd4-9fa8c948298f",
+        "card_color_scheme": "scheme-2",
+        "color_scheme_bg_fix": false,
+        "card_shadow": true,
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false,
+        "heading_tag": "h2"
+      }
+    },
+    "rich_text_wLpXDQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ymeB6n": {
+          "type": "heading",
+          "settings": {
+            "heading": "Is My Vehicle Fixable?",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_fQKBr3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Not sure if your rusted frame can be brought back to life? Let our team take a look. Send us your vehicle info and photos, and we’ll help you figure out the best repair path. Whether it’s a small patch or a full frame section, we’ll let you know what’s possible — and which Rust Buster kits are built to get the job done.</strong></p>",
+            "text_size": "t2"
+          }
+        },
+        "buttons_kXMjdp": {
+          "type": "buttons",
+          "settings": {
+            "button_text_size": "t4",
+            "button_label_1": "Send Us Your Vehicle",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ymeB6n",
+        "text_fQKBr3",
+        "buttons_kXMjdp"
+      ],
+      "custom_css": [
+        ".rich-text {background-image: url(https://cdn.shopify.com/s/files/1/0529/7445/2920/files/TireTexture-02-Large.png?v=1755200946);}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_max_width": "l",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "container_color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "video_banner_W4W3gd": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_fNTGxY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tested in the Elements.  Trusted by Enthusiasts.",
+            "heading_italic_convert": "",
+            "heading_size": "custom",
+            "heading_size_custom": 3.8,
+            "heading_line_height_custom": 1,
+            "heading_tag": "h2"
+          }
+        },
+        "text_kUVARU": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "t3"
+          }
+        },
+        "buttons_y4erff": {
+          "type": "buttons",
+          "settings": {
+            "button_text_size": "t3",
+            "button_label_1": "",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fNTGxY",
+        "text_kUVARU",
+        "buttons_y4erff"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "video": "shopify://files/videos/002.mp4",
+        "video_url": "https://vimeo.com/1102261612/c44538835f?share=copy",
+        "show_play_pause": false,
+        "reveal_content_timer": 0,
+        "playback_end": "loop",
+        "section_ratio": "custom",
+        "desktop_section_height": 400,
+        "mobile_section_height": 260,
+        "full_width": true,
+        "full_width_animate": false,
+        "desktop_content_position": "md:justify-start md:items-center",
+        "mobile_content_position": "justify-start items-center",
+        "content_max_width": "l",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_box": "off",
+        "show_text_below": true,
+        "color_scheme": "",
+        "container_color_scheme": "scheme-1f7dc79f-46cd-457c-8515-2a2e9656bdf5",
+        "color_overlay": "#000000",
+        "video_overlay_opacity": 30,
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false,
+        "lazy_load": true,
+        "heading_tag": "h2",
+        "description": "",
+        "video_aspect_ratio": "1.77"
+      }
+    },
+    "rich_text_EeaxFY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GqBxTt": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Offering  </strong><em><strong>affordable solutions</strong></em><strong> for rust issues on++ truck and Jeep</strong>®<strong> frames</strong>",
+            "heading_italic_convert": "accent_color",
+            "heading_size": "h0",
+            "heading_size_custom": 3.6,
+            "heading_line_height_custom": 1,
+            "heading_tag": "h2"
+          }
+        },
+        "spacer_9xQQWA": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "spacing_top": 2.4,
+            "spacing_bottom": 2.4,
+            "spacer_visibility": "desktop",
+            "line_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_GqBxTt",
+        "spacer_9xQQWA"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_max_width": "l",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "container_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "174913377853274376": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_cXN6wC": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "disabled": true,
+          "settings": {
+            "gallery_id": 25913,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_cXN6wC"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
+    "featured_collection_GQEYiP": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "body-bushing-kits",
+        "products_to_show": 6,
+        "desktop_layout": "carousel",
+        "mobile_layout": "carousel",
+        "columns_desktop": "5",
+        "columns_mobile": "1",
+        "full_width": false,
+        "content_max_width": "s",
+        "desktop_heading_alignment": "left",
+        "mobile_heading_alignment": "left",
+        "title": "Featured collection",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "<p>Each section can have its own color scheme. Scroll to the end of the cards to see the <strong>View more</strong> card.</p>",
+        "text_size": "t1",
+        "show_view_all_link": false,
+        "view_all_text": "View more",
+        "view_all_text_size": "t5",
+        "view_all_card_visibility": "",
+        "view_all_card_text": "There's plenty more",
+        "color_scheme": "scheme-8",
+        "view_all_color_scheme": "scheme-8",
+        "line_separator": "",
+        "top_padding": "pt-s15",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": false,
+        "heading_tag": "h2"
+      }
+    },
+    "newsletter_JjUqmd": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_bJWyQN": {
+          "type": "heading",
+          "settings": {
+            "visibility": "before",
+            "heading": "Email Signup",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_MR9izT": {
+          "type": "text",
+          "settings": {
+            "visibility": "before",
+            "text": "<p>Featuring completely customizable success messages. Check the <strong>Preview successful sign up</strong> setting to see what we mean.</p>",
+            "text_size": "t2"
+          }
+        },
+        "email_form_xrzb7Q": {
+          "type": "email_form",
+          "settings": {
+            "visibility": "before"
+          }
+        },
+        "icon_FmTbWh": {
+          "type": "icon",
+          "settings": {
+            "visibility": "success",
+            "icon": "heart",
+            "icon_container": "none",
+            "icon_size": 3,
+            "icon_color": "#dd1d1d",
+            "icon_background_color": "#ededed",
+            "background_gradient": ""
+          }
+        },
+        "heading_ebQqNg": {
+          "type": "heading",
+          "settings": {
+            "visibility": "success",
+            "heading": "Thank you!",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_rtKjNL": {
+          "type": "text",
+          "settings": {
+            "visibility": "success",
+            "text": "<p>You're signed up to get the all the latest deals from us.</p>",
+            "text_size": "t1"
+          }
+        },
+        "spacer_tjQycK": {
+          "type": "spacer",
+          "settings": {
+            "visibility": "success",
+            "show_line_separator": true,
+            "spacing_top": 0.2,
+            "spacing_bottom": 0.2,
+            "spacer_visibility": "both",
+            "line_color": ""
+          }
+        },
+        "text_3VCjtt": {
+          "type": "text",
+          "settings": {
+            "visibility": "success",
+            "text": "<p>In the meantime, here's a 10% off code for your first purchase.</p>",
+            "text_size": "t3"
+          }
+        },
+        "discount_z7AqD8": {
+          "type": "discount",
+          "settings": {
+            "visibility": "success",
+            "discount_code": "GET10OFF",
+            "text_size": "t3",
+            "discount_gated": false,
+            "color_peel_background": "#f57309",
+            "color_peel_foreground": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bJWyQN",
+        "text_MR9izT",
+        "email_form_xrzb7Q",
+        "icon_FmTbWh",
+        "heading_ebQqNg",
+        "text_rtKjNL",
+        "spacer_tjQycK",
+        "text_3VCjtt",
+        "discount_z7AqD8"
+      ],
+      "settings": {
+        "preview_success": false,
+        "show_image": true,
+        "image": "shopify://shop_images/Screenshot_2025-05-28_100249.png",
+        "image_overlay_opacity": 14,
+        "fix_image": false,
+        "image_ratio": "landscape_wide",
+        "desktop_section_height": 500,
+        "mobile_section_height": 500,
+        "full_width": false,
+        "desktop_content_position": "md:justify-center md:items-center",
+        "mobile_content_position": "justify-center items-center",
+        "content_max_width": "m",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "show_text_box": "desktop",
+        "show_text_below": true,
+        "color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "container_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "1752087555f64c33a3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_mMHtJi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_mMHtJi"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
+    "image_with_text_RhRMfE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4EGrzc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frame Repair Kits Built for the Trail Ahead.",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_E94BbN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our USA-made repair kits are precision-designed for a perfect fit, using high-quality steel and CAD-driven accuracy. Don’t let corrosion win bring your vehicle back to life with gear that’s built to take a beating.</p>",
+            "text_size": "t3"
+          }
+        },
+        "buttons_eaqpbh": {
+          "type": "buttons",
+          "settings": {
+            "button_text_size": "t3",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "button_style_2_show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4EGrzc",
+        "text_E94BbN",
+        "buttons_eaqpbh"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_7237_Large_3dd4a8c0-2bcd-4933-847f-dbc52526ccca.jpg",
+        "desktop_section_height": 500,
+        "mobile_section_height": 400,
+        "desktop_media_width": 50,
+        "desktop_media_scale": 100,
+        "layout": "media_first",
+        "image_cover": true,
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "text_max_width": "xs",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "testimonials_UCrJ6F": {
+      "type": "testimonials",
+      "blocks": {
+        "column_standard_aAQejg": {
+          "type": "column_standard",
+          "settings": {
+            "image_ratio": "adapt",
+            "image_width": 100,
+            "rating_stars": 5,
+            "title": "Testimonial",
+            "heading_tag": "h3",
+            "text": "<p>Include a customer review of a product, collection, or your company.</p>",
+            "author_name": "Jane Doe",
+            "author_caption": "Director, Company name",
+            "card_link": "",
+            "card_color_scheme": "",
+            "color_scheme_bg_fix": false
+          }
+        },
+        "column_standard_BmYAUK": {
+          "type": "column_standard",
+          "settings": {
+            "image_ratio": "adapt",
+            "image_width": 100,
+            "rating_stars": 5,
+            "title": "Testimonial",
+            "heading_tag": "h3",
+            "text": "<p>Include a customer review of a product, collection, or your company.</p>",
+            "author_name": "Jane Doe",
+            "author_caption": "Director, Company name",
+            "card_link": "",
+            "card_color_scheme": "",
+            "color_scheme_bg_fix": false
+          }
+        },
+        "column_standard_GHUCdj": {
+          "type": "column_standard",
+          "settings": {
+            "image_ratio": "adapt",
+            "image_width": 100,
+            "rating_stars": 5,
+            "title": "Testimonial",
+            "heading_tag": "h3",
+            "text": "<p>Include a customer review of a product, collection, or your company.</p>",
+            "author_name": "Jane Doe",
+            "author_caption": "Director, Company name",
+            "card_link": "",
+            "card_color_scheme": "",
+            "color_scheme_bg_fix": false
+          }
+        }
+      },
+      "block_order": [
+        "column_standard_aAQejg",
+        "column_standard_BmYAUK",
+        "column_standard_GHUCdj"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn {background-image: url(https://cdn.shopify.com/s/files/1/0529/7445/2920/files/TireTexture-02-Large.png?v=1755200946);}"
+      ],
+      "settings": {
+        "review_style": "star",
+        "rating_size": 3,
+        "heading_style": "text-body",
+        "card_heading_size": "t0",
+        "card_text_size": "t3",
+        "author_line": true,
+        "desktop_section_height": 200,
+        "mobile_section_height": 200,
+        "column_alignment": "left",
+        "text_vertical_alignment": "justify-start",
+        "content_padding": 4,
+        "desktop_layout": "grid",
+        "mobile_layout": "carousel",
+        "columns_desktop": "3",
+        "columns_desktop_scale": false,
+        "full_width": false,
+        "image_overlay_opacity": 0,
+        "content_max_width": "m",
+        "desktop_heading_alignment": "center",
+        "mobile_heading_alignment": "left",
+        "title": "Why choose Rust Buster?",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "<p>Over 20 years experience.</p>",
+        "text_size": "t1",
+        "view_all_link": "",
+        "view_all_text": "",
+        "view_all_text_size": "t3",
+        "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "star_color": "#f5e121",
+        "card_shadow": true,
+        "line_separator": "",
+        "top_padding": "pt-s15",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false,
+        "heading_tag": "h2"
+      }
+    },
+    "175795671405bb4c2a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_QnbiBh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1600
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_QnbiBh"
+      ],
+      "custom_css": [
+        ".shopify-block {background-image: url(https://cdn.shopify.com/s/files/1/0529/7445/2920/files/TireTexture-02-Large.png?v=1755200946);}"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
+    "collapsible_content_zUAt9h": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_eaamgk": {
+          "type": "collapsible_row",
+          "settings": {
+            "row_open": true,
+            "heading": "What type of welder is best for truck frame repair?",
+            "icon": "",
+            "image_width": 20,
+            "row_heading_tag": "h3",
+            "row_content": "<p>A MIG welder is probably the easiest to operate, as you will not have to worry about striking an arc in a tight area.</p>",
+            "page": "",
+            "content_embed": "",
+            "button_text_size": "t3",
+            "button_label_1": "",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false
+          }
+        },
+        "collapsible_row_374nM8": {
+          "type": "collapsible_row",
+          "settings": {
+            "row_open": true,
+            "heading": "How powerful does my welder need to be for frame repair?",
+            "icon": "",
+            "image_width": 20,
+            "row_heading_tag": "h3",
+            "row_content": "<p>Your welder should have a max output of at least 140 amps.</p>",
+            "page": "",
+            "content_embed": "",
+            "button_text_size": "t3",
+            "button_label_1": "",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false
+          }
+        },
+        "collapsible_row_thrg78": {
+          "type": "collapsible_row",
+          "settings": {
+            "row_open": true,
+            "heading": "What Welding Rod should I use?",
+            "icon": "",
+            "image_width": 20,
+            "row_heading_tag": "h3",
+            "row_content": "<p>We recommend E7018 Welding Rods.  Our personal favorite is the Lincoln Electric Carbon Steel E7018 H4R, 1/8” x 14”.</p>",
+            "page": "",
+            "content_embed": "",
+            "button_text_size": "t3",
+            "button_label_1": "",
+            "button_link_1": "/",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": false
+          }
+        },
+        "text_aTk8RT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Still got a question? <a href=\"/pages/contact\" title=\"CONTACT\">Get in touch</a></p>",
+            "text_size": "t3"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_eaamgk",
+        "collapsible_row_374nM8",
+        "collapsible_row_thrg78",
+        "text_aTk8RT"
+      ],
+      "settings": {
+        "one_row_at_a_time": true,
+        "show_line_separator": true,
+        "row_heading_size": "t1",
+        "row_text_size": "t4",
+        "show_header_beside": true,
+        "desktop_media_width": 40,
+        "layout": "media_first",
+        "show_search_box": false,
+        "content_max_width": "l",
+        "desktop_heading_alignment": "left",
+        "mobile_heading_alignment": "center",
+        "title": "Got a question?",
+        "italic_convert": "",
+        "heading_size": "h3",
+        "text": "<p>Answer common questions with the collapsible content section.</p>",
+        "text_size": "t3",
+        "button_label": "View FAQs",
+        "button_link": "shopify://pages/faq",
+        "button_style": "primary",
+        "button_text_size": "t4",
+        "button_style_show_arrow": true,
+        "section_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "show_content_shadow": true,
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "heading_tag": "h3",
+        "visibility": "",
+        "hide_when_empty": false,
+        "render_schema": false
+      }
+    },
+    "image_banner_jfDgUP": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UJV3bx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need Help? Contact Us",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "buttons_kCfWLy": {
+          "type": "buttons",
+          "settings": {
+            "button_text_size": "t3",
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": true,
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/locate-a-dealer",
+            "button_style_2": "primary",
+            "button_style_2_show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UJV3bx",
+        "buttons_kCfWLy"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image": "shopify://shop_images/IMG_7236.jpg",
+        "image_overlay_opacity": 40,
+        "image_link": "",
+        "fix_image": false,
+        "skew_images": false,
+        "stack_images_on_mobile": false,
+        "image_ratio": "custom",
+        "desktop_section_height": 400,
+        "mobile_section_height": 200,
+        "full_width": true,
+        "full_width_animate": false,
+        "desktop_content_position": "md:justify-start md:items-center",
+        "mobile_content_position": "justify-center items-center",
+        "content_max_width": "m",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_box": "off",
+        "show_text_below": false,
+        "color_scheme": "scheme-30070904-3bfb-41dd-9192-415bc6674672",
+        "container_color_scheme": "scheme-30070904-3bfb-41dd-9192-415bc6674672",
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "icons_with_text_ELUgNB": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icon_with_text_AhRy9e": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shield_checkmark",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>WELL TRUSTED</strong>",
+            "text": "Over 100k customers",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_WKrJVC": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "truck",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>SUPER FAST</strong>",
+            "text": "With Express delivery",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_d6Bpr6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "chat_bubbles",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>EXPERT HELP</strong>",
+            "text": "Seven days a week",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_E3URNx": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "price_tags",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>BEST PRICES</strong>",
+            "text": "Unbeatable value",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_AhRy9e",
+        "icon_with_text_WKrJVC",
+        "icon_with_text_d6Bpr6",
+        "icon_with_text_E3URNx"
+      ],
+      "disabled": true,
+      "settings": {
+        "placement": "beside",
+        "content_vertical_alignment": "items-center",
+        "column_alignment": "left",
+        "vertical_padding": 2.4,
+        "icon_size": 3.2,
+        "heading_size": "t4",
+        "text_size": "t5",
+        "mobile_layout": "carousel",
+        "columns_mobile": "2",
+        "color_scheme": "scheme-3",
+        "line_separator": "border-bottom",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    }
+  },
+  "order": [
+    "quick_filter_XTFBQD",
+    "slideshow_9pXPcN",
+    "quick_filter_EjbqHd",
+    "icons_with_text_A8P3h4",
+    "gallery_ViHcnz",
+    "logo_list_YbACA4",
+    "rich_text_wLpXDQ",
+    "video_banner_W4W3gd",
+    "rich_text_EeaxFY",
+    "174913377853274376",
+    "featured_collection_GQEYiP",
+    "newsletter_JjUqmd",
+    "1752087555f64c33a3",
+    "image_with_text_RhRMfE",
+    "testimonials_UCrJ6F",
+    "175795671405bb4c2a",
+    "collapsible_content_zUAt9h",
+    "image_banner_jfDgUP",
+    "icons_with_text_ELUgNB"
+  ]
+}
