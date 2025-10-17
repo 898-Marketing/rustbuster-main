@@ -577,10 +577,10 @@
       ],
       "settings": {
         "include_margins": true,
-        "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
         "line_separator": "",
         "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
+        "bottom_padding": "pb-s2",
         "visibility": ""
       }
     },
