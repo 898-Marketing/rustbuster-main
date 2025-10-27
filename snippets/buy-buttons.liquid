@@ -18,8 +18,15 @@
     if (!form) return;
     var idInput = form.querySelector('input[name="id"]');
     var submit = form.querySelector('[name="add"]');
+    var variantSelectionMessage = form.querySelector('.variant-selection-message');
+
     if (idInput && submit && !idInput.value) {
       submit.setAttribute('disabled', 'disabled');
+      if (messageElement) {
+        messageElement.style.display = 'block';
+      }
+    } else if (messageElement) {
+      messageElement.style.display = 'none';
     }
   });
 </script>
@@ -129,6 +136,8 @@
                 </quantity-input>
               </div>
             {%- endif -%}
+
+            <div class="variant-selection-message" style="display: none; color:#ffb6b; font-size: 0.9rem; margin-bottom: 0.5rem; text-align: center;"> Please choose a side to add to cart. </div>
 
             <div class="grow">
               <button

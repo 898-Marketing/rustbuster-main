@@ -2170,6 +2170,7 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
+      this.showVariantSelectionMessage(true);
     } else {
       this.updateMedia();
       this.updateURL();
@@ -2513,6 +2514,19 @@ class VariantSelects extends HTMLElement {
     }
 
     if (!modifyClass) return;
+  }
+
+  showVariantSelectionMessage(show) {
+    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
+    if (!productForm) return;
+    const messageElement = productForm.querySelector('.variant-selection-message');
+    if (!messageElement) return;
+    
+    if (show) {
+      messageElement.style.display = 'block';
+    } else {
+      messageElement.style.display = 'none';
+    }
   }
 
   setUnavailable() {
