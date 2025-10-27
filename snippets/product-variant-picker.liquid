@@ -177,6 +177,9 @@
         </div>
       {%- endif -%}
     {%- endfor -%}
+    <div class="variant-selection-message" style="display: none; color: #ff6b6b; font-size: 0.9rem; margin-top: 0.5rem; text-align: center; padding: 0.5rem; background-color: #fff3f3; border-radius: 4px;">
+      Please choose a side to add to cart.
+    </div>
     <script type="application/json">
       {{ product.variants | json }}
     </script>
