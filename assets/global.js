@@ -2157,6 +2157,12 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
+  connectedCallback() {
+    this.updateOptions();
+    this.updateMasterId(); 
+    this.updateInitialVariantState(); 
+  }
+
   onVariantChange(event) {
     this.updateOptions();
     this.updateMasterId();
@@ -2177,9 +2183,30 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.showVariantSelectionMessage(false);
     }
 
     this.updateNiceSelectLabels();
+  }
+
+  updateInitialVariantState() {
+    if (!this.currentVariant) {
+      this.showVariantSelectionMessage(true);
+      this.toggleAddButton(true, '', false);
+    } else {
+      this.showVariantSelectionMessage(false);
+    }
+  }
+
+  showVariantSelectionMessage(show) {
+    const messageElement = this.querySelector('.variant-selection-message');
+    if (!messageElement) return;
+    
+    if (show) {
+      messageElement.style.display = 'block';
+    } else {
+      messageElement.style.display = 'none';
+    }
   }
 
   updateVariantDataVisibility() {
@@ -2516,18 +2543,6 @@ class VariantSelects extends HTMLElement {
     if (!modifyClass) return;
   }
 
-  showVariantSelectionMessage(show) {
-    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
-    if (!productForm) return;
-    const messageElement = productForm.querySelector('.variant-selection-message');
-    if (!messageElement) return;
-    
-    if (show) {
-      messageElement.style.display = 'block';
-    } else {
-      messageElement.style.display = 'none';
-    }
-  }
 
   setUnavailable() {
     const button = document.getElementById(`product-form-${this.dataset.section}`);

@@ -18,15 +18,16 @@
     if (!form) return;
     var idInput = form.querySelector('input[name="id"]');
     var submit = form.querySelector('[name="add"]');
-    var variantSelectionMessage = form.querySelector('.variant-selection-message');
-
+    
     if (idInput && submit && !idInput.value) {
       submit.setAttribute('disabled', 'disabled');
+      
+      // Fallback: find and show variant selection message
+      var variantSelects = form.closest('.product__info-wrapper')?.querySelector('variant-selects');
+      var messageElement = variantSelects?.querySelector('.variant-selection-message');
       if (messageElement) {
         messageElement.style.display = 'block';
       }
-    } else if (messageElement) {
-      messageElement.style.display = 'none';
     }
   });
 </script>
