@@ -131,6 +131,9 @@
             endif
           endif
         -%}
+        <div class="variant-selection-message" style="display: none; color: #ff6b6b; font-size: 0.9rem; margin-top: 1rem; text-align: center; padding: 0.5rem; background-color: #fff3f3; border-radius: 4px;">
+      Please choose a side to add to cart.
+        </div>
         <fieldset class="js {{ block.settings.pill_text_size }} product-form__input product-form__input--pill{% if picker_type == 'box' %} product-form__input--box{% else %} flex flex-wrap gap-1{% endif %}"
           style="--variant-pill-font-weight: {{ block.settings.pill_text_weight }};--variant-pill-text-transform: {{ block.settings.pill_text_transform }};{% if picker_type == 'box' %}--max-boxes: {{ max_boxes }};{% endif %}">
           <legend class="variant-form__label flex{% if size_chart %} gap-2{% endif %} w-full items-center m-0 justify-between font-{{ block.settings.variant_label_text_weight }} {{ block.settings.variant_label_text_size }} {{ block.settings.variant_label_text_transform }}">
@@ -177,9 +180,7 @@
         </div>
       {%- endif -%}
     {%- endfor -%}
-    <div class="variant-selection-message" style="display: none; color: #ff6b6b; font-size: 0.9rem; margin-top: 0.5rem; text-align: center; padding: 0.5rem; background-color: #fff3f3; border-radius: 4px;">
-      Please choose a side to add to cart.
-    </div>
+
     <script type="application/json">
       {{ product.variants | json }}
     </script>
