@@ -69,6 +69,15 @@
             "show_in_quickbuy": true
           }
         },
+        "richtext_RUK8ME": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p><a href=\"#description\">View Full Description</a></p>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": false
+          }
+        },
         "panel_KaqEVk": {
           "type": "panel",
           "disabled": true,
@@ -166,6 +175,7 @@
         "spacer_PKVqBG",
         "variant_picker",
         "richtext_xtdgbK",
+        "richtext_RUK8ME",
         "panel_KaqEVk",
         "spacer_XCjAkL",
         "description_VVj7PD",
@@ -217,6 +227,19 @@
         "image_replace_background": false,
         "top_padding": "pt-0",
         "bottom_padding": "pb-0"
+      }
+    },
+    "custom_liquid_GjMYMF": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<h2 id=\"description\" style=\"padding-left:50px; font-size:50px;\"> </h2>",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
       }
     },
     "section_tabs_wprPDx": {
@@ -875,6 +898,7 @@
   "order": [
     "breadcrumbs",
     "main",
+    "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
     "rich_text_AqAAyx",
     "rich_text_BWWMaA",
