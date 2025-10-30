@@ -21,21 +21,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "spacer_PKVqBG": {
-          "type": "spacer",
-          "disabled": true,
-          "settings": {
-            "show_line_separator": true,
-            "full_width": true,
-            "line_separator_style": "solid",
-            "spacing_top": 1,
-            "spacing_bottom": 1,
-            "spacer_visibility": "both",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true,
-            "line_color": ""
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -79,7 +64,7 @@
             "spacing_bottom": 1,
             "spacer_visibility": "both",
             "stock_visibility": "either",
-            "show_in_quickbuy": true,
+            "show_in_quickbuy": false,
             "line_color": ""
           }
         },
@@ -171,7 +156,6 @@
         }
       },
       "block_order": [
-        "spacer_PKVqBG",
         "variant_picker",
         "richtext_xtdgbK",
         "spacer_XCjAkL",
