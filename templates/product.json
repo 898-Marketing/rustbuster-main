@@ -21,15 +21,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "inventory_ADrHqA": {
-          "type": "inventory",
-          "settings": {
-            "show_inventory_quantity": false,
-            "show_as_badge": true,
-            "text_style": "body",
-            "text_size": "t5"
-          }
-        },
         "spacer_PKVqBG": {
           "type": "spacer",
           "disabled": true,
@@ -139,6 +130,15 @@
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
         },
+        "inventory_ADrHqA": {
+          "type": "inventory",
+          "settings": {
+            "show_inventory_quantity": false,
+            "show_as_badge": true,
+            "text_style": "body",
+            "text_size": "t6"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -163,7 +163,6 @@
         }
       },
       "block_order": [
-        "inventory_ADrHqA",
         "spacer_PKVqBG",
         "variant_picker",
         "richtext_xtdgbK",
@@ -172,6 +171,7 @@
         "description_VVj7PD",
         "panel_EbDytj",
         "infinite_options_app_block_AKg8eE",
+        "inventory_ADrHqA",
         "price",
         "buy_buttons"
       ],
@@ -393,9 +393,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "real_data",
+            "max_width": 1200,
             "show_shop_reviews": false,
-            "empty_state": "empty_widget",
-            "max_width": 1200
+            "empty_state": "empty_widget"
           }
         }
       },
