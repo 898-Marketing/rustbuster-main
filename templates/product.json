@@ -69,6 +69,20 @@
             "show_in_quickbuy": true
           }
         },
+        "spacer_XCjAkL": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 3.4,
+            "spacing_bottom": 3,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
+          }
+        },
         "richtext_RUK8ME": {
           "type": "richtext",
           "settings": {
@@ -93,21 +107,6 @@
             "stock_visibility": "out_of_stock",
             "show_in_quickbuy": true,
             "color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e"
-          }
-        },
-        "spacer_XCjAkL": {
-          "type": "spacer",
-          "disabled": true,
-          "settings": {
-            "show_line_separator": true,
-            "full_width": true,
-            "line_separator_style": "solid",
-            "spacing_top": 3.4,
-            "spacing_bottom": 3,
-            "spacer_visibility": "both",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true,
-            "line_color": ""
           }
         },
         "description_VVj7PD": {
@@ -175,9 +174,9 @@
         "spacer_PKVqBG",
         "variant_picker",
         "richtext_xtdgbK",
+        "spacer_XCjAkL",
         "richtext_RUK8ME",
         "panel_KaqEVk",
-        "spacer_XCjAkL",
         "description_VVj7PD",
         "panel_EbDytj",
         "infinite_options_app_block_AKg8eE",
