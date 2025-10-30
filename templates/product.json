@@ -129,7 +129,7 @@
             "show_inventory_quantity": false,
             "show_as_badge": true,
             "text_style": "body",
-            "text_size": "t6"
+            "text_size": "t7"
           }
         },
         "price": {
