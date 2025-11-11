@@ -254,17 +254,6 @@
     "rich_text_AqAAyx": {
       "type": "rich-text",
       "blocks": {
-        "heading_yVzDpd": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ product.title }}",
-            "heading_italic_convert": "",
-            "heading_size": "h3",
-            "heading_size_custom": 2.4,
-            "heading_line_height_custom": 1.2,
-            "heading_tag": "h2"
-          }
-        },
         "text_dyL3R9": {
           "type": "text",
           "settings": {
@@ -274,7 +263,6 @@
         }
       },
       "block_order": [
-        "heading_yVzDpd",
         "text_dyL3R9"
       ],
       "settings": {
