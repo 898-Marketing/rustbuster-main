@@ -1,0 +1,535 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ribbon_banner_zkP4Bb": {
+      "type": "ribbon-banner",
+      "blocks": {
+        "heading_gE9ieC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Huge</em> sale starts soon!",
+            "heading_italic_convert": "accent",
+            "heading_size": "h4",
+            "heading_size_custom": 1.6,
+            "heading_line_height_custom": 1,
+            "heading_tag": "h2"
+          }
+        },
+        "countdown_Q94nTA": {
+          "type": "countdown",
+          "settings": {
+            "end_date": "",
+            "end_time": "",
+            "end_action": "hide",
+            "end_message": "You just missed it!",
+            "abbreviate_units": true,
+            "countdown_size": 24,
+            "separator": ":",
+            "countdown_font_weight": "bold",
+            "text_alignment": "center",
+            "countdown_container": "rounded",
+            "countdown_color": "",
+            "countdown_background_color": "#3b3b3b",
+            "countdown_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_gE9ieC",
+        "countdown_Q94nTA"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "closable": true,
+        "content_alignment": "justify-center",
+        "vertical_padding": 1.3,
+        "horizontal_padding": 3.5,
+        "spacing_grid": 4.2,
+        "image_overlay_opacity": 0,
+        "color_scheme": "scheme-3",
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "visibility": "both",
+        "hide_when_empty": false
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "spacing": 0,
+        "color_scheme": "scheme-2",
+        "line_separator": "",
+        "visibility": ""
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "collection_heading_PrBhyC": {
+          "type": "collection_heading",
+          "settings": {
+            "show_collection_title_count": false,
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "collection_description_NzG3Qj": {
+          "type": "collection_description",
+          "settings": {
+            "max_height": 0,
+            "text_size": "t2"
+          }
+        },
+        "spacer_imp6yn": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": true,
+            "spacing_top": 2.4,
+            "spacing_bottom": 2.4,
+            "spacer_visibility": "both",
+            "line_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_heading_PrBhyC",
+        "collection_description_NzG3Qj",
+        "spacer_imp6yn"
+      ],
+      "settings": {
+        "show_collection_image": true,
+        "show_product_image": false,
+        "image_overlay_opacity": 50,
+        "fix_image": false,
+        "image_ratio": "custom",
+        "desktop_section_height": 400,
+        "mobile_section_height": 160,
+        "full_width": true,
+        "full_width_animate": false,
+        "desktop_content_position": "md:justify-center md:items-center",
+        "mobile_content_position": "justify-start items-center",
+        "content_max_width": "l",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_box": "off",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-6",
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s"
+      }
+    },
+    "rich_text_3J9HRw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9FcdFR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop the Frame",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_kEVBFx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hover over one of the pulsating icons to view the corresponding part listing on the frame or view the list of parts on the side. </p>",
+            "text_size": "t3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9FcdFR",
+        "text_kEVBFx"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_max_width": "m",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "container_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s05",
+        "visibility": "",
+        "hide_when_empty": true
+      }
+    },
+    "17494821836f4da1fb": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_k3hKHA": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "dynamic_source": "{{ collection.metafields.custom.gallery_id.value }}",
+            "title": "Shop the Frame",
+            "subtitle": "Hover over one of the pulsating icons to view the corresponding part listing on the frame or view the list of parts on the side.",
+            "heading_size": "1.2",
+            "heading_color": "#000000",
+            "heading_align": "left",
+            "desc_style": "body",
+            "desc_color": "#000000",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_k3hKHA"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "scheme-9",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-s",
+        "visibility": ""
+      }
+    },
+    "banner-split": {
+      "type": "main-collection-split-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_title": true,
+        "heading_size": "h2",
+        "show_collection_title_count": true,
+        "show_collection_description": true,
+        "text_size": "t3",
+        "show_collection_image": true,
+        "show_product_image": false,
+        "collection_image_ratio": "adapt",
+        "stick_collection_info": true,
+        "image_position_desktop": "right",
+        "content_max_width": "m",
+        "desktop_heading_alignment": "left",
+        "mobile_heading_alignment": "left",
+        "color_scheme": "scheme-2",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
+        "heading_tag": "h1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "inline_promo_AtRrpT": {
+          "type": "inline_promo",
+          "disabled": true,
+          "settings": {
+            "position": 3,
+            "visibility": "",
+            "promo_image_overlay_opacity": 50,
+            "promo_text": "<h4>Promotion</h4><p>While stocks last.</p>",
+            "promo_url": "",
+            "promo_text_size": "h6-size",
+            "promo_text_position": "justify-center items-center",
+            "promo_text_alignment": "center",
+            "promo_text_padding": 1,
+            "promo_text_color": "#ffffff"
+          }
+        },
+        "top_promo_qw3d4n": {
+          "type": "top_promo",
+          "disabled": true,
+          "settings": {
+            "promo_image_min_height": 140,
+            "visibility": "",
+            "promo_image_overlay_opacity": 50,
+            "promo_text": "<h2>Promotion</h2>",
+            "promo_url": "",
+            "promo_text_size": "h4-size",
+            "promo_text_position": "justify-center items-center",
+            "promo_text_alignment": "center",
+            "promo_text_padding": 1,
+            "promo_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "inline_promo_AtRrpT",
+        "top_promo_qw3d4n"
+      ],
+      "custom_css": [
+        ".button--secondary {background-color: #e1a525; color: white;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "products_per_page": 15,
+        "columns_desktop": "4",
+        "columns_mobile": "1",
+        "filter_type": "vertical",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "show_filter_count": true,
+        "uppercase_filter_titles": true,
+        "open_all_accordions": true,
+        "show_more_number": 12,
+        "filter_text_size": "1.4",
+        "box_filters": "",
+        "box_filter_active": "border",
+        "show_image_box_filter_border": true,
+        "show_image_box_filter_labels": true,
+        "image_box_filter_cols": 2,
+        "image_box_filter_active": "border",
+        "swatch_size": 1.8,
+        "show_swatch_filter_labels": true,
+        "color_scheme": "",
+        "color_scheme_drawer": "",
+        "color_scheme_filter": "",
+        "color_scheme_filter_bar": "",
+        "card_shadow": true,
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s"
+      }
+    },
+    "spacer_KDamdW": {
+      "type": "spacer",
+      "settings": {
+        "full_width": false,
+        "show_line_separator": true,
+        "line_width": 80,
+        "spacing_top": 0,
+        "spacing_bottom": 0,
+        "color_scheme": "",
+        "line_color": "",
+        "visibility": ""
+      }
+    },
+    "rich_text_eWHqW4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FmJxHK": {
+          "type": "heading",
+          "settings": {
+            "heading": "This could be the page's H1.",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_LiJJqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEO text could go here.</p>",
+            "text_size": "t3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FmJxHK",
+        "text_LiJJqQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_max_width": "m",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "container_color_scheme": "",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "gallery_gx8rmi": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_item_Vzih9W": {
+          "type": "gallery_item",
+          "settings": {
+            "tall": false,
+            "wide": true,
+            "column_alignment": "left",
+            "text_vertical_alignment": "justify-end",
+            "content_max_width": "m",
+            "image": "shopify://shop_images/close-up-detail-bottom-pov-view-of-4x4-awd-suv-veh-2025-01-10-12-41-07-utc.jpg",
+            "image_overlay_opacity": 50,
+            "icon": "",
+            "icon_container": "circle",
+            "icon_size": 2.4,
+            "icon_color": "",
+            "icon_background_color": "#e66711",
+            "background_gradient": "",
+            "title": "Is My Vehicle Fixable?",
+            "heading_size": "h1",
+            "heading_size_custom": 2.4,
+            "text": "<p>Not sure if your rusted frame can be brought back to life? Let our team take a look. Send us your vehicle info and photos, and we’ll help you figure out the best repair path. Whether it’s a small patch or a full frame section, we’ll let you know what’s possible — and which Rust Buster kits are built to get the job done.</p>",
+            "text_size": "t1",
+            "button_text_size": "t4",
+            "button_label": "Send Us Your Vehicle",
+            "button_link": "/",
+            "button_style": "primary",
+            "button_style_show_arrow": true,
+            "card_link": "",
+            "card_color_scheme": "scheme-30070904-3bfb-41dd-9192-415bc6674672"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_Vzih9W"
+      ],
+      "settings": {
+        "columns_desktop": 2,
+        "spacing_grid": 10,
+        "spacing_grid_mobile": 16,
+        "corner_rounding": "outer",
+        "content_padding": 7,
+        "desktop_section_height": 500,
+        "mobile_section_height": 220,
+        "mobile_layout": "grid",
+        "full_width": true,
+        "content_max_width": "s",
+        "desktop_heading_alignment": "left",
+        "mobile_heading_alignment": "left",
+        "title": "",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "",
+        "text_size": "t3",
+        "view_all_link": "",
+        "view_all_text": "",
+        "view_all_text_size": "t3",
+        "section_color_scheme": "scheme-2",
+        "line_separator": "border-top",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "icons_with_text_74BKWK": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icon_with_text_jbidNc": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shield_checkmark",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>WELL TRUSTED</strong>",
+            "text": "Over 100k customers",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_M6Uyt6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "truck",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>SUPER FAST</strong>",
+            "text": "With Express delivery",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_UMWN7X": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "chat_bubbles",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>EXPERT HELP</strong>",
+            "text": "Seven days a week",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_GGDDDP": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "price_tags",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>BEST PRICES</strong>",
+            "text": "Unbeatable value",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_jbidNc",
+        "icon_with_text_M6Uyt6",
+        "icon_with_text_UMWN7X",
+        "icon_with_text_GGDDDP"
+      ],
+      "settings": {
+        "placement": "beside",
+        "content_vertical_alignment": "items-start",
+        "column_alignment": "left",
+        "vertical_padding": 2,
+        "icon_size": 2.8,
+        "heading_size": "t6",
+        "text_size": "t6",
+        "mobile_layout": "carousel",
+        "columns_mobile": "2",
+        "color_scheme": "scheme-3",
+        "line_separator": "border-top",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
+    "spacer_imhhye": {
+      "type": "spacer",
+      "settings": {
+        "full_width": true,
+        "show_line_separator": true,
+        "line_width": 100,
+        "spacing_top": 0,
+        "spacing_bottom": 0,
+        "color_scheme": "",
+        "line_color": "#2d2d2d",
+        "visibility": ""
+      }
+    }
+  },
+  "order": [
+    "ribbon_banner_zkP4Bb",
+    "breadcrumbs",
+    "banner",
+    "rich_text_3J9HRw",
+    "17494821836f4da1fb",
+    "banner-split",
+    "product-grid",
+    "spacer_KDamdW",
+    "rich_text_eWHqW4",
+    "gallery_gx8rmi",
+    "icons_with_text_74BKWK",
+    "spacer_imhhye"
+  ]
+}
