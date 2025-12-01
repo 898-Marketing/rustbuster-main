@@ -129,6 +129,49 @@
         "bottom_padding": "pb-s"
       }
     },
+    "rich_text_3J9HRw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9FcdFR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop the Frame",
+            "heading_italic_convert": "",
+            "heading_size": "h3",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_kEVBFx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hover over one of the pulsating icons to view the corresponding part listing on the frame or view the list of parts on the side. </p>",
+            "text_size": "t3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9FcdFR",
+        "text_kEVBFx"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_max_width": "m",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "container_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
+        "show_content_shadow": false,
+        "line_separator": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-0",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
     "17494821836f4da1fb": {
       "type": "apps",
       "blocks": {
@@ -136,7 +179,7 @@
           "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
           "settings": {
             "dynamic_source": "{{ collection.metafields.custom.gallery_id.value }}",
-            "title": "",
+            "title": "Shop The Frame",
             "subtitle": "",
             "heading_size": "1",
             "heading_color": "",
@@ -145,7 +188,7 @@
             "desc_color": "",
             "custom_class": "",
             "background_color": "",
-            "padding_top": 100,
+            "padding_top": 0,
             "padding_bottom": 36,
             "padding_left_right": 0
           }
@@ -158,7 +201,7 @@
         "include_margins": true,
         "color_scheme": "scheme-9",
         "line_separator": "",
-        "top_padding": "pt-s",
+        "top_padding": "pt-0",
         "bottom_padding": "pb-s",
         "visibility": ""
       }
@@ -480,6 +523,7 @@
     "ribbon_banner_zkP4Bb",
     "breadcrumbs",
     "banner",
+    "rich_text_3J9HRw",
     "17494821836f4da1fb",
     "banner-split",
     "product-grid",
