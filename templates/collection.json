@@ -155,6 +155,7 @@
         "heading_9FcdFR",
         "text_kEVBFx"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "desktop_content_position": "center",
@@ -169,6 +170,19 @@
         "bottom_padding": "pb-s05",
         "visibility": "",
         "hide_when_empty": true
+      }
+    },
+    "custom_liquid_NRHUXe": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in this collection.\n    </p>\n  </div>\n{% endif %}",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
       }
     },
     "17494821836f4da1fb": {
@@ -523,6 +537,7 @@
     "breadcrumbs",
     "banner",
     "rich_text_3J9HRw",
+    "custom_liquid_NRHUXe",
     "17494821836f4da1fb",
     "banner-split",
     "product-grid",
