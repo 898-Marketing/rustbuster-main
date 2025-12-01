@@ -155,7 +155,6 @@
         "heading_9FcdFR",
         "text_kEVBFx"
       ],
-      "disabled": true,
       "name": "Rich text",
       "settings": {
         "desktop_content_position": "center",
@@ -167,9 +166,9 @@
         "show_content_shadow": false,
         "line_separator": "",
         "top_padding": "pt-s",
-        "bottom_padding": "pb-0",
+        "bottom_padding": "pb-s05",
         "visibility": "",
-        "hide_when_empty": false
+        "hide_when_empty": true
       }
     },
     "17494821836f4da1fb": {
@@ -179,13 +178,13 @@
           "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
           "settings": {
             "dynamic_source": "{{ collection.metafields.custom.gallery_id.value }}",
-            "title": "Shop The Frame",
-            "subtitle": "",
+            "title": "Shop the Frame",
+            "subtitle": "Hover over one of the pulsating icons to view the corresponding part listing on the frame or view the list of parts on the side.",
             "heading_size": "1",
-            "heading_color": "",
+            "heading_color": "#000000",
             "heading_align": "left",
             "desc_style": "subtitle",
-            "desc_color": "",
+            "desc_color": "#000000",
             "custom_class": "",
             "background_color": "",
             "padding_top": 0,
