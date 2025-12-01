@@ -176,12 +176,12 @@
       "type": "custom-liquid",
       "name": "Custom Liquid",
       "settings": {
-        "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in this collection.\n    </p>\n  </div>\n{% endif %}",
-        "full_width": true,
-        "color_scheme": "",
+        "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\" style=\"text-align:center;\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in this collection.\n    </p>\n  </div>\n{% endif %}",
+        "full_width": false,
+        "color_scheme": "scheme-1",
         "line_separator": "",
-        "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
         "visibility": ""
       }
     },
