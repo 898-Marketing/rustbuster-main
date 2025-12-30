@@ -119,9 +119,41 @@
             "color_scheme": "scheme-2"
           }
         },
+        "richtext_XXGLHa": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h6>Optional Add-ons</h6>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
         "infinite_options_app_block_AKg8eE": {
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
+        },
+        "richtext_tFbfVL": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>*These options are optional</p>",
+            "text_size": "t5",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "spacer_mE94Fg": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 0.6,
+            "spacing_bottom": 0.6,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
+          }
         },
         "inventory_ADrHqA": {
           "type": "inventory",
@@ -163,7 +195,10 @@
         "panel_KaqEVk",
         "description_VVj7PD",
         "panel_EbDytj",
+        "richtext_XXGLHa",
         "infinite_options_app_block_AKg8eE",
+        "richtext_tFbfVL",
+        "spacer_mE94Fg",
         "inventory_ADrHqA",
         "price",
         "buy_buttons"
