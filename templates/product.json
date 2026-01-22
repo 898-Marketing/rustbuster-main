@@ -300,6 +300,9 @@
       "block_order": [
         "text_dyL3R9"
       ],
+      "custom_css": [
+        ".featured-description{display: none !important; }"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_max_width": "l",
