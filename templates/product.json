@@ -35,13 +35,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "rating_PyGT9p": {
-          "type": "rating",
-          "settings": {
-            "rating_size": "1.7",
-            "margin_top": "mt--1"
-          }
-        },
         "richtext_V78c8D": {
           "type": "richtext",
           "settings": {
@@ -49,6 +42,13 @@
             "text_size": "t3",
             "stock_visibility": "either",
             "show_in_quickbuy": true
+          }
+        },
+        "rating_PyGT9p": {
+          "type": "rating",
+          "settings": {
+            "rating_size": "1.7",
+            "margin_top": "mt--1"
           }
         },
         "richtext_wEDaLW": {
@@ -236,8 +236,8 @@
         }
       },
       "block_order": [
-        "rating_PyGT9p",
         "richtext_V78c8D",
+        "rating_PyGT9p",
         "richtext_wEDaLW",
         "richtext_xtdgbK",
         "spacer_XCjAkL",
