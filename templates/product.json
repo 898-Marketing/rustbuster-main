@@ -21,28 +21,22 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "variant_picker": {
-          "type": "variant_picker",
+        "richtext_V78c8D": {
+          "type": "richtext",
           "settings": {
-            "picker_type": "button",
-            "show_availability": true,
-            "box_size": "1",
-            "pill_text_size": "t4",
-            "pill_text_weight": "500",
-            "pill_text_transform": "none",
-            "prefix": "",
-            "variant_label_text_size": "t4",
-            "variant_label_text_weight": "normal",
-            "variant_label_text_transform": "",
-            "swatch_enabled": true,
-            "swatch_size": 1.6,
-            "swatch_box": true,
-            "size_chart_options": "Size",
-            "popup_style": "center",
-            "size_chart_icon": "ruler",
-            "size_chart_label": "",
-            "size_chart_page": "",
-            "stock_visibility": "either"
+            "text": "<h1>{{ product.title }}</h1>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "richtext_wEDaLW": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h6>Fitment:</h6>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
           }
         },
         "richtext_xtdgbK": {
@@ -119,6 +113,39 @@
             "color_scheme": "scheme-2"
           }
         },
+        "richtext_XQtgFD": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h6>Choose a Door Side</h6>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_availability": true,
+            "box_size": "1",
+            "pill_text_size": "t4",
+            "pill_text_weight": "500",
+            "pill_text_transform": "none",
+            "prefix": "",
+            "variant_label_text_size": "t4",
+            "variant_label_text_weight": "normal",
+            "variant_label_text_transform": "",
+            "swatch_enabled": true,
+            "swatch_size": 1.6,
+            "swatch_box": true,
+            "size_chart_options": "Size",
+            "popup_style": "center",
+            "size_chart_icon": "ruler",
+            "size_chart_label": "",
+            "size_chart_page": "",
+            "stock_visibility": "either"
+          }
+        },
         "richtext_XXGLHa": {
           "type": "richtext",
           "settings": {
@@ -188,13 +215,16 @@
         }
       },
       "block_order": [
-        "variant_picker",
+        "richtext_V78c8D",
+        "richtext_wEDaLW",
         "richtext_xtdgbK",
         "spacer_XCjAkL",
         "richtext_RUK8ME",
         "panel_KaqEVk",
         "description_VVj7PD",
         "panel_EbDytj",
+        "richtext_XQtgFD",
+        "variant_picker",
         "richtext_XXGLHa",
         "infinite_options_app_block_AKg8eE",
         "richtext_tFbfVL",
@@ -203,13 +233,15 @@
         "price",
         "buy_buttons"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".rte h1 {margin-bottom: 30px; font-size: 35px;}"
+      ],
       "settings": {
         "gallery_layout": "stacked",
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
-        "page_title_enabled": true,
+        "page_title_enabled": false,
         "page_title_vendor": true,
         "page_title_price": false,
         "page_title_review_stars": false,
@@ -301,7 +333,7 @@
         "text_dyL3R9"
       ],
       "custom_css": [
-        ".featured-description{display: none !important; }"
+        ".featured-description {display: none !important;}"
       ],
       "settings": {
         "desktop_content_position": "center",
