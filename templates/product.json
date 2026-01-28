@@ -18,6 +18,20 @@
         "visibility": ""
       }
     },
+    "spacer_kC7GdJ": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "full_width": false,
+        "show_line_separator": false,
+        "line_width": 100,
+        "spacing_top": 2.4,
+        "spacing_bottom": 2.4,
+        "color_scheme": "",
+        "line_color": "",
+        "visibility": ""
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -946,6 +960,7 @@
   },
   "order": [
     "breadcrumbs",
+    "spacer_kC7GdJ",
     "main",
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
