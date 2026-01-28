@@ -35,6 +35,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating_PyGT9p": {
+          "type": "rating",
+          "settings": {
+            "rating_size": "1.7",
+            "margin_top": "mt--1"
+          }
+        },
         "richtext_V78c8D": {
           "type": "richtext",
           "settings": {
@@ -229,6 +236,7 @@
         }
       },
       "block_order": [
+        "rating_PyGT9p",
         "richtext_V78c8D",
         "richtext_wEDaLW",
         "richtext_xtdgbK",
