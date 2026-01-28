@@ -208,17 +208,6 @@
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
         },
-        "infinite_options_app_block_price_fEFetV": {
-          "type": "shopify://apps/infinite-options/blocks/app-block-price/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {
-            "color": "#000000",
-            "font": "Assistant, sans-serif",
-            "font_size": "18px",
-            "compare_at_color": "#999999",
-            "compare_at_font_size": "14px",
-            "compare_at_position": "before"
-          }
-        },
         "richtext_tFbfVL": {
           "type": "richtext",
           "settings": {
@@ -251,8 +240,20 @@
             "text_size": "t7"
           }
         },
+        "infinite_options_app_block_price_fEFetV": {
+          "type": "shopify://apps/infinite-options/blocks/app-block-price/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+            "color": "#000000",
+            "font": "Assistant, sans-serif",
+            "font_size": "23px",
+            "compare_at_color": "#999999",
+            "compare_at_font_size": "14px",
+            "compare_at_position": "before"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_tax_info": true,
             "price_color": "#ea0707",
@@ -290,10 +291,10 @@
         "variant_picker",
         "richtext_XXGLHa",
         "infinite_options_app_block_AKg8eE",
-        "infinite_options_app_block_price_fEFetV",
         "richtext_tFbfVL",
         "spacer_mE94Fg",
         "inventory_ADrHqA",
+        "infinite_options_app_block_price_fEFetV",
         "price",
         "buy_buttons"
       ],
