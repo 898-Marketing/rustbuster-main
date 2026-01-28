@@ -51,6 +51,20 @@
             "margin_top": "mt--1"
           }
         },
+        "spacer_hc8cw3": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 1,
+            "spacing_bottom": 1,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
+          }
+        },
         "richtext_wEDaLW": {
           "type": "richtext",
           "settings": {
@@ -58,6 +72,20 @@
             "text_size": "t3",
             "stock_visibility": "either",
             "show_in_quickbuy": true
+          }
+        },
+        "spacer_Jx7Jqw": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 1,
+            "spacing_bottom": 1,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
           }
         },
         "richtext_xtdgbK": {
@@ -238,7 +266,9 @@
       "block_order": [
         "richtext_V78c8D",
         "rating_PyGT9p",
+        "spacer_hc8cw3",
         "richtext_wEDaLW",
+        "spacer_Jx7Jqw",
         "richtext_xtdgbK",
         "spacer_XCjAkL",
         "richtext_RUK8ME",
