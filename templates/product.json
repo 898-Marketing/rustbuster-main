@@ -316,7 +316,7 @@
         "page_title_vendor": false,
         "page_title_price": false,
         "page_title_review_stars": false,
-        "page_title_size": "h4",
+        "page_title_size": "h2",
         "page_title_visibility": "",
         "scroll_to_active_variant_on_change": true,
         "highlight_active_media": false,
