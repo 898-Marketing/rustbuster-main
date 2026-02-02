@@ -164,6 +164,7 @@
         },
         "richtext_XQtgFD": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<h6>Choose a Door Side</h6>",
             "text_size": "t3",
@@ -181,8 +182,8 @@
             "pill_text_weight": "500",
             "pill_text_transform": "none",
             "prefix": "",
-            "variant_label_text_size": "t4",
-            "variant_label_text_weight": "normal",
+            "variant_label_text_size": "t1",
+            "variant_label_text_weight": "bold",
             "variant_label_text_transform": "",
             "swatch_enabled": true,
             "swatch_size": 1.6,
@@ -197,6 +198,7 @@
         },
         "richtext_XXGLHa": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<h6>Optional Add-ons</h6>",
             "text_size": "t3",
