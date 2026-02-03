@@ -91,7 +91,7 @@
         "richtext_xtdgbK": {
           "type": "richtext",
           "settings": {
-            "text": "{{ product.metafields.custom.featured_description | metafield_tag }}",
+            "text": "{{ product.metafields.custom.fitment | metafield_tag }}",
             "text_size": "t3",
             "stock_visibility": "either",
             "show_in_quickbuy": true
@@ -307,7 +307,7 @@
         "buy_buttons"
       ],
       "custom_css": [
-        ".rte h1 {margin-bottom: 30px; font-size: 35px;}"
+        ".rte h1 {margin-bottom: 30px; font-size: 30px;}"
       ],
       "settings": {
         "gallery_layout": "columns",
