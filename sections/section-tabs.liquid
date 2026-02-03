@@ -9,6 +9,7 @@
 <lazy-script src="{{ 'section-tabs.js' | asset_url }}" defer="defer"></lazy-script>
 
 {%- assign num_section_tabs = section.settings.section_tabs | plus: 0 -%}
+{%- assign something_is_checked = false -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient" data-num-sections="{{ section.settings.section_tabs }}">
   <div class="section__inner {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
@@ -20,14 +21,16 @@
     <div class="page-width flex justify-{{ section.settings.tab_alignment }}">
       <div class="horizontal-scroll">
         <section-tabs class="block responsive-margin-bottom custom-tabs custom-tabs--{{ section.settings.tab_style }} {{ section.settings.tab_text_size }}">
-          <div class="flex">
-            <label class="custom-tab tap-target--small">
-              <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="1"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
-              {{ section.settings.tab1 | default: 'Tab 1' }}
-            </label>
-          </div>
+          {% if product.metafields.custom[section.settings.tab1_metafield_key] != blank %}
+            <div class="flex">
+              <label class="custom-tab tap-target--small">
+                <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="1"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
+                {{ section.settings.tab1 | default: 'Tab 1' }}
+              </label>
+            </div>
+          {% endif %}
 
-          {% if num_section_tabs > 1 %}
+          {% if num_section_tabs > 1 and product.metafields.custom[section.settings.tab2_metafield_key] != blank %}
             <div class="flex">
               <label class="custom-tab tap-target--small">
                 <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="2"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
@@ -36,7 +39,7 @@
             </div>
           {% endif %}
 
-          {% if num_section_tabs > 2 %}
+          {% if num_section_tabs > 2 and product.metafields.custom[section.settings.tab3_metafield_key] != blank %}
             <div class="flex">
               <label class="custom-tab tap-target--small">
                 <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="3"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
@@ -45,7 +48,7 @@
             </div>
           {% endif %}
 
-          {% if num_section_tabs > 3 %}
+          {% if num_section_tabs > 3 and product.metafields.custom[section.settings.tab4_metafield_key] != blank %}
             <div class="flex">
               <label class="custom-tab tap-target--small">
                 <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="4"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
@@ -104,8 +107,20 @@
     },
     {
       "type": "text",
+      "id": "tab1_metafield_key",
+      "label": "Tab 1 metafield key",
+      "info": "Enter the metafield key (e.g., 'product_description')"
+    },
+    {
+      "type": "text",
       "id": "tab2",
       "label": "Tab 2 title"
+    },
+    {
+      "type": "text",
+      "id": "tab2_metafield_key",
+      "label": "Tab 2 metafield key",
+      "info": "Enter the metafield key (e.g., 'installation_guide')"
     },
     {
       "type": "text",
@@ -114,8 +129,20 @@
     },
     {
       "type": "text",
+      "id": "tab3_metafield_key",
+      "label": "Tab 3 metafield key",
+      "info": "Enter the metafield key (e.g., 'dimensions')"
+    },
+    {
+      "type": "text",
       "id": "tab4",
       "label": "Tab 4 title"
+    },
+    {
+      "type": "text",
+      "id": "tab4_metafield_key",
+      "label": "Tab 4 metafield key",
+      "info": "Enter the metafield key (optional)"
     },
     {
       "type": "header",
@@ -215,8 +242,7 @@
     "id": "mobile_heading_alignment",
     "default": "center",
     "label": "Heading alignment on mobile"
-  }
-,
+  },
     {
       "type": "header",
       "content": "Heading"
@@ -301,8 +327,7 @@
     ],
     "default": "h2",
     "label": "Heading size"
-  }
-,
+  },
     {
       "type": "header",
       "content": "Description"
@@ -349,8 +374,7 @@
     ],
     "default": "t3",
     "label": "Text size"
-  }
-,
+  },
     {
       "type": "header",
       "content": "Style"
