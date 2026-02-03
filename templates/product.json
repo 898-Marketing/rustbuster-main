@@ -18,37 +18,80 @@
         "visibility": ""
       }
     },
+    "spacer_kC7GdJ": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "full_width": false,
+        "show_line_separator": false,
+        "line_width": 100,
+        "spacing_top": 2.4,
+        "spacing_bottom": 2.4,
+        "color_scheme": "",
+        "line_color": "",
+        "visibility": ""
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
-        "variant_picker": {
-          "type": "variant_picker",
+        "richtext_V78c8D": {
+          "type": "richtext",
           "settings": {
-            "picker_type": "button",
-            "show_availability": true,
-            "box_size": "1",
-            "pill_text_size": "t4",
-            "pill_text_weight": "500",
-            "pill_text_transform": "none",
-            "prefix": "",
-            "variant_label_text_size": "t4",
-            "variant_label_text_weight": "normal",
-            "variant_label_text_transform": "",
-            "swatch_enabled": true,
-            "swatch_size": 1.6,
-            "swatch_box": true,
-            "size_chart_options": "Size",
-            "popup_style": "center",
-            "size_chart_icon": "ruler",
-            "size_chart_label": "",
-            "size_chart_page": "",
-            "stock_visibility": "either"
+            "text": "<h1>{{ product.title }}</h1>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "rating_PyGT9p": {
+          "type": "rating",
+          "settings": {
+            "rating_size": "2.4",
+            "margin_top": "mt--1"
+          }
+        },
+        "spacer_hc8cw3": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 1,
+            "spacing_bottom": 1,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
+          }
+        },
+        "richtext_wEDaLW": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h6>Fitment:</h6>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "spacer_Jx7Jqw": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 1,
+            "spacing_bottom": 1,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
           }
         },
         "richtext_xtdgbK": {
           "type": "richtext",
           "settings": {
-            "text": "{{ product.metafields.custom.featured_description | metafield_tag }}",
+            "text": "{{ product.metafields.custom.fitment | metafield_tag }}",
             "text_size": "t3",
             "stock_visibility": "either",
             "show_in_quickbuy": true
@@ -119,8 +162,43 @@
             "color_scheme": "scheme-2"
           }
         },
+        "richtext_XQtgFD": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "text": "<h6>Choose a Door Side</h6>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_availability": true,
+            "box_size": "1",
+            "pill_text_size": "t4",
+            "pill_text_weight": "500",
+            "pill_text_transform": "none",
+            "prefix": "",
+            "variant_label_text_size": "t1",
+            "variant_label_text_weight": "bold",
+            "variant_label_text_transform": "",
+            "swatch_enabled": true,
+            "swatch_size": 1.6,
+            "swatch_box": true,
+            "size_chart_options": "Size",
+            "popup_style": "center",
+            "size_chart_icon": "ruler",
+            "size_chart_label": "",
+            "size_chart_page": "",
+            "stock_visibility": "either"
+          }
+        },
         "richtext_XXGLHa": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<h6>Optional Add-ons</h6>",
             "text_size": "t3",
@@ -128,14 +206,19 @@
             "show_in_quickbuy": true
           }
         },
+        "mw_bundle_builder_addons_app_block_4ArxPR": {
+          "type": "shopify://apps/mw-bundle-builder/blocks/addons-app-block/5bcb1a6d-53b5-4d9c-b4f9-19f6620da62b",
+          "settings": {}
+        },
         "infinite_options_app_block_AKg8eE": {
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "disabled": true,
           "settings": {}
         },
         "richtext_tFbfVL": {
           "type": "richtext",
           "settings": {
-            "text": "<p>*These options are optional</p>",
+            "text": "<p>*These items are optional</p>",
             "text_size": "t5",
             "stock_visibility": "either",
             "show_in_quickbuy": true
@@ -164,6 +247,18 @@
             "text_size": "t7"
           }
         },
+        "infinite_options_app_block_price_fEFetV": {
+          "type": "shopify://apps/infinite-options/blocks/app-block-price/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "disabled": true,
+          "settings": {
+            "color": "#000000",
+            "font": "Assistant, sans-serif",
+            "font_size": "23px",
+            "compare_at_color": "#999999",
+            "compare_at_font_size": "14px",
+            "compare_at_position": "before"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -188,29 +283,40 @@
         }
       },
       "block_order": [
-        "variant_picker",
+        "richtext_V78c8D",
+        "rating_PyGT9p",
+        "spacer_hc8cw3",
+        "richtext_wEDaLW",
+        "spacer_Jx7Jqw",
         "richtext_xtdgbK",
         "spacer_XCjAkL",
         "richtext_RUK8ME",
         "panel_KaqEVk",
         "description_VVj7PD",
         "panel_EbDytj",
+        "richtext_XQtgFD",
+        "variant_picker",
         "richtext_XXGLHa",
+        "mw_bundle_builder_addons_app_block_4ArxPR",
         "infinite_options_app_block_AKg8eE",
         "richtext_tFbfVL",
         "spacer_mE94Fg",
         "inventory_ADrHqA",
+        "infinite_options_app_block_price_fEFetV",
         "price",
         "buy_buttons"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".rte h1 {margin-bottom: 30px; font-size: 30px;}",
+        ".metafield-single_line_text_field {font-weight: 600;}"
+      ],
       "settings": {
         "gallery_layout": "stacked",
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
-        "page_title_enabled": true,
-        "page_title_vendor": true,
+        "page_title_enabled": false,
+        "page_title_vendor": false,
         "page_title_price": false,
         "page_title_review_stars": false,
         "page_title_size": "h2",
@@ -221,10 +327,10 @@
         "slider_controls_mobile": true,
         "slider_full_width_mobile": false,
         "enable_sticky_info": true,
-        "media_size": "small",
+        "media_size": "large",
         "main_image_ratio": "landscape_wide",
         "media_fit": false,
-        "product_media_radius": 16,
+        "product_media_radius": 0,
         "product_media_scale": 100,
         "enable_video_looping": false,
         "show_media_shadow": true,
@@ -267,11 +373,8 @@
         "section_tabs": "3",
         "tab1": "Product Description",
         "tab2": "Install Guide",
-        "tab2_metafield_key": "install_guide",
         "tab3": "Dimensions",
-        "tab3_metafield_key": "product_dimensions_image",
         "tab4": "",
-        "tab4_metafield_key": "",
         "tab_style": "switch",
         "tab_alignment": "center",
         "tab_text_size": "t2",
@@ -917,6 +1020,7 @@
   },
   "order": [
     "breadcrumbs",
+    "spacer_kC7GdJ",
     "main",
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
