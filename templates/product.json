@@ -307,7 +307,8 @@
         "buy_buttons"
       ],
       "custom_css": [
-        ".rte h1 {margin-bottom: 30px; font-size: 30px;}"
+        ".rte h1 {margin-bottom: 30px; font-size: 30px;}",
+        ".metafield-single_line_text_field {font-weight: 600;}"
       ],
       "settings": {
         "gallery_layout": "stacked",
