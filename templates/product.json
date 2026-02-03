@@ -310,7 +310,7 @@
         ".rte h1 {margin-bottom: 30px; font-size: 30px;}"
       ],
       "settings": {
-        "gallery_layout": "columns",
+        "gallery_layout": "stacked",
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
@@ -326,10 +326,10 @@
         "slider_controls_mobile": true,
         "slider_full_width_mobile": false,
         "enable_sticky_info": true,
-        "media_size": "small",
+        "media_size": "large",
         "main_image_ratio": "landscape_wide",
         "media_fit": false,
-        "product_media_radius": 16,
+        "product_media_radius": 0,
         "product_media_scale": 100,
         "enable_video_looping": false,
         "show_media_shadow": true,
