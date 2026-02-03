@@ -47,7 +47,7 @@
         "rating_PyGT9p": {
           "type": "rating",
           "settings": {
-            "rating_size": "1.7",
+            "rating_size": "2.4",
             "margin_top": "mt--1"
           }
         },
