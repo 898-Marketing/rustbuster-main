@@ -218,7 +218,7 @@
         "richtext_tFbfVL": {
           "type": "richtext",
           "settings": {
-            "text": "<p>*These options are optional</p>",
+            "text": "<p>*These items are optional</p>",
             "text_size": "t5",
             "stock_visibility": "either",
             "show_in_quickbuy": true
