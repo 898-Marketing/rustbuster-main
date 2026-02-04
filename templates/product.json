@@ -433,7 +433,7 @@
         "heading_eYXUng": {
           "type": "heading",
           "settings": {
-            "heading": "Installation Guide",
+            "heading": "Installation Guide for {{ product.title }}",
             "heading_italic_convert": "",
             "heading_size": "h3",
             "heading_size_custom": 2.4,
