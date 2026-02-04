@@ -481,7 +481,7 @@
         "heading_4citn3": {
           "type": "heading",
           "settings": {
-            "heading": "Product Dimensions",
+            "heading": "Product Dimensions for {{ product.title }}",
             "heading_italic_convert": "",
             "heading_size": "h3",
             "heading_size_custom": 2.4,
