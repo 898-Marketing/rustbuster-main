@@ -375,7 +375,7 @@
         "tab2": "Install Guide",
         "tab2_metafield_key": "install_guide",
         "tab3": "Dimensions",
-        "tab3_metafield_key": "product_dimensions_image",
+        "tab3_metafield_key": "product_dimensions_image, product_dimensions_text",
         "tab4": "",
         "tab4_metafield_key": "",
         "tab_style": "switch",
