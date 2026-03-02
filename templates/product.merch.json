@@ -19,7 +19,7 @@
       }
     },
     "main": {
-      "type": "main-product",
+      "type": "main-product-merch",
       "blocks": {
         "description_VVj7PD": {
           "type": "description",
