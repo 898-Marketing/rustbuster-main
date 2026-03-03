@@ -187,6 +187,9 @@
         "product_badges_nGN6yi",
         "spacer_PKVqBG"
       ],
+      "custom_css": [
+        ".variant-selection-message {display: none !important;}"
+      ],
       "settings": {
         "gallery_layout": "slider",
         "sticky_panel": "",
