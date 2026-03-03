@@ -12,25 +12,27 @@
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true, show_price: true %}
 {% endcomment %}
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('{{ product_form_id }}');
-    if (!form) return;
-    var idInput = form.querySelector('input[name="id"]');
-    var submit = form.querySelector('[name="add"]');
-    
-    if (idInput && submit && !idInput.value) {
-      submit.setAttribute('disabled', 'disabled');
+{% unless product.template_suffix == 'merch' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('{{ product_form_id }}');
+      if (!form) return;
+      var idInput = form.querySelector('input[name="id"]');
+      var submit = form.querySelector('[name="add"]');
       
-      // Fallback: find and show variant selection message
-      var variantSelects = form.closest('.product__info-wrapper')?.querySelector('variant-selects');
-      var messageElement = variantSelects?.querySelector('.variant-selection-message');
-      if (messageElement) {
-        messageElement.style.display = 'block';
+      if (idInput && submit && !idInput.value) {
+        submit.setAttribute('disabled', 'disabled');
+        
+        // Fallback: find and show variant selection message
+        var variantSelects = form.closest('.product__info-wrapper')?.querySelector('variant-selects');
+        var messageElement = variantSelects?.querySelector('.variant-selection-message');
+        if (messageElement) {
+          messageElement.style.display = 'block';
+        }
       }
-    }
-  });
-</script>
+    });
+  </script>
+{% endunless %}
 
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
@@ -138,7 +140,9 @@
               </div>
             {%- endif -%}
 
-            <div class="variant-selection-message" style="display: none; color:#ffb6b; font-size: 0.9rem; margin-bottom: 0.5rem; text-align: center;"> Please choose a side to add to cart. </div>
+            {% unless product.template_suffix == 'merch' %}
+              <div class="variant-selection-message" style="display: none; color:#ffb6b; font-size: 0.9rem; margin-bottom: 0.5rem; text-align: center;"> Please choose a side to add to cart. </div>
+            {% endunless %}
 
             <div class="grow">
               <button
