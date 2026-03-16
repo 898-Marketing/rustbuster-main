@@ -187,9 +187,6 @@
         "product_badges_nGN6yi",
         "spacer_PKVqBG"
       ],
-      "custom_css": [
-        ".variant-selection-message {display: none !important;}"
-      ],
       "settings": {
         "gallery_layout": "slider",
         "sticky_panel": "",
@@ -207,7 +204,7 @@
         "slider_controls_mobile": true,
         "slider_full_width_mobile": false,
         "enable_sticky_info": true,
-        "media_size": "medium",
+        "media_size": "large",
         "main_image_ratio": "square",
         "media_fit": false,
         "product_media_radius": 2,
@@ -488,6 +485,49 @@
         "hide_when_empty": true,
         "heading_tag": "h2"
       }
+    },
+    "alert_DtAfgB": {
+      "type": "alert",
+      "blocks": {
+        "text_J3aeGA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sustainable product</strong></p><p>Made with 88% organic material</p>",
+            "text_size": "t3"
+          }
+        }
+      },
+      "block_order": [
+        "text_J3aeGA"
+      ],
+      "settings": {
+        "show_delay": 4,
+        "auto_close": 0,
+        "show_close": true,
+        "mode": "enabled",
+        "desktop_content_position": "md:justify-start md:items-end",
+        "mobile_content_position": "justify-start items-end",
+        "content_max_width": "xs",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "content_padding": 1.8,
+        "icon": "earth",
+        "icon_container": "none",
+        "icon_size": 5.4,
+        "icon_color": "",
+        "icon_background_color": "#ededed",
+        "background_gradient": "",
+        "image_cover": true,
+        "image_position_desktop": "left",
+        "image_position_mobile": "left",
+        "image_size_desktop": 150,
+        "image_size_mobile": 150,
+        "image_overlay_opacity": 0,
+        "color_scheme": "",
+        "close_color": "",
+        "visibility": "both",
+        "hide_when_empty": false
+      }
     }
   },
   "order": [
@@ -496,6 +536,7 @@
     "quick_order_list_TJVHJp",
     "related-products",
     "collapsible_content_t3C4Tq",
-    "testimonials_wGiqtd"
+    "testimonials_wGiqtd",
+    "alert_DtAfgB"
   ]
 }

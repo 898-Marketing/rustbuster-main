@@ -32,34 +32,46 @@
             </div>
           {% endif %}
 
-          <!-- Tab 2 - Metafield -->
-          {% if num_section_tabs > 1 and product.metafields.custom[section.settings.tab2_metafield_key] != blank %}
-            <div class="flex">
-              <label class="custom-tab tap-target--small">
-                <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="2"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
-                {{ section.settings.tab2 | default: 'Tab 2' }}
-              </label>
-            </div>
+          <!-- Tab 2 - Metafields -->
+          {% assign tab2_metafield_primary = product.metafields.custom[section.settings.tab2_metafield_key] %}
+          {% assign tab2_metafield_secondary = product.metafields.custom[section.settings.tab2_metafield_key_secondary] %}
+          {% if num_section_tabs > 1 %}
+            {% if tab2_metafield_primary != blank or tab2_metafield_secondary != blank %}
+              <div class="flex">
+                <label class="custom-tab tap-target--small">
+                  <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="2"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
+                  {{ section.settings.tab2 | default: 'Tab 2' }}
+                </label>
+              </div>
+            {% endif %}
           {% endif %}
 
-          <!-- Tab 3 - Metafield -->
-          {% if num_section_tabs > 2 and product.metafields.custom[section.settings.tab3_metafield_key] != blank %}
-            <div class="flex">
-              <label class="custom-tab tap-target--small">
-                <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="3"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
-                {{ section.settings.tab3 | default: 'Tab 3' }}
-              </label>
-            </div>
+          <!-- Tab 3 - Metafields -->
+          {% assign tab3_metafield_primary = product.metafields.custom[section.settings.tab3_metafield_key] %}
+          {% assign tab3_metafield_secondary = product.metafields.custom[section.settings.tab3_metafield_key_secondary] %}
+          {% if num_section_tabs > 2 %}
+            {% if tab3_metafield_primary != blank or tab3_metafield_secondary != blank %}
+              <div class="flex">
+                <label class="custom-tab tap-target--small">
+                  <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="3"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
+                  {{ section.settings.tab3 | default: 'Tab 3' }}
+                </label>
+              </div>
+            {% endif %}
           {% endif %}
 
-          <!-- Tab 4 - Metafield -->
-          {% if num_section_tabs > 3 and product.metafields.custom[section.settings.tab4_metafield_key] != blank %}
-            <div class="flex">
-              <label class="custom-tab tap-target--small">
-                <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="4"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
-                {{ section.settings.tab4 | default: 'Tab 4' }}
-              </label>
-            </div>
+          <!-- Tab 4 - Metafields -->
+          {% assign tab4_metafield_primary = product.metafields.custom[section.settings.tab4_metafield_key] %}
+          {% assign tab4_metafield_secondary = product.metafields.custom[section.settings.tab4_metafield_key_secondary] %}
+          {% if num_section_tabs > 3 %}
+            {% if tab4_metafield_primary != blank or tab4_metafield_secondary != blank %}
+              <div class="flex">
+                <label class="custom-tab tap-target--small">
+                  <input type="radio" class="field__checkbox" name="{{ section.id }}__radio" value="4"{% unless something_is_checked %} checked{%- assign something_is_checked = true -%}{% endunless %}/>
+                  {{ section.settings.tab4 | default: 'Tab 4' }}
+                </label>
+              </div>
+            {% endif %}
           {% endif %}
 
         </section-tabs>
@@ -125,6 +137,12 @@
     },
     {
       "type": "text",
+      "id": "tab2_metafield_key_secondary",
+      "label": "Tab 2 secondary metafield key",
+      "info": "Optional: enter a second metafield key that can also trigger this tab"
+    },
+    {
+      "type": "text",
       "id": "tab3",
       "label": "Tab 3 title"
     },
@@ -136,6 +154,12 @@
     },
     {
       "type": "text",
+      "id": "tab3_metafield_key_secondary",
+      "label": "Tab 3 secondary metafield key",
+      "info": "Optional: enter a second metafield key that can also trigger this tab"
+    },
+    {
+      "type": "text",
       "id": "tab4",
       "label": "Tab 4 title"
     },
@@ -144,6 +168,12 @@
       "id": "tab4_metafield_key",
       "label": "Tab 4 metafield key",
       "info": "Enter the metafield key (optional)"
+    },
+    {
+      "type": "text",
+      "id": "tab4_metafield_key_secondary",
+      "label": "Tab 4 secondary metafield key",
+      "info": "Optional: enter a second metafield key that can also trigger this tab"
     },
     {
       "type": "header",
