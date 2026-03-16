@@ -131,8 +131,8 @@ body:has(.sticky-cta) .section-image-hotspots:not(:has(.hotspot--visible)) {
 @media screen and (min-width: 1200px) {
   .product--large .product__info-padded,
   .product--medium .product__info-padded {
-    --info-padding-y: 4rem;
-    --info-padding-x: 4rem;
+    --info-padding-y: 3rem;
+    --info-padding-x: 3rem;
   }
 
   .product--large {
