@@ -219,6 +219,38 @@
         "visibility": ""
       }
     },
+    "section_tabs_qcVY4V": {
+      "type": "section-tabs",
+      "name": "Section tabs",
+      "settings": {
+        "section_tabs": "3",
+        "tab1": "",
+        "tab2": "2WD",
+        "tab2_metafield_key": "custom.gallery_id",
+        "tab2_metafield_key_secondary": "",
+        "tab3": "AWD",
+        "tab3_metafield_key": "custom.gallery_id",
+        "tab3_metafield_key_secondary": "",
+        "tab4": "",
+        "tab4_metafield_key": "",
+        "tab4_metafield_key_secondary": "",
+        "tab_style": "switch",
+        "tab_alignment": "center",
+        "tab_text_size": "t2",
+        "content_max_width": "m",
+        "desktop_heading_alignment": "center",
+        "mobile_heading_alignment": "center",
+        "title": "",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "",
+        "text_size": "t3",
+        "color_scheme": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-0",
+        "heading_tag": "h2"
+      }
+    },
     "banner-split": {
       "type": "main-collection-split-banner",
       "disabled": true,
@@ -539,6 +571,7 @@
     "rich_text_3J9HRw",
     "custom_liquid_NRHUXe",
     "17494821836f4da1fb",
+    "section_tabs_qcVY4V",
     "banner-split",
     "product-grid",
     "spacer_KDamdW",
