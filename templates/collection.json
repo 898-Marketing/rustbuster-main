@@ -191,17 +191,17 @@
       "settings": {
         "tab_style": "switch",
         "tab_alignment": "center",
-        "tab_text_size": "t2",
+        "tab_text_size": "t3",
         "content_max_width": "m",
         "desktop_heading_alignment": "center",
         "mobile_heading_alignment": "center",
-        "title": "",
+        "title": "Select a Variant",
         "italic_convert": "",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "text": "",
         "text_size": "t3",
         "color_scheme": "scheme-2",
-        "top_padding": "pt-s",
+        "top_padding": "pt-0",
         "bottom_padding": "pb-0",
         "heading_tag": "h2"
       }
