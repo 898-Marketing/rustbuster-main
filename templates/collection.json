@@ -185,6 +185,27 @@
         "visibility": ""
       }
     },
+    "vehicle_gallery_tabs_BzGiAh": {
+      "type": "vehicle-gallery-tabs",
+      "name": "Vehicle Gallery Tabs",
+      "settings": {
+        "tab_style": "switch",
+        "tab_alignment": "center",
+        "tab_text_size": "t2",
+        "content_max_width": "m",
+        "desktop_heading_alignment": "center",
+        "mobile_heading_alignment": "center",
+        "title": "",
+        "italic_convert": "",
+        "heading_size": "h2",
+        "text": "",
+        "text_size": "t3",
+        "color_scheme": "",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-0",
+        "heading_tag": "h2"
+      }
+    },
     "17494821836f4da1fb": {
       "type": "apps",
       "blocks": {
@@ -538,6 +559,7 @@
     "banner",
     "rich_text_3J9HRw",
     "custom_liquid_NRHUXe",
+    "vehicle_gallery_tabs_BzGiAh",
     "17494821836f4da1fb",
     "banner-split",
     "product-grid",
