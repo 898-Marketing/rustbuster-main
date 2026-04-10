@@ -1,0 +1,435 @@
+{%- comment -%}theme-check-disable SchemaJsonFormat{%- endcomment -%}
+
+{%- if section.index < 3 or request.design_mode -%}
+    {{ 'component-section-tabs.css' | asset_url | stylesheet_tag }}
+  {%- else -%}
+    <link rel="stylesheet" href="{{ 'component-section-tabs.css' | asset_url }}" media="print" onload="this.media='all'">
+  {%- endif -%}
+  
+  {%- assign variants = collection.metafields.vehicle_config.variants.value -%}
+  
+  {% if variants and variants.size > 0 %}
+  
+    <div class="color-{{ section.settings.color_scheme }} isolate gradient">
+      <div class="section__inner {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
+  
+        {% render 'standard-section-heading',
+            section_name: 'vehicle-gallery-tabs',
+            section: section
+        %}
+  
+        {% comment %} Tab navigation {% endcomment %}
+        <div class="page-width flex justify-{{ section.settings.tab_alignment }}">
+          <div class="horizontal-scroll">
+            <div class="block responsive-margin-bottom custom-tabs custom-tabs--{{ section.settings.tab_style }} {{ section.settings.tab_text_size }}">
+              {% for variant in variants %}
+                <div class="flex">
+                  <button
+                    class="custom-tab tap-target--small vgt-tab-btn {% if forloop.first %}custom-tab--active{% endif %}"
+                    data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
+                    aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                    role="tab"
+                    type="button">
+                    {{ variant.label }}
+                  </button>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+  
+        {% comment %} Tab panels {% endcomment %}
+        <div class="page-width vgt-panels" id="vgt-{{ section.id }}">
+          {% for variant in variants %}
+            <div
+              id="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
+              class="vgt-panel {% unless forloop.first %}vgt-panel--hidden{% endunless %}"
+              role="tabpanel"
+              aria-label="{{ variant.label }}">
+              <div
+                id="lookfy-gallery-main-{{ variant.gallery_id }}"
+                data-type="default_embedded">
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+  
+      </div>
+    </div>
+  
+    <style>
+      .vgt-panel--hidden {
+        display: none;
+      }
+    </style>
+  
+    <script>
+      (function () {
+        var container = document.getElementById('vgt-{{ section.id }}');
+        if (!container) return;
+  
+        var section = container.closest('.color-{{ section.settings.color_scheme }}');
+        if (!section) return;
+  
+        var buttons = section.querySelectorAll('.vgt-tab-btn');
+        var panels = container.querySelectorAll('.vgt-panel');
+  
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var targetId = btn.getAttribute('data-target');
+  
+            buttons.forEach(function (b) {
+              b.classList.remove('custom-tab--active');
+              b.setAttribute('aria-selected', 'false');
+            });
+  
+            panels.forEach(function (panel) {
+              panel.classList.add('vgt-panel--hidden');
+            });
+  
+            btn.classList.add('custom-tab--active');
+            btn.setAttribute('aria-selected', 'true');
+            document.getElementById(targetId).classList.remove('vgt-panel--hidden');
+          });
+        });
+      })();
+    </script>
+  
+  {% endif %}
+  
+  {% schema %}
+  {
+    "name": "Vehicle Gallery Tabs",
+    "tag": "div",
+    "class": "section section-vehicle-gallery-tabs",
+    "disabled_on": {
+      "groups": ["header", "footer", "aside"]
+    },
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Renders switchable Lookfy frame diagram galleries driven by the vehicle_config.variants collection metafield. No tab configuration needed here — manage variants via the collection metafield JSON."
+      },
+      {
+        "type": "header",
+        "content": "Tab appearance"
+      },
+      {
+        "type": "select",
+        "id": "tab_style",
+        "options": [
+          {
+            "value": "simple",
+            "label": "Simple"
+          },
+          {
+            "value": "switch",
+            "label": "Switch"
+          }
+        ],
+        "default": "switch",
+        "label": "Tab style"
+      },
+      {
+        "type": "text_alignment",
+        "id": "tab_alignment",
+        "default": "center",
+        "label": "Tab alignment"
+      },
+      {
+        "type": "select",
+        "id": "tab_text_size",
+        "options": [
+          {
+            "value": "t4",
+            "label": "S"
+          },
+          {
+            "value": "t3",
+            "label": "M"
+          },
+          {
+            "value": "t2",
+            "label": "L"
+          },
+          {
+            "value": "t1",
+            "label": "XL"
+          },
+          {
+            "value": "t0",
+            "label": "2XL"
+          }
+        ],
+        "default": "t2",
+        "label": "Tab size"
+      },
+      {
+        "type": "header",
+        "content": "Header layout"
+      },
+      {
+        "type": "select",
+        "id": "content_max_width",
+        "options": [
+          {
+            "value": "xs",
+            "label": "XS"
+          },
+          {
+            "value": "s",
+            "label": "S"
+          },
+          {
+            "value": "m",
+            "label": "M"
+          },
+          {
+            "value": "l",
+            "label": "L"
+          },
+          {
+            "value": "xl",
+            "label": "XL"
+          }
+        ],
+        "default": "m",
+        "label": "Maximum heading width"
+      },
+      {
+        "type": "text_alignment",
+        "id": "desktop_heading_alignment",
+        "default": "center",
+        "label": "Heading alignment on desktop"
+      },
+      {
+        "type": "text_alignment",
+        "id": "mobile_heading_alignment",
+        "default": "center",
+        "label": "Heading alignment on mobile"
+      },
+      {
+        "type": "header",
+        "content": "Heading"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "info": "Enter ++ for a line break.",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "italic_convert",
+        "options": [
+          {
+            "value": "",
+            "label": "Off (keep as italics)"
+          },
+          {
+            "value": "light",
+            "label": "Lighter"
+          },
+          {
+            "value": "accent_color",
+            "label": "Accent color"
+          },
+          {
+            "value": "accent",
+            "label": "Accent gradient color"
+          },
+          {
+            "value": "outline",
+            "label": "Outline"
+          },
+          {
+            "value": "outline_accent",
+            "label": "Outline - Accent color"
+          },
+          {
+            "value": "glow",
+            "label": "Glow - Accent color"
+          },
+          {
+            "value": "glow_outline",
+            "label": "Glow with outline - Accent color"
+          },
+          {
+            "value": "glow_pulsating",
+            "label": "Glow - Pulsating accent color"
+          }
+        ],
+        "default": "",
+        "label": "Convert italic text to"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h4",
+            "label": "XS"
+          },
+          {
+            "value": "h3",
+            "label": "S"
+          },
+          {
+            "value": "h2",
+            "label": "M"
+          },
+          {
+            "value": "h1",
+            "label": "L"
+          },
+          {
+            "value": "h0",
+            "label": "XL"
+          }
+        ],
+        "default": "h2",
+        "label": "Heading size"
+      },
+      {
+        "type": "header",
+        "content": "Description"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Description"
+      },
+      {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+          {
+            "value": "t6",
+            "label": "2XS"
+          },
+          {
+            "value": "t5",
+            "label": "XS"
+          },
+          {
+            "value": "t4",
+            "label": "S"
+          },
+          {
+            "value": "t3",
+            "label": "M"
+          },
+          {
+            "value": "t2",
+            "label": "L"
+          },
+          {
+            "value": "t1",
+            "label": "XL"
+          },
+          {
+            "value": "t0",
+            "label": "2XL"
+          }
+        ],
+        "default": "t3",
+        "label": "Text size"
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "select",
+        "id": "top_padding",
+        "options": [
+          {
+            "value": "pt-0",
+            "label": "0"
+          },
+          {
+            "value": "pt-s05",
+            "label": "0.5"
+          },
+          {
+            "value": "pt-s",
+            "label": "1"
+          },
+          {
+            "value": "pt-s15",
+            "label": "1.5"
+          },
+          {
+            "value": "pt-s2",
+            "label": "2"
+          }
+        ],
+        "default": "pt-s",
+        "label": "Top section spacing"
+      },
+      {
+        "type": "select",
+        "id": "bottom_padding",
+        "options": [
+          {
+            "value": "pb-0",
+            "label": "0"
+          },
+          {
+            "value": "pb-s05",
+            "label": "0.5"
+          },
+          {
+            "value": "pb-s",
+            "label": "1"
+          },
+          {
+            "value": "pb-s15",
+            "label": "1.5"
+          },
+          {
+            "value": "pb-s2",
+            "label": "2"
+          }
+        ],
+        "default": "pb-0",
+        "label": "Bottom section spacing"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          }
+        ],
+        "default": "h2",
+        "label": "Heading tag"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vehicle Gallery Tabs"
+      }
+    ]
+  }
+  {% endschema %}
