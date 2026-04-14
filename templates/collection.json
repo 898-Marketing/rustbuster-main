@@ -178,32 +178,11 @@
       "settings": {
         "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\" style=\"text-align:center;\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in the Frame Kit.\n    </p>\n  </div>\n{% endif %}",
         "full_width": false,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "line_separator": "",
         "top_padding": "pt-s05",
         "bottom_padding": "pb-s05",
         "visibility": ""
-      }
-    },
-    "vehicle_gallery_tabs_c4rmEk": {
-      "type": "vehicle-gallery-tabs",
-      "name": "Vehicle Gallery Tabs",
-      "settings": {
-        "tab_style": "switch",
-        "tab_alignment": "center",
-        "tab_text_size": "t3",
-        "content_max_width": "m",
-        "desktop_heading_alignment": "center",
-        "mobile_heading_alignment": "center",
-        "title": "Select a Variant",
-        "italic_convert": "",
-        "heading_size": "h3",
-        "text": "",
-        "text_size": "t3",
-        "color_scheme": "scheme-2",
-        "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
-        "heading_tag": "h2"
       }
     },
     "17494821836f4da1fb": {
@@ -231,7 +210,6 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_k3hKHA"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true,
         "color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
@@ -560,7 +538,6 @@
     "banner",
     "rich_text_3J9HRw",
     "custom_liquid_NRHUXe",
-    "vehicle_gallery_tabs_c4rmEk",
     "17494821836f4da1fb",
     "banner-split",
     "product-grid",

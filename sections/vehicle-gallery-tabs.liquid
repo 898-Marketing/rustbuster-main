@@ -25,9 +25,9 @@
               {% for variant in variants %}
                 <div class="flex">
                   <button
-                    class="custom-tab tap-target--small vgt-tab-btn {% if forloop.first %}custom-tab--active{% endif %}"
+                    class="custom-tab tap-target--small vgt-tab-btn"
                     data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
-                    aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                    aria-selected="false"
                     role="tab"
                     type="button">
                     {{ variant.label }}
@@ -43,14 +43,14 @@
           {% for variant in variants %}
             <div
               id="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
-              class="vgt-panel {% unless forloop.first %}vgt-panel--hidden{% endunless %}"
+              class="vgt-panel vgt-panel--hidden"
               role="tabpanel"
               aria-label="{{ variant.label }}">
-              <div
-                class="lookfy-gallery"
-                data-id="{{ variant.gallery_id }}">
-              </div>
+            <div
+              class="lookfy-gallery"
+              data-id="{{ variant.gallery_id }}">
             </div>
+          </div>
           {% endfor %}
         </div>
   
