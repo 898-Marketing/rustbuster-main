@@ -201,7 +201,7 @@
         "text": "",
         "text_size": "t3",
         "color_scheme": "scheme-2",
-        "top_padding": "pt-s",
+        "top_padding": "pt-0",
         "bottom_padding": "pb-0",
         "heading_tag": "h2"
       }
