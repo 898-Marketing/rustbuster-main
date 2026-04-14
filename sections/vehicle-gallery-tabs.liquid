@@ -24,14 +24,14 @@
             <div class="block responsive-margin-bottom custom-tabs custom-tabs--{{ section.settings.tab_style }} {{ section.settings.tab_text_size }}">
               {% for variant in variants %}
                 <div class="flex">
-                  <button
-                    class="custom-tab tap-target--small vgt-tab-btn"
-                    data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
-                    aria-selected="false"
-                    role="tab"
-                    type="button">
-                    {{ variant.label }}
-                  </button>
+                    <button
+                        class="custom-tab tap-target--small vgt-tab-btn {% if forloop.first %}custom-tab--active{% endif %}"
+                        data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
+                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                        role="tab"
+                        type="button">
+                        {{ variant.label }}
+                    </button>
                 </div>
               {% endfor %}
             </div>
@@ -42,15 +42,15 @@
         <div class="page-width vgt-panels" id="vgt-{{ section.id }}">
           {% for variant in variants %}
             <div
-              id="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
-              class="vgt-panel vgt-panel--hidden"
-              role="tabpanel"
-              aria-label="{{ variant.label }}">
+                id="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
+                class="vgt-panel {% unless forloop.first %}vgt-panel--hidden{% endunless %}"
+                role="tabpanel"
+                aria-label="{{ variant.label }}">
             <div
-              class="lookfy-gallery"
-              data-id="{{ variant.gallery_id }}">
+                class="lookfy-gallery"
+                data-id="{{ variant.gallery_id }}">
             </div>
-          </div>
+            </div>
           {% endfor %}
         </div>
   
