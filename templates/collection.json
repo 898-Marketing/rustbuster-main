@@ -178,7 +178,7 @@
       "settings": {
         "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\" style=\"text-align:center;\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in the Frame Kit.\n    </p>\n  </div>\n{% endif %}",
         "full_width": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "line_separator": "",
         "top_padding": "pt-s05",
         "bottom_padding": "pb-s05",
@@ -200,7 +200,7 @@
         "heading_size": "h2",
         "text": "",
         "text_size": "t3",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "top_padding": "pt-s",
         "bottom_padding": "pb-0",
         "heading_tag": "h2"
