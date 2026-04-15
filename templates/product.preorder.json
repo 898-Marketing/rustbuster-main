@@ -140,7 +140,7 @@
         "star_color": "#f5e121",
         "card_shadow": true,
         "image_replace_background": false,
-        "top_padding": "pt-0",
+        "top_padding": "pt-s",
         "bottom_padding": "pb-s"
       }
     },
