@@ -18,6 +18,19 @@
         "visibility": ""
       }
     },
+    "custom_liquid_AFBwtW": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<button style=\"padding:10px 20px 10px 20px; margin-left: 55px; color:\"#852A2C\" !important;\"> Return to vehicle products </button>",
+        "full_width": true,
+        "color_scheme": "scheme-1",
+        "line_separator": "",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -140,7 +153,7 @@
         "star_color": "#f5e121",
         "card_shadow": true,
         "image_replace_background": false,
-        "top_padding": "pt-s",
+        "top_padding": "pt-s05",
         "bottom_padding": "pb-s"
       }
     },
@@ -327,6 +340,7 @@
   },
   "order": [
     "breadcrumbs",
+    "custom_liquid_AFBwtW",
     "main",
     "quick_order_list_TJVHJp",
     "related-products",

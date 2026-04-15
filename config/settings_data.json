@@ -36,6 +36,7 @@
     "pagination_style": "infinite",
     "pagination_text_size": "t6",
     "breadcrumb_truncate": "7",
+    "breadcrumb_text_size": "t5",
     "card_style": "card",
     "card_text_alignment": "left",
     "card_corner_radius": 8,
