@@ -1,20 +1,18 @@
-<div id="pdp-back-btn-wrapper"></div>
+{% assign back_collection = nil %}
 
-<script>
-  (function () {
-    var returnUrl = localStorage.getItem('vgt-return-url');
-    var returnLabel = localStorage.getItem('vgt-return-label');
+{% for c in product.collections %}
+  {% assign variants = c.metafields.vehicle_config.variants.value %}
+  {% if variants and variants.size > 0 %}
+    {% assign back_collection = c %}
+    {% break %}
+  {% endif %}
+{% endfor %}
 
-    if (returnUrl && returnLabel) {
-      var wrapper = document.getElementById('pdp-back-btn-wrapper');
-      if (!wrapper) return;
-
-      wrapper.innerHTML = '<a href="' + returnUrl + '" class="pdp-back-btn">'
-        + '← Back to ' + returnLabel
-        + '</a>';
-    }
-  })();
-</script>
+{% if back_collection %}
+  <a href="{{ back_collection.url }}" class="pdp-back-btn">
+    ← Back to {{ back_collection.title }}
+  </a>
+{% endif %}
 
 <style>
   .pdp-back-btn {
