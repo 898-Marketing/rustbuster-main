@@ -1,0 +1,31 @@
+<div id="pdp-back-btn-wrapper"></div>
+
+<script>
+  (function () {
+    var returnUrl = localStorage.getItem('vgt-return-url');
+    var returnLabel = localStorage.getItem('vgt-return-label');
+
+    if (returnUrl && returnLabel) {
+      var wrapper = document.getElementById('pdp-back-btn-wrapper');
+      if (!wrapper) return;
+
+      wrapper.innerHTML = '<a href="' + returnUrl + '" class="pdp-back-btn">'
+        + '← Back to ' + returnLabel
+        + '</a>';
+    }
+  })();
+</script>
+
+<style>
+  .pdp-back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: rgba(var(--color-foreground), 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .pdp-back-btn:hover {
+    color: rgba(var(--color-foreground), 1);
+  }
+</style>
