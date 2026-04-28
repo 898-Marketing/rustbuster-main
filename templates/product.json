@@ -32,6 +32,19 @@
         "visibility": ""
       }
     },
+    "custom_liquid_UidKrg": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "{% render 'pdp-back-to-collection-btn' %}",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -1027,6 +1040,7 @@
   "order": [
     "breadcrumbs",
     "spacer_kC7GdJ",
+    "custom_liquid_UidKrg",
     "main",
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
