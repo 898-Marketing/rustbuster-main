@@ -26,8 +26,8 @@
         "full_width": true,
         "color_scheme": "",
         "line_separator": "",
-        "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
+        "top_padding": "pt-s05",
+        "bottom_padding": "pb-s05",
         "visibility": ""
       }
     },
