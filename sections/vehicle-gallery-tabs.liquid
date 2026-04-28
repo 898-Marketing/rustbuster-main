@@ -79,37 +79,54 @@
         }
     </style>
   
-    <script>
-      (function () {
-        var container = document.getElementById('vgt-{{ section.id }}');
-        if (!container) return;
+  <script>
+    (function () {
+      var container = document.getElementById('vgt-{{ section.id }}');
+      if (!container) return;
   
-        var section = container.closest('.color-{{ section.settings.color_scheme }}');
-        if (!section) return;
+      var sectionEl = container.closest('.color-{{ section.settings.color_scheme }}');
+      if (!sectionEl) return;
   
-        var buttons = section.querySelectorAll('.vgt-tab-btn');
-        var panels = container.querySelectorAll('.vgt-panel');
+      var buttons = sectionEl.querySelectorAll('.vgt-tab-btn');
+      var panels = container.querySelectorAll('.vgt-panel');
+      var storageKey = 'vgt-tab-{{ collection.handle }}';
   
-        buttons.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var targetId = btn.getAttribute('data-target');
-  
-            buttons.forEach(function (b) {
-              b.classList.remove('custom-tab--active');
-              b.setAttribute('aria-selected', 'false');
-            });
-  
-            panels.forEach(function (panel) {
-              panel.classList.add('vgt-panel--hidden');
-            });
-  
-            btn.classList.add('custom-tab--active');
-            btn.setAttribute('aria-selected', 'true');
-            document.getElementById(targetId).classList.remove('vgt-panel--hidden');
-          });
+      function activateTab(targetId) {
+        buttons.forEach(function (b) {
+          b.classList.remove('custom-tab--active');
+          b.setAttribute('aria-selected', 'false');
         });
-      })();
-    </script>
+  
+        panels.forEach(function (panel) {
+          panel.classList.add('vgt-panel--hidden');
+        });
+  
+        var targetPanel = document.getElementById(targetId);
+        var targetBtn = sectionEl.querySelector('[data-target="' + targetId + '"]');
+  
+        if (targetPanel) targetPanel.classList.remove('vgt-panel--hidden');
+        if (targetBtn) {
+          targetBtn.classList.add('custom-tab--active');
+          targetBtn.setAttribute('aria-selected', 'true');
+        }
+      }
+  
+      // Restore saved tab on page load
+      var savedTab = localStorage.getItem(storageKey);
+      if (savedTab && document.getElementById(savedTab)) {
+        activateTab(savedTab);
+      }
+  
+      // Save tab selection on click
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetId = btn.getAttribute('data-target');
+          activateTab(targetId);
+          localStorage.setItem(storageKey, targetId);
+        });
+      });
+    })();
+  </script>
   
   {% endif %}
   
