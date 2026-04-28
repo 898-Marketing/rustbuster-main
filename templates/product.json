@@ -32,33 +32,6 @@
         "visibility": ""
       }
     },
-    "spacer_GTJLTF": {
-      "type": "spacer",
-      "name": "Spacer",
-      "settings": {
-        "full_width": false,
-        "show_line_separator": false,
-        "line_width": 100,
-        "spacing_top": 2.4,
-        "spacing_bottom": 2.4,
-        "color_scheme": "",
-        "line_color": "",
-        "visibility": ""
-      }
-    },
-    "custom_liquid_QHG7jV": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "custom_liquid": "{% render 'pdp-back-to-collection-btn' %}",
-        "full_width": true,
-        "color_scheme": "",
-        "line_separator": "",
-        "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
-        "visibility": ""
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -1054,8 +1027,6 @@
   "order": [
     "breadcrumbs",
     "spacer_kC7GdJ",
-    "custom_liquid_QHG7jV",
-    "spacer_GTJLTF",
     "main",
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",

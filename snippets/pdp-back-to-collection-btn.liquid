@@ -15,16 +15,24 @@
 {% endif %}
 
 <style>
-  .pdp-back-btn {
+    .pdp-back-btn {
     display: inline-block;
     margin-bottom: 1rem;
-    font-size: 30px;
+    font-size: 16px;
     color: rgba(var(--color-foreground), 0.7);
     text-decoration: none;
     transition: color 0.2s;
-    margin-left: 2em; 
-  }
-  .pdp-back-btn:hover {
+    margin-left: 10em;
+    }
+
+    .pdp-back-btn:hover {
     color: rgba(var(--color-foreground), 1);
-  }
+    }
+
+    @media screen and (max-width: 749px) {
+    .pdp-back-btn {
+        margin-left: 1rem;
+        font-size: 14px;
+    }
+    }
 </style>
