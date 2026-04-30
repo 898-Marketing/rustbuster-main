@@ -194,6 +194,7 @@
         },
         "inventory_ADrHqA": {
           "type": "inventory",
+          "disabled": true,
           "settings": {
             "show_inventory_quantity": false,
             "show_as_badge": true,
