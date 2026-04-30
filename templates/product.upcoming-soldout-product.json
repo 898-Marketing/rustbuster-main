@@ -34,15 +34,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "richtext_V78c8D": {
-          "type": "richtext",
-          "settings": {
-            "text": "<h1>{{ product.title }}</h1>",
-            "text_size": "t3",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true
-          }
-        },
         "rating_PyGT9p": {
           "type": "rating",
           "settings": {
@@ -52,6 +43,7 @@
         },
         "spacer_hc8cw3": {
           "type": "spacer",
+          "disabled": true,
           "settings": {
             "show_line_separator": false,
             "full_width": true,
@@ -66,6 +58,7 @@
         },
         "richtext_wEDaLW": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<h6>Fitment:</h6>",
             "text_size": "t3",
@@ -75,6 +68,7 @@
         },
         "spacer_Jx7Jqw": {
           "type": "spacer",
+          "disabled": true,
           "settings": {
             "show_line_separator": false,
             "full_width": true,
@@ -89,76 +83,12 @@
         },
         "richtext_xtdgbK": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.custom.fitment | metafield_tag }}",
             "text_size": "t3",
             "stock_visibility": "either",
             "show_in_quickbuy": true
-          }
-        },
-        "spacer_XCjAkL": {
-          "type": "spacer",
-          "settings": {
-            "show_line_separator": false,
-            "full_width": true,
-            "line_separator_style": "solid",
-            "spacing_top": 2,
-            "spacing_bottom": 1,
-            "spacer_visibility": "both",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false,
-            "line_color": ""
-          }
-        },
-        "richtext_RUK8ME": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p><a href=\"#description\">View Full Description</a></p>",
-            "text_size": "t3",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false
-          }
-        },
-        "panel_KaqEVk": {
-          "type": "panel",
-          "disabled": true,
-          "settings": {
-            "padding": 3,
-            "panel_icon": "",
-            "panel_heading": "",
-            "heading_style": "text-body",
-            "heading_text_size": "t4",
-            "heading_text_weight": "bold",
-            "below_media": false,
-            "visibility": "",
-            "stock_visibility": "out_of_stock",
-            "show_in_quickbuy": true,
-            "color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e"
-          }
-        },
-        "description_VVj7PD": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "text_size": "t3",
-            "max_height": 0,
-            "show_in_quickbuy": true
-          }
-        },
-        "panel_EbDytj": {
-          "type": "panel",
-          "settings": {
-            "padding": 0,
-            "panel_icon": "",
-            "panel_heading": "",
-            "heading_style": "text-body",
-            "heading_text_size": "t4",
-            "heading_text_weight": "bold",
-            "below_media": true,
-            "visibility": "",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true,
-            "color_scheme": "scheme-2"
           }
         },
         "richtext_XQtgFD": {
@@ -205,6 +135,15 @@
             "show_in_quickbuy": true
           }
         },
+        "richtext_V78c8D": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h1>{{ product.title }}</h1>",
+            "text_size": "t3",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
         "mw_bundle_builder_addons_app_block_4ArxPR": {
           "type": "shopify://apps/mw-bundle-builder/blocks/addons-app-block/5bcb1a6d-53b5-4d9c-b4f9-19f6620da62b",
           "settings": {}
@@ -246,6 +185,33 @@
             "text_size": "t7"
           }
         },
+        "enquiry_back_in_stock_yi68Bj": {
+          "type": "enquiry_back_in_stock",
+          "settings": {
+            "icon": "",
+            "text": "<h5><strong>Sorry, it's out of stock.</strong></h5><p>But we can let you know when it's back in.</p>",
+            "text_size": "t3",
+            "text_padding": 1,
+            "show_in_quickbuy": true,
+            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+            "image_overlay_opacity": 6,
+            "card_shadow": false
+          }
+        },
+        "spacer_wj8AKD": {
+          "type": "spacer",
+          "settings": {
+            "show_line_separator": false,
+            "full_width": true,
+            "line_separator_style": "solid",
+            "spacing_top": 0.6,
+            "spacing_bottom": 0.6,
+            "spacer_visibility": "both",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true,
+            "line_color": ""
+          }
+        },
         "infinite_options_app_block_price_fEFetV": {
           "type": "shopify://apps/infinite-options/blocks/app-block-price/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "disabled": true,
@@ -282,25 +248,22 @@
         }
       },
       "block_order": [
-        "richtext_V78c8D",
         "rating_PyGT9p",
         "spacer_hc8cw3",
         "richtext_wEDaLW",
         "spacer_Jx7Jqw",
         "richtext_xtdgbK",
-        "spacer_XCjAkL",
-        "richtext_RUK8ME",
-        "panel_KaqEVk",
-        "description_VVj7PD",
-        "panel_EbDytj",
         "richtext_XQtgFD",
         "variant_picker",
         "richtext_XXGLHa",
+        "richtext_V78c8D",
         "mw_bundle_builder_addons_app_block_4ArxPR",
         "infinite_options_app_block_AKg8eE",
         "richtext_tFbfVL",
         "spacer_mE94Fg",
         "inventory_ADrHqA",
+        "enquiry_back_in_stock_yi68Bj",
+        "spacer_wj8AKD",
         "infinite_options_app_block_price_fEFetV",
         "price",
         "buy_buttons"
@@ -310,7 +273,7 @@
         ".metafield-single_line_text_field {font-weight: 600;}"
       ],
       "settings": {
-        "gallery_layout": "stacked",
+        "gallery_layout": "slider",
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
@@ -326,11 +289,11 @@
         "slider_controls_mobile": true,
         "slider_full_width_mobile": false,
         "enable_sticky_info": true,
-        "media_size": "large",
+        "media_size": "medium",
         "main_image_ratio": "landscape_wide",
         "media_fit": false,
         "product_media_radius": 0,
-        "product_media_scale": 100,
+        "product_media_scale": 70,
         "enable_video_looping": false,
         "show_media_shadow": true,
         "image_zoom": "lightbox",
