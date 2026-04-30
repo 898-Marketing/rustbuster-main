@@ -211,6 +211,7 @@
       "blocks": {
         "lookfy_gallery_lookfy_gallery_k3hKHA": {
           "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "disabled": true,
           "settings": {
             "dynamic_source": "{{ collection.metafields.custom.gallery_id.value }}",
             "title": "Shop the Frame",
