@@ -170,6 +170,7 @@
         },
         "richtext_tFbfVL": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<p>*These items are optional</p>",
             "text_size": "t5",
