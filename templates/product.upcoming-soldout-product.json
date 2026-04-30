@@ -103,6 +103,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "show_availability": true,
@@ -139,13 +140,27 @@
           "type": "richtext",
           "settings": {
             "text": "<h1>{{ product.title }}</h1>",
-            "text_size": "t3",
+            "text_size": "t4",
             "stock_visibility": "either",
             "show_in_quickbuy": true
           }
         },
+        "enquiry_back_in_stock_yi68Bj": {
+          "type": "enquiry_back_in_stock",
+          "settings": {
+            "icon": "",
+            "text": "<h5><strong>Sorry, it's out of stock.</strong></h5><p>But we can let you know when it's back in.</p>",
+            "text_size": "t3",
+            "text_padding": 1,
+            "show_in_quickbuy": true,
+            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+            "image_overlay_opacity": 6,
+            "card_shadow": false
+          }
+        },
         "mw_bundle_builder_addons_app_block_4ArxPR": {
           "type": "shopify://apps/mw-bundle-builder/blocks/addons-app-block/5bcb1a6d-53b5-4d9c-b4f9-19f6620da62b",
+          "disabled": true,
           "settings": {}
         },
         "infinite_options_app_block_AKg8eE": {
@@ -183,19 +198,6 @@
             "show_as_badge": true,
             "text_style": "body",
             "text_size": "t7"
-          }
-        },
-        "enquiry_back_in_stock_yi68Bj": {
-          "type": "enquiry_back_in_stock",
-          "settings": {
-            "icon": "",
-            "text": "<h5><strong>Sorry, it's out of stock.</strong></h5><p>But we can let you know when it's back in.</p>",
-            "text_size": "t3",
-            "text_padding": 1,
-            "show_in_quickbuy": true,
-            "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
-            "image_overlay_opacity": 6,
-            "card_shadow": false
           }
         },
         "spacer_wj8AKD": {
@@ -257,12 +259,12 @@
         "variant_picker",
         "richtext_XXGLHa",
         "richtext_V78c8D",
+        "enquiry_back_in_stock_yi68Bj",
         "mw_bundle_builder_addons_app_block_4ArxPR",
         "infinite_options_app_block_AKg8eE",
         "richtext_tFbfVL",
         "spacer_mE94Fg",
         "inventory_ADrHqA",
-        "enquiry_back_in_stock_yi68Bj",
         "spacer_wj8AKD",
         "infinite_options_app_block_price_fEFetV",
         "price",
@@ -289,8 +291,8 @@
         "slider_controls_mobile": true,
         "slider_full_width_mobile": false,
         "enable_sticky_info": true,
-        "media_size": "medium",
-        "main_image_ratio": "landscape_wide",
+        "media_size": "small",
+        "main_image_ratio": "square",
         "media_fit": false,
         "product_media_radius": 0,
         "product_media_scale": 70,
