@@ -204,6 +204,30 @@
         "type": "shopify://apps/kbite-back-in-stock-notify-me/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
         "disabled": false,
         "settings": {}
+      },
+      "12645029315662244871": {
+        "type": "shopify://apps/meteor-mega-menu/blocks/app_embed/9412d6a7-f8f8-4d65-b9ae-2737c2f0f45b",
+        "disabled": false,
+        "settings": {
+          "navigation_link_caret_style": "outline",
+          "navigation_link_spacing": 25,
+          "menu_vertical_padding": 15,
+          "menu_justify_content": "flex-start",
+          "menu_font_size": 16,
+          "menu_font_weight": "500",
+          "menu_text_transform": "none",
+          "menu_center_in_viewport": true,
+          "menu_vertical_offset": 15,
+          "menu_display_action": "hover",
+          "menu_display_delay": "0",
+          "menu_display_animation": "fade",
+          "disable_desktop": false,
+          "mobile_breakpoint": 0,
+          "disable_mobile": false,
+          "desktop_nav_selector": "",
+          "mobile_nav_selector": "",
+          "addons_enabled": true
+        }
       }
     },
     "color_schemes": {
