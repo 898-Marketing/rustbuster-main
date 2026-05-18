@@ -295,7 +295,7 @@
         "text_size": "t3",
         "button_text_size": "t5",
         "button_label": "FAQs",
-        "button_link": "/",
+        "button_link": "shopify://pages/faq",
         "button_style": "secondary",
         "button_style_show_arrow": true,
         "section_color_scheme": "",
