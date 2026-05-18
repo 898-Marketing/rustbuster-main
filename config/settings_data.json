@@ -216,7 +216,7 @@
           "menu_font_size": 16,
           "menu_font_weight": "500",
           "menu_text_transform": "none",
-          "menu_center_in_viewport": true,
+          "menu_center_in_viewport": false,
           "menu_vertical_offset": 15,
           "menu_display_action": "hover",
           "menu_display_delay": "0",
