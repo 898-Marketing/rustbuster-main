@@ -70,7 +70,7 @@
             "text": "<h6>Fitment:</h6>",
             "text_size": "t3",
             "stock_visibility": "either",
-            "show_in_quickbuy": true
+            "show_in_quickbuy": false
           }
         },
         "spacer_Jx7Jqw": {
@@ -93,7 +93,7 @@
             "text": "{{ product.metafields.custom.fitment | metafield_tag }}",
             "text_size": "t3",
             "stock_visibility": "either",
-            "show_in_quickbuy": true
+            "show_in_quickbuy": false
           }
         },
         "spacer_XCjAkL": {
