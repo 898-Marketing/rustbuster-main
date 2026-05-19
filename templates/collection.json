@@ -417,7 +417,7 @@
             "text_size": "t1",
             "button_text_size": "t4",
             "button_label": "Send Us Your Vehicle",
-            "button_link": "/",
+            "button_link": "shopify://pages/is-my-vehicle-fixable",
             "button_style": "primary",
             "button_style_show_arrow": true,
             "card_link": "",
