@@ -1,1 +1,80 @@
-{"sections":{"breadcrumbs":{"type":"breadcrumbs","settings":{"spacing":0,"color_scheme":"","line_separator":"","visibility":""}},"main":{"type":"main-page","disabled":true,"settings":{"page_width":"normal","content_max_width":"xl","custom_page_header":false,"title":"Section heading","italic_convert":"","heading_size":"h1","show_view_all_link":true,"view_all_link":"","view_all_text":"","view_all_text_size":"t3","color_scheme":"","heading_tag":"h1"}},"1756235627933a36ee":{"type":"apps","blocks":{"storemapper_store_locator_map_storemapper_map_7zaThD":{"type":"shopify:\/\/apps\/storemapper-store-locator-map\/blocks\/storemapper-map\/274f7127-75a8-4b2a-8816-530b0cac93a7","settings":{}}},"block_order":["storemapper_store_locator_map_storemapper_map_7zaThD"],"settings":{"include_margins":true,"color_scheme":"","line_separator":"","top_padding":"pt-0","bottom_padding":"pb-0","visibility":""}}},"order":["breadcrumbs","main","1756235627933a36ee"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "spacing": 0,
+        "color_scheme": "",
+        "line_separator": "",
+        "visibility": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "page_width": "normal",
+        "content_max_width": "xl",
+        "custom_page_header": false,
+        "title": "Section heading",
+        "italic_convert": "",
+        "heading_size": "h1",
+        "show_view_all_link": true,
+        "view_all_link": "",
+        "view_all_text": "",
+        "view_all_text_size": "t3",
+        "color_scheme": "",
+        "heading_tag": "h1"
+      }
+    },
+    "custom_liquid_P7eb6y": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<!-- Storemapper code starts here -->\n<div id='storemapper' style='width:100%;'>\n  <p>Store Locator is loading from <a href='https://www.storemapper.co'>Storemapper store locator app</a>...</p>\n</div>\n<script data-storemapper-start='2021,03,25'\n  data-storemapper-id='10099'>\n  (function() {var script = document.createElement('script');\n    script.type  = 'text/javascript';script.async = true;\n    script.src = 'https://www.storemapper.co/js/widget-3.min.js';\n    var entry = document.getElementsByTagName('script')[0];\n    entry.parentNode.insertBefore(script, entry);}\n  ());\n</script>\n<!-- Storemapper code ends here -->",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
+    "1756235627933a36ee": {
+      "type": "apps",
+      "blocks": {
+        "storemapper_store_locator_map_storemapper_map_7zaThD": {
+          "type": "shopify://apps/storemapper-store-locator-map/blocks/storemapper-map/274f7127-75a8-4b2a-8816-530b0cac93a7",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "storemapper_store_locator_map_storemapper_map_7zaThD"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "custom_liquid_P7eb6y",
+    "1756235627933a36ee"
+  ]
+}
