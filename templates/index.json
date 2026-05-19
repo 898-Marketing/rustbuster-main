@@ -556,7 +556,7 @@
             "image_scale": 100,
             "text": "",
             "text_size": "t1",
-            "card_link": "shopify://collections/ford-1"
+            "card_link": "shopify://collections/ford"
           }
         },
         "column_standard_XKbiQb": {
@@ -566,7 +566,7 @@
             "image_scale": 80,
             "text": "",
             "text_size": "t1",
-            "card_link": "shopify://collections/test"
+            "card_link": "shopify://collections/toyota"
           }
         },
         "column_standard_mcgYgm": {
@@ -628,6 +628,16 @@
             "text_size": "t1",
             "card_link": "shopify://collections/hummer"
           }
+        },
+        "column_standard_eRddDz": {
+          "type": "column_standard",
+          "settings": {
+            "image": "shopify://shop_images/Nissan-logo.jpg",
+            "image_scale": 100,
+            "text": "",
+            "text_size": "t1",
+            "card_link": "shopify://collections/nissan"
+          }
         }
       },
       "block_order": [
@@ -639,7 +649,8 @@
         "column_standard_h77G3e",
         "column_standard_eUcktJ",
         "column_standard_fE6dUG",
-        "column_standard_eAgqeV"
+        "column_standard_eAgqeV",
+        "column_standard_eRddDz"
       ],
       "custom_css": [
         ".slider-scrollbar__indicator {height: 6px; background-color: #ba0c2f;}"
