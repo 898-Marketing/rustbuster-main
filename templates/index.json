@@ -716,7 +716,7 @@
           "settings": {
             "button_text_size": "t4",
             "button_label_1": "Send Us Your Vehicle",
-            "button_link_1": "/",
+            "button_link_1": "shopify://pages/is-my-vehicle-fixable",
             "button_style_1": "primary",
             "button_style_1_show_arrow": true,
             "button_label_2": "",
@@ -1118,7 +1118,7 @@
           "settings": {
             "button_text_size": "t3",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify://collections",
             "button_style_1": "primary",
             "button_style_1_show_arrow": true,
             "button_label_2": "",
