@@ -57,7 +57,7 @@
   </p>
 
 {%- elsif block.type == 'richtext' -%}
-  <div class="rte {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
+  <div class="rte {{ block.settings.text_size }}{% if block.settings.show_in_quickbuy != true %} quick-add-hidden{% endif %}" {{ block.shopify_attributes }}>
     {{- block.settings.text -}}
   </div>
 
