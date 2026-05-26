@@ -779,7 +779,7 @@
           "settings": {
             "button_text_size": "t3",
             "button_label_1": "About us",
-            "button_link_1": "/",
+            "button_link_1": "shopify://pages/about",
             "button_style_1": "primary",
             "button_style_1_show_arrow": false,
             "button_label_2": "",
@@ -841,7 +841,7 @@
           "settings": {
             "button_text_size": "t2",
             "button_label_1": "Get in touch",
-            "button_link_1": "/",
+            "button_link_1": "shopify://pages/contact",
             "button_style_1": "primary",
             "button_style_1_show_arrow": true,
             "button_label_2": "",
