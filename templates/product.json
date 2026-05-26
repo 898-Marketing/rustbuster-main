@@ -220,7 +220,7 @@
             "text": "<p>*These items are optional</p>",
             "text_size": "t5",
             "stock_visibility": "either",
-            "show_in_quickbuy": true
+            "show_in_quickbuy": false
           }
         },
         "spacer_mE94Fg": {
