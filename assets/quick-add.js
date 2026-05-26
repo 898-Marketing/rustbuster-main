@@ -135,6 +135,9 @@ if (!customElements.get('quick-add-modal')) {
 
         const modalDialog = this.productElement.querySelectorAll('modal-dialog');
         if (modalDialog) modalDialog.forEach((modal) => modal.remove());
+        // Add these to strip the native title so prependProductTitle() handles it cleanly
+        const productTitle = this.productElement.querySelector('.product__title');
+        if (productTitle) productTitle.remove();
       }
 
       preventDuplicatedIDs() {
