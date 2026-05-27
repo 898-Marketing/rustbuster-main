@@ -90,7 +90,7 @@
       "settings": {
         "show_collection_image": true,
         "show_product_image": false,
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 60,
         "fix_image": false,
         "image_ratio": "custom",
         "desktop_section_height": 350,
