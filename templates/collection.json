@@ -97,7 +97,7 @@
         "mobile_section_height": 160,
         "full_width": true,
         "full_width_animate": false,
-        "desktop_content_position": "md:justify-center md:items-center",
+        "desktop_content_position": "md:justify-start md:items-center",
         "mobile_content_position": "justify-start items-center",
         "content_max_width": "l",
         "desktop_content_alignment": "left",
