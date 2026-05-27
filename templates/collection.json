@@ -82,29 +82,10 @@
             "heading_size": "h1",
             "heading_tag": "h1"
           }
-        },
-        "collection_description_NzG3Qj": {
-          "type": "collection_description",
-          "settings": {
-            "max_height": 0,
-            "text_size": "t2"
-          }
-        },
-        "spacer_imp6yn": {
-          "type": "spacer",
-          "settings": {
-            "show_line_separator": true,
-            "spacing_top": 2.4,
-            "spacing_bottom": 2.4,
-            "spacer_visibility": "both",
-            "line_color": ""
-          }
         }
       },
       "block_order": [
-        "collection_heading_PrBhyC",
-        "collection_description_NzG3Qj",
-        "spacer_imp6yn"
+        "collection_heading_PrBhyC"
       ],
       "settings": {
         "show_collection_image": true,
@@ -112,7 +93,7 @@
         "image_overlay_opacity": 50,
         "fix_image": false,
         "image_ratio": "custom",
-        "desktop_section_height": 400,
+        "desktop_section_height": 350,
         "mobile_section_height": 160,
         "full_width": true,
         "full_width_animate": false,
