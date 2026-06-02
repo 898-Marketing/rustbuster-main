@@ -73,7 +73,7 @@
     "collection_card_image_cover": false,
     "blog_card_style": "card",
     "blog_card_corner_radius": 8,
-    "blog_card_image_ratio": "landscape_wide",
+    "blog_card_image_ratio": "adapt",
     "blog_card_image_cover": true,
     "blog_card_image_padding": 0,
     "blog_card_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
