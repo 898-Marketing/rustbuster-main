@@ -105,7 +105,7 @@
         "show_author": false,
         "show_reading_estimate": false,
         "show_first_tag": false,
-        "excerpt_mode": "none",
+        "excerpt_mode": "medium",
         "blog_card_omit": "",
         "blog_card_featured_1": "",
         "blog_card_featured_2": "",
