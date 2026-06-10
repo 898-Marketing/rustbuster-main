@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "You can have more succinct announcements for mobile.",
+            "text": "Know your vehicle? <a href=\"/collections\">Shop by Vehicle</a> for a guaranteed fit.",
             "mobile_text": "",
             "announcement_pages": "",
             "color_scheme": "scheme-1f7dc79f-46cd-457c-8515-2a2e9656bdf5"
