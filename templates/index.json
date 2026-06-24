@@ -331,14 +331,14 @@
         "icon_with_text_Qi374n": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "cog",
+            "icon": "calendar",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>WELL TRUSTED</strong>",
-            "text": "75 years of expertise",
+            "title": "<strong>75 Years of Expertise</strong>",
+            "text": " Four generations of automotive experience",
             "card_link": ""
           }
         },
@@ -351,8 +351,8 @@
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>SUPER FAST</strong>",
-            "text": "With Express delivery",
+            "title": "<strong>Engineered Solutions</strong>",
+            "text": " Precision-designed frame repair systems",
             "card_link": ""
           }
         },
@@ -365,8 +365,8 @@
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>EXPERT HELP</strong>",
-            "text": "Seven days a week",
+            "title": "<strong>Technical Support</strong>",
+            "text": "Monday-Friday from our Ohio team",
             "card_link": ""
           }
         },
@@ -379,8 +379,8 @@
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>BEST PRICES</strong>",
-            "text": "Unbeatable value",
+            "title": "<strong>Lifetime Warranty</strong>",
+            "text": "Confidence built into every product",
             "card_link": ""
           }
         }
