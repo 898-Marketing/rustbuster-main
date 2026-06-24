@@ -345,7 +345,7 @@
         "icon_with_text_PtjAX6": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "truck",
+            "icon": "gear",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
@@ -373,7 +373,7 @@
         "icon_with_text_VMaqgr": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "price_tags",
+            "icon": "check_mark_only",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
