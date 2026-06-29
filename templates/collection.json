@@ -293,7 +293,7 @@
         "columns_desktop": "4",
         "columns_mobile": "1",
         "filter_type": "vertical",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "enable_sorting": true,
         "show_filter_count": true,
         "uppercase_filter_titles": true,
