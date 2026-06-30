@@ -1,38 +1,78 @@
-{% assign back_collection = nil %}
+<a href="#" class="pdp-back-btn" id="pdp-back-to-collection" style="display:none;"></a>
 
-{% for c in product.collections %}
-  {% assign variants = c.metafields.vehicle_config.variants.value %}
-  {% if variants and variants.size > 0 %}
-    {% assign back_collection = c %}
-    {% break %}
-  {% endif %}
-{% endfor %}
+<script type="application/json" id="pdp-back-collection-data">
+[
+  {% for c in product.collections %}
+    {% assign single_id = c.metafields.custom.gallery_id.value %}
+    {% assign variants = c.metafields.vehicle_config.variants.value %}
+    {
+      "title": {{ c.title | json }},
+      "url": {{ c.url | json }},
+      "single_gallery_id": {{ single_id | json }},
+      "variant_gallery_ids": [
+        {% if variants %}
+          {% for v in variants %}
+            {{ v.gallery_id | json }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        {% endif %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
 
-{% if back_collection %}
-  <a href="{{ back_collection.url }}" class="pdp-back-btn">
-    ← Back to {{ back_collection.title }}
-  </a>
-{% endif %}
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var lfgid = params.get('lfgid');
+  if (!lfgid) return;
+
+  var dataEl = document.getElementById('pdp-back-collection-data');
+  if (!dataEl) return;
+
+  var collections;
+  try {
+    collections = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    return;
+  }
+
+  var match = collections.find(function (c) {
+    if (c.single_gallery_id && String(c.single_gallery_id) === String(lfgid)) {
+      return true;
+    }
+    return (c.variant_gallery_ids || []).some(function (id) {
+      return String(id) === String(lfgid);
+    });
+  });
+
+  if (!match) return;
+
+  var btn = document.getElementById('pdp-back-to-collection');
+  if (!btn) return;
+  btn.href = match.url;
+  btn.textContent = '\u2190 Back to ' + match.title;
+  btn.style.display = 'inline-block';
+})();
+</script>
 
 <style>
-    .pdp-back-btn {
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-size: 16px;
-    color: rgba(var(--color-foreground), 0.7);
-    text-decoration: none;
-    transition: color 0.2s;
-    margin-left: 10em;
-    }
-
-    .pdp-back-btn:hover {
-    color: rgba(var(--color-foreground), 1);
-    }
-
-    @media screen and (max-width: 749px) {
-    .pdp-back-btn {
-        margin-left: 1rem;
-        font-size: 14px;
-    }
-    }
+.pdp-back-btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: rgba(var(--color-foreground), 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-left: 10em;
+}
+.pdp-back-btn:hover {
+  color: rgba(var(--color-foreground), 1);
+}
+@media screen and (max-width: 749px) {
+  .pdp-back-btn {
+    margin-left: 1rem;
+    font-size: 14px;
+  }
+}
 </style>
