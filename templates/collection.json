@@ -124,49 +124,6 @@
         "bottom_padding": "pb-s"
       }
     },
-    "rich_text_3J9HRw": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9FcdFR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Shop the Frame",
-            "heading_italic_convert": "",
-            "heading_size": "h3",
-            "heading_size_custom": 2.4,
-            "heading_line_height_custom": 1.2,
-            "heading_tag": "h2"
-          }
-        },
-        "text_kEVBFx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Hover over one of the pulsating icons to view the corresponding part listing on the frame or view the list of parts on the side. </p>",
-            "text_size": "t3"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9FcdFR",
-        "text_kEVBFx"
-      ],
-      "disabled": true,
-      "name": "Rich text",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_max_width": "m",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
-        "container_color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
-        "show_content_shadow": false,
-        "line_separator": "",
-        "top_padding": "pt-s",
-        "bottom_padding": "pb-s05",
-        "visibility": "",
-        "hide_when_empty": true
-      }
-    },
     "custom_liquid_NRHUXe": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -174,7 +131,7 @@
         "custom_liquid": "{% if collection.metafields.custom.gallery_id != blank %}\n  <div class=\"collection-diagram-intro\" style=\"text-align:center;\">\n    <h2>Find Parts Using the Frame Diagram</h2>\n    <p>\n      Click on the hotspots in the diagram below to view parts that fit this frame.\n      You can also scroll further down to browse all products in the Frame Kit.\n    </p>\n  </div>\n{% endif %}",
         "full_width": false,
         "color_scheme": "scheme-325e8ee2-8f8e-40a4-a0ac-69dc6ca3bc2e",
-        "line_separator": "",
+        "line_separator": "border-top",
         "top_padding": "pt-0",
         "bottom_padding": "pb-s05",
         "visibility": ""
@@ -553,7 +510,6 @@
     "breadcrumbs",
     "custom_liquid_ngzANC",
     "banner",
-    "rich_text_3J9HRw",
     "custom_liquid_NRHUXe",
     "vehicle_gallery_tabs_nGfRgF",
     "17494821836f4da1fb",
