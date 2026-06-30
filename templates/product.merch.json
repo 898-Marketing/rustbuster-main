@@ -272,18 +272,18 @@
         "visibility": ""
       }
     },
-    "collapsible_content_t3C4Tq": {
+    "collapsible_content_HEYjaP": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_UPgR8m": {
+        "collapsible_row_WrPXPX": {
           "type": "collapsible_row",
           "settings": {
             "row_open": true,
-            "heading": "Does it come with a warranty?",
-            "icon": "shield_checkmark",
+            "heading": "What is the return window?",
+            "icon": "",
             "image_width": 20,
             "row_heading_tag": "h3",
-            "row_content": "<p>Add your collapsible row content here. If it's set to open one row at a time, consider keeping the content in each row about the same length.</p>",
+            "row_content": "<p>Returns must be initiated within 30 days of receiving your order. Requests made after this period may be declined or subject to a restocking fee.</p>",
             "page": "",
             "content_embed": "",
             "button_text_size": "t3",
@@ -293,15 +293,15 @@
             "button_style_1_show_arrow": false
           }
         },
-        "collapsible_row_wzzmgF": {
+        "collapsible_row_XQmpdU": {
           "type": "collapsible_row",
           "settings": {
             "row_open": false,
-            "heading": "What happens if I don't like it?",
-            "icon": "ban",
+            "heading": "How do I start a return?",
+            "icon": "",
             "image_width": 20,
             "row_heading_tag": "h3",
-            "row_content": "<p>Add your collapsible row content here. If it's set to open one row at a time, consider keeping the content in each row about the same length.</p>",
+            "row_content": "<p>Email our customer service team at <a href=\"mailto:customerservice@rustbuster.com\">customerservice@rustbuster.com</a> to request a Return Goods Authorization (RGA) number. Have your original purchase invoice number ready when you reach out.</p>",
             "page": "",
             "content_embed": "",
             "button_text_size": "t3",
@@ -311,15 +311,15 @@
             "button_style_1_show_arrow": false
           }
         },
-        "collapsible_row_y93qxH": {
+        "collapsible_row_rE4XAp": {
           "type": "collapsible_row",
           "settings": {
             "row_open": false,
-            "heading": "How fast is shipping?",
-            "icon": "truck",
+            "heading": "What condition does my item need to be in to qualify for a return?",
+            "icon": "",
             "image_width": 20,
             "row_heading_tag": "h3",
-            "row_content": "<p>Add your collapsible row content here. If it's set to open one row at a time, consider keeping the content in each row about the same length.</p>",
+            "row_content": "<p>Items must be returned in new condition with no surface rust or damage, and include all original packaging, components, and hardware. Please use a trackable, insured shipping method when sending your return. Return shipping costs are the responsibility of the customer.</p>",
             "page": "",
             "content_embed": "",
             "button_text_size": "t3",
@@ -329,15 +329,15 @@
             "button_style_1_show_arrow": false
           }
         },
-        "collapsible_row_3zyzVG": {
+        "collapsible_row_nb7ni6": {
           "type": "collapsible_row",
           "settings": {
             "row_open": false,
-            "heading": "What's the returns policy?",
-            "icon": "return",
+            "heading": "Are there any items that cannot be returned?",
+            "icon": "",
             "image_width": 20,
             "row_heading_tag": "h3",
-            "row_content": "<p>Add your collapsible row content here. If it's set to open one row at a time, consider keeping the content in each row about the same length.</p>",
+            "row_content": "<p>Yes. Consumables including paint, cut-off wheels, and maintenance items are non-returnable. Additionally, if your order qualified for free shipping, your refund will be issued minus the original shipping cost.</p>",
             "page": "",
             "content_embed": "",
             "button_text_size": "t3",
@@ -349,10 +349,10 @@
         }
       },
       "block_order": [
-        "collapsible_row_UPgR8m",
-        "collapsible_row_wzzmgF",
-        "collapsible_row_y93qxH",
-        "collapsible_row_3zyzVG"
+        "collapsible_row_WrPXPX",
+        "collapsible_row_XQmpdU",
+        "collapsible_row_rE4XAp",
+        "collapsible_row_nb7ni6"
       ],
       "settings": {
         "one_row_at_a_time": true,
@@ -362,21 +362,21 @@
         "show_header_beside": true,
         "desktop_media_width": 40,
         "layout": "media_first",
-        "show_search_box": true,
+        "show_search_box": false,
         "content_max_width": "l",
         "desktop_heading_alignment": "left",
         "mobile_heading_alignment": "left",
         "title": "Any questions?",
         "italic_convert": "",
         "heading_size": "h2",
-        "text": "",
+        "text": "<p>Our team is happy to help. Whether you have questions about fitment, installation, or your order, don't hesitate to reach out. We're committed to making sure you get the right parts and the support you need.</p>",
         "text_size": "t3",
-        "button_label": "",
-        "button_link": "",
+        "button_label": "View All FAQs",
+        "button_link": "shopify://pages/faq",
         "button_style": "secondary",
         "button_text_size": "t5",
         "button_style_show_arrow": true,
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "",
         "show_content_shadow": true,
         "line_separator": "",
@@ -617,7 +617,7 @@
     "main",
     "quick_order_list_TJVHJp",
     "related-products",
-    "collapsible_content_t3C4Tq",
+    "collapsible_content_HEYjaP",
     "icons_with_text_y8AmyR",
     "testimonials_wGiqtd",
     "alert_DtAfgB"

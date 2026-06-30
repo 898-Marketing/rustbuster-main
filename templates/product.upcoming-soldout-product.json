@@ -709,6 +709,88 @@
         "render_schema": true
       }
     },
+    "icons_with_text_ze9e34": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icon_with_text_AD6teE": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "calendar",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>75 Years of Expertise</strong>",
+            "text": " Four generations of automotive experience",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_AWHmbm": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "gear",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>Engineered Solutions</strong>",
+            "text": " Precision-designed frame repair systems",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_KN8fFw": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "chat_bubbles",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>Technical Support</strong>",
+            "text": "Monday-Friday from our Ohio team",
+            "card_link": ""
+          }
+        },
+        "icon_with_text_mezHhb": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "check_mark_only",
+            "icon_container": "none",
+            "icon_color": "",
+            "icon_background_color": "#ededed",
+            "background_gradient": "",
+            "image_width": 40,
+            "title": "<strong>Lifetime Warranty</strong>",
+            "text": "Confidence built into every product",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_AD6teE",
+        "icon_with_text_AWHmbm",
+        "icon_with_text_KN8fFw",
+        "icon_with_text_mezHhb"
+      ],
+      "settings": {
+        "placement": "beside",
+        "content_vertical_alignment": "items-start",
+        "column_alignment": "left",
+        "vertical_padding": 2,
+        "icon_size": 2.8,
+        "heading_size": "t6",
+        "text_size": "t6",
+        "mobile_layout": "grid",
+        "columns_mobile": "2",
+        "color_scheme": "scheme-3",
+        "line_separator": "border-bottom",
+        "visibility": "",
+        "hide_when_empty": false
+      }
+    },
     "testimonials_wGiqtd": {
       "type": "testimonials",
       "blocks": {
@@ -981,6 +1063,7 @@
     "spacer_9qJUFC",
     "ribbon_banner_pxNBa9",
     "collapsible_content_yLjbEb",
+    "icons_with_text_ze9e34",
     "testimonials_wGiqtd",
     "recently_viewed_WRF76n",
     "ribbon_banner_kAqDx9",
