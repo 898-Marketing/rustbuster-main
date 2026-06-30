@@ -72,6 +72,19 @@
         "visibility": ""
       }
     },
+    "custom_liquid_ngzANC": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "{% assign vehicle_display = collection.title\n  | remove: 'Rust Buster Frame Repair Kits For '\n  | remove: 'Rust Buster Frame Repair Kits for ' %}\n\n<div class=\"rb-vehicle-strip\">\n  <div class=\"rb-vehicle-strip__accent\"></div>\n  <div class=\"rb-vehicle-strip__inner\">\n    <p class=\"rb-vehicle-strip__label\">Frame Repair Kits</p>\n    <h1 class=\"rb-vehicle-strip__title\">{{ vehicle_display }}</h1>\n  </div>\n</div>\n\n<style>\n  .rb-vehicle-strip {\n    position: relative;\n    height: 104px;\n    background: #1a1a1a;\n    display: flex;\n    align-items: center;\n    overflow: hidden;\n  }\n  .rb-vehicle-strip__accent {\n    position: absolute;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    width: 8px;\n    background: #E8A020;\n    flex-shrink: 0;\n  }\n  .rb-vehicle-strip__inner {\n    padding: 0 48px;\n    position: relative;\n  }\n  .rb-vehicle-strip__label {\n    font-family: var(--font-body-family);\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 2.5px;\n    text-transform: uppercase;\n    color: #E8A020;\n    margin: 0 0 6px;\n  }\n  .rb-vehicle-strip__title {\nfont-family: var(--font-heading-family);\n    font-weight: 700;\n    font-size: 38px;\n    line-height: 1;\n    color: #ffffff;\n    text-transform: uppercase;\n    letter-spacing: 0.5px;\n    margin: 0;\n  }\n  @media screen and (max-width: 749px) {\n    .rb-vehicle-strip {\n      height: auto;\n      padding: 18px 0;\n    }\n    .rb-vehicle-strip__title {\n      font-size: 26px;\n    }\n  }\n</style>",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "blocks": {
@@ -87,13 +100,14 @@
       "block_order": [
         "collection_heading_PrBhyC"
       ],
+      "disabled": true,
       "settings": {
-        "show_collection_image": true,
+        "show_collection_image": false,
         "show_product_image": false,
         "image_overlay_opacity": 60,
         "fix_image": false,
         "image_ratio": "custom",
-        "desktop_section_height": 350,
+        "desktop_section_height": 200,
         "mobile_section_height": 160,
         "full_width": true,
         "full_width_animate": false,
@@ -103,8 +117,8 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "show_text_box": "off",
-        "color_scheme": "scheme-1",
-        "container_color_scheme": "scheme-6",
+        "color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
+        "container_color_scheme": "scheme-68776429-038d-4dc4-b0cd-a5790c9d1e79",
         "line_separator": "",
         "top_padding": "pt-s",
         "bottom_padding": "pb-s"
@@ -537,6 +551,7 @@
   "order": [
     "ribbon_banner_zkP4Bb",
     "breadcrumbs",
+    "custom_liquid_ngzANC",
     "banner",
     "rich_text_3J9HRw",
     "custom_liquid_NRHUXe",
