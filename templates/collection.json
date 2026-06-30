@@ -409,38 +409,38 @@
         "hide_when_empty": false
       }
     },
-    "icons_with_text_74BKWK": {
+    "icons_with_text_WDepax": {
       "type": "icons-with-text",
       "blocks": {
-        "icon_with_text_jbidNc": {
+        "icon_with_text_8QPGPQ": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "shield_checkmark",
+            "icon": "calendar",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>WELL TRUSTED</strong>",
-            "text": "Over 100k customers",
+            "title": "<strong>75 Years of Expertise</strong>",
+            "text": " Four generations of automotive experience",
             "card_link": ""
           }
         },
-        "icon_with_text_M6Uyt6": {
+        "icon_with_text_qiGzE4": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "truck",
+            "icon": "gear",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>SUPER FAST</strong>",
-            "text": "With Express delivery",
+            "title": "<strong>Engineered Solutions</strong>",
+            "text": " Precision-designed frame repair systems",
             "card_link": ""
           }
         },
-        "icon_with_text_UMWN7X": {
+        "icon_with_text_7pjaFQ": {
           "type": "icon_with_text",
           "settings": {
             "icon": "chat_bubbles",
@@ -449,31 +449,31 @@
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>EXPERT HELP</strong>",
-            "text": "Seven days a week",
+            "title": "<strong>Technical Support</strong>",
+            "text": "Monday-Friday from our Ohio team",
             "card_link": ""
           }
         },
-        "icon_with_text_GGDDDP": {
+        "icon_with_text_87aktm": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "price_tags",
+            "icon": "check_mark_only",
             "icon_container": "none",
             "icon_color": "",
             "icon_background_color": "#ededed",
             "background_gradient": "",
             "image_width": 40,
-            "title": "<strong>BEST PRICES</strong>",
-            "text": "Unbeatable value",
+            "title": "<strong>Lifetime Warranty</strong>",
+            "text": "Confidence built into every product",
             "card_link": ""
           }
         }
       },
       "block_order": [
-        "icon_with_text_jbidNc",
-        "icon_with_text_M6Uyt6",
-        "icon_with_text_UMWN7X",
-        "icon_with_text_GGDDDP"
+        "icon_with_text_8QPGPQ",
+        "icon_with_text_qiGzE4",
+        "icon_with_text_7pjaFQ",
+        "icon_with_text_87aktm"
       ],
       "settings": {
         "placement": "beside",
@@ -483,10 +483,10 @@
         "icon_size": 2.8,
         "heading_size": "t6",
         "text_size": "t6",
-        "mobile_layout": "carousel",
+        "mobile_layout": "grid",
         "columns_mobile": "2",
         "color_scheme": "scheme-3",
-        "line_separator": "border-top",
+        "line_separator": "border-bottom",
         "visibility": "",
         "hide_when_empty": false
       }
@@ -518,7 +518,7 @@
     "spacer_KDamdW",
     "rich_text_eWHqW4",
     "gallery_gx8rmi",
-    "icons_with_text_74BKWK",
+    "icons_with_text_WDepax",
     "spacer_imhhye"
   ]
 }
