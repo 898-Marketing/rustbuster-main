@@ -102,7 +102,7 @@
     "inventory_threshold": 10,
     "stock_low": "#c1462b",
     "stock_out": "#c1462b",
-    "show_search_types": true,
+    "show_search_types": false,
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_suggested_searches": "",
