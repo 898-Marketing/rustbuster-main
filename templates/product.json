@@ -291,7 +291,7 @@
         ".metafield-single_line_text_field {font-weight: 600;}"
       ],
       "settings": {
-        "gallery_layout": "slider",
+        "gallery_layout": "columns",
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
