@@ -22,6 +22,20 @@
       '}' +
       '.ProductAddons__Description {' +
       '  display: none !important;' +
+      '}' +
+      /* The theme reserves space above each offer for its (now-hidden)
+         heading. Without this, offers after the first show a large gap
+         above their content. */
+      '.ProductAddons:not(:first-of-type) {' +
+      '  padding-top: 0 !important;' +
+      '}' +
+      '.ProductAddons:not(:first-of-type) > .ProductAddons__Content {' +
+      '  margin-top: 0 !important;' +
+      '}' +
+      /* Tightens the gap between stacked offer items so the list reads
+         as one group rather than separate blocks. */
+      '.ProductAddons {' +
+      '  padding-bottom: 8px !important;' +
       '}';
 
     shadowRoot.appendChild(style);
