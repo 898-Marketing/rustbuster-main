@@ -44,6 +44,8 @@
     <lazy-script data-watch-element=".product" src="{{ 'product-form.js' | asset_url }}" defer="defer"></lazy-script>
   {%- endunless -%}
 
+  <lazy-script data-watch-element=".product" src="{{ 'rust-buster-bundle-fix.js' | asset_url }}" defer="defer"></lazy-script>
+
   {%- if product.quantity_price_breaks_configured? -%}
     <lazy-script data-watch-element=".product" src="{{ 'show-more.js' | asset_url }}" defer="defer"></lazy-script>
     <lazy-script data-watch-element=".product" src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></lazy-script>
