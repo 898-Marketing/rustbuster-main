@@ -366,13 +366,7 @@
       var headerHeight = getHeaderHeight();
       var cumulativeTop = isMobile ? headerHeight : headerHeight + HEADER_BUFFER;
 
-      var visiblePanel = document.querySelector('.vgt-panel:not(.vgt-panel--hidden)');
-      var imageCol = visiblePanel
-        ? visiblePanel.querySelector('.kt-image-column.kt-grid__item')
-        : document.querySelector('.kt-image-column.kt-grid__item');
-      var colRect = imageCol ? imageCol.getBoundingClientRect() : null;
-
-      // 1. Vehicle ID strip
+      // 1. Vehicle ID strip — present on single-gallery pages, and on tabs pages too
       var strip = document.querySelector('.rb-vehicle-strip');
       var stripWrapper = strip ? strip.closest('.shopify-section') : null;
       if (strip && stripWrapper) {
@@ -382,18 +376,10 @@
         cumulativeTop += strip.getBoundingClientRect().height;
       }
 
-      // 2. Vehicle gallery tabs heading + toggle — constrained to the diagram column's width,
-      //    so the sticky bar doesn't extend across the products column
+      // 2. Vehicle gallery tabs heading + toggle — only on multi-variant pages
       var title = document.querySelector('.vehicle-gallery-tabs__title');
       var toggle = title ? title.nextElementSibling : null;
-      if (title && toggle && colRect) {
-        [title, toggle].forEach(function (el) {
-          el.style.boxSizing = 'border-box';
-          el.style.width = colRect.width + 'px';
-          el.style.marginLeft = colRect.left + 'px';
-          el.style.marginRight = 'auto';
-        });
-
+      if (title && toggle) {
         title.style.position = 'sticky';
         title.style.top = cumulativeTop + 'px';
         title.style.zIndex = '3';
@@ -410,7 +396,7 @@
         cumulativeTop += parseFloat(getComputedStyle(toggle).marginBottom) || 0;
       }
 
-      // 3. Diagram
+      // 3. The diagram itself — sticks below whatever's stacked above it
       document.querySelectorAll('.kt-image-column.kt-grid__item').forEach(function (col) {
         col.style.top = cumulativeTop + 'px';
       });
@@ -447,6 +433,7 @@
     init();
   })();
 </script>
+
 
 {% schema %}
 {
