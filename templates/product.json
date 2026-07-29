@@ -314,7 +314,7 @@
         "product_media_scale": 100,
         "enable_video_looping": false,
         "show_media_shadow": true,
-        "image_zoom": "hover",
+        "image_zoom": "lightbox",
         "image_zoom_level": "2x",
         "thumbnail_layout": "desktop",
         "thumbnail_radius": 8,
