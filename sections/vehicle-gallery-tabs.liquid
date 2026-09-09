@@ -99,7 +99,13 @@
         .section-vehicle-gallery-tabs .vgt-sticky-header--on {
           position: sticky;
           top: var(--header-height, 0px);
-          z-index: 2;
+          /* Must beat Lookfy's .kt-hotspots-wrapper, which computes to z-index 2.
+             At an equal value the hotspots win on DOM order and paint over the
+             heading. The .kt-hotspot-item children sit at z-index 10 but are
+             confined to the wrapper's own stacking context, so only the
+             wrapper's 2 matters here. Capped by the section's .isolate class
+             (z-index 0), so this can never reach the theme header at z-index 5. */
+          z-index: 6;
           background-color: rgba(var(--color-background), 1);
           padding-top: 1.2rem;
           padding-bottom: 0.8rem;
@@ -223,9 +229,18 @@
       var headerOffset = 0;
       var ticking = false;
 
+      // Ignite sets --header-height on documentElement from JavaScript, which
+      // runs after this inline script. Reading it once at init yields an empty
+      // string, so fall back to measuring the header element directly.
       function readHeaderOffset() {
         var raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
-        headerOffset = parseFloat(raw) || 0;
+        var fromVar = parseFloat(raw);
+        if (!isNaN(fromVar) && fromVar > 0) {
+          headerOffset = fromVar;
+          return;
+        }
+        var hdr = document.querySelector('.section-header');
+        headerOffset = hdr ? hdr.getBoundingClientRect().height : 0;
       }
 
       function publishHeights() {
@@ -238,6 +253,9 @@
       }
 
       function updatePinned() {
+        // Re-read each time so the value self-corrects once the theme header
+        // has initialised. Cheap, since this is already rAF throttled.
+        readHeaderOffset();
         var isPinned = wrapper.getBoundingClientRect().top <= headerOffset + 1;
         wrapper.classList.toggle('vgt-sticky-header--pinned', isPinned);
         ticking = false;
@@ -255,6 +273,13 @@
       updatePinned();
 
       window.addEventListener('scroll', onScroll, { passive: true });
+      // Covers a reload that restores scroll position part way down the page,
+      // where no scroll event fires but the block is already pinned.
+      window.addEventListener('load', function () {
+        readHeaderOffset();
+        publishHeights();
+        updatePinned();
+      });
       window.addEventListener('resize', function () {
         readHeaderOffset();
         publishHeights();
