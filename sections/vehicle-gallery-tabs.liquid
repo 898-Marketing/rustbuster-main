@@ -107,17 +107,18 @@
              (z-index 0), so this can never reach the theme header at z-index 5. */
           z-index: 6;
           background-color: rgba(var(--color-background), 1);
-          padding-top: 1.2rem;
+          padding-top: 2.4rem;
           padding-bottom: 0.8rem;
-          transition: box-shadow 0.2s ease, border-color 0.2s ease;
-          border-bottom: 1px solid rgba(var(--color-foreground), 0);
+          transition: box-shadow 0.2s ease;
         }
 
         /* The section carries Ignite's .isolate class (z-index: 0), so this
            block is contained in its own stacking context and cannot collide
            with the theme header at z-index 5. */
         .section-vehicle-gallery-tabs .vgt-sticky-header--on.vgt-sticky-header--pinned {
-          border-bottom-color: rgba(var(--color-foreground), 0.08);
+          /* Delete the line below to remove the drop shadow too, leaving no
+             visual separation at all between the pinned block and the content
+             scrolling beneath it. */
           box-shadow: 0 4px 14px rgba(var(--color-foreground), 0.05);
         }
 
