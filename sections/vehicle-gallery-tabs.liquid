@@ -109,18 +109,11 @@
           background-color: rgba(var(--color-background), 1);
           padding-top: 2.4rem;
           padding-bottom: 0.8rem;
-          transition: box-shadow 0.2s ease;
         }
 
-        /* The section carries Ignite's .isolate class (z-index: 0), so this
-           block is contained in its own stacking context and cannot collide
-           with the theme header at z-index 5. */
-        .section-vehicle-gallery-tabs .vgt-sticky-header--on.vgt-sticky-header--pinned {
-          /* Delete the line below to remove the drop shadow too, leaving no
-             visual separation at all between the pinned block and the content
-             scrolling beneath it. */
-          box-shadow: 0 4px 14px rgba(var(--color-foreground), 0.05);
-        }
+        /* No visual treatment on the pinned state. The
+           .vgt-sticky-header--pinned class is still applied by the script,
+           because the optional description collapse below depends on it. */
 
         /* Optional: collapse the description once the block pins.
            Enabled via the "Collapse description when pinned" setting. */
@@ -162,7 +155,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .section-vehicle-gallery-tabs .vgt-sticky-header--on,
           .section-vehicle-gallery-tabs .vgt-sticky-header--on[data-vgt-collapse="true"] .vehicle-gallery-tabs__description {
             transition: none;
           }
