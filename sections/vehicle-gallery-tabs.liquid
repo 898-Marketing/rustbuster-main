@@ -5,39 +5,51 @@
   {%- else -%}
     <link rel="stylesheet" href="{{ 'component-section-tabs.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
-  
+
   {%- assign variants = collection.metafields.vehicle_config.variants.value -%}
-  
+
   {% if variants and variants.size > 0 %}
-  
+
     <div class="color-{{ section.settings.color_scheme }} isolate gradient">
       <div class="section__inner {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
-  
-        {% render 'standard-section-heading',
-            section_name: 'vehicle-gallery-tabs',
-            section: section
-        %}
-  
-        {% comment %} Tab navigation {% endcomment %}
-        <div class="page-width flex justify-{{ section.settings.tab_alignment }}">
-          <div class="horizontal-scroll">
-            <div class="block responsive-margin-bottom custom-tabs custom-tabs--{{ section.settings.tab_style }} {{ section.settings.tab_text_size }}">
-              {% for variant in variants %}
-                <div class="flex">
-                    <button
-                        class="custom-tab tap-target--small vgt-tab-btn {% if forloop.first %}custom-tab--active{% endif %}"
-                        data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
-                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-                        role="tab"
-                        type="button">
-                        {{ variant.label }}
-                    </button>
-                </div>
-              {% endfor %}
+
+        {% comment %}
+          Sticky block: heading, description and tab navigation pin together beneath
+          the theme header for as long as this section is on screen. Must remain a
+          direct child of .section__inner, since that element spans the full section
+          height and defines the sticky travel range.
+        {% endcomment %}
+        <div
+            class="vgt-sticky-header{% if section.settings.enable_sticky_header %} vgt-sticky-header--on{% endif %}"
+            data-vgt-collapse="{% if section.settings.collapse_description_when_pinned %}true{% else %}false{% endif %}">
+
+          {% render 'standard-section-heading',
+              section_name: 'vehicle-gallery-tabs',
+              section: section
+          %}
+
+          {% comment %} Tab navigation {% endcomment %}
+          <div class="page-width flex justify-{{ section.settings.tab_alignment }}">
+            <div class="horizontal-scroll">
+              <div class="block responsive-margin-bottom custom-tabs custom-tabs--{{ section.settings.tab_style }} {{ section.settings.tab_text_size }}">
+                {% for variant in variants %}
+                  <div class="flex">
+                      <button
+                          class="custom-tab tap-target--small vgt-tab-btn {% if forloop.first %}custom-tab--active{% endif %}"
+                          data-target="vgt-panel-{{ section.id }}-{{ variant.gallery_id }}"
+                          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                          role="tab"
+                          type="button">
+                          {{ variant.label }}
+                      </button>
+                  </div>
+                {% endfor %}
+              </div>
             </div>
           </div>
+
         </div>
-  
+
         {% comment %} Tab panels {% endcomment %}
         <div class="page-width vgt-panels" id="vgt-{{ section.id }}">
           {% for variant in variants %}
@@ -53,15 +65,15 @@
             </div>
           {% endfor %}
         </div>
-  
+
       </div>
     </div>
-  
+
     <style>
         .vgt-panel--hidden {
           display: none;
         }
-      
+
         .section-vehicle-gallery-tabs .vgt-tab-btn {
           background: none;
           border: none;
@@ -77,46 +89,117 @@
         background-color: rgba(var(--color-background), 1);
         box-shadow: 0 2px 10px rgba(var(--color-foreground), 0.03);
         }
+
+        /* ------------------------------------------------------------------
+           Sticky heading + toggle
+           --header-height is set responsively by Ignite on :root
+           (174px desktop, 80px mobile).
+           --vgt-sticky-h is written to the section by the script below.
+           ------------------------------------------------------------------ */
+        .section-vehicle-gallery-tabs .vgt-sticky-header--on {
+          position: sticky;
+          top: var(--header-height, 0px);
+          z-index: 2;
+          background-color: rgba(var(--color-background), 1);
+          padding-top: 1.2rem;
+          padding-bottom: 0.8rem;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease;
+          border-bottom: 1px solid rgba(var(--color-foreground), 0);
+        }
+
+        /* The section carries Ignite's .isolate class (z-index: 0), so this
+           block is contained in its own stacking context and cannot collide
+           with the theme header at z-index 5. */
+        .section-vehicle-gallery-tabs .vgt-sticky-header--on.vgt-sticky-header--pinned {
+          border-bottom-color: rgba(var(--color-foreground), 0.08);
+          box-shadow: 0 4px 14px rgba(var(--color-foreground), 0.05);
+        }
+
+        /* Optional: collapse the description once the block pins.
+           Enabled via the "Collapse description when pinned" setting. */
+        .section-vehicle-gallery-tabs .vgt-sticky-header--on[data-vgt-collapse="true"] .vehicle-gallery-tabs__description {
+          max-height: var(--vgt-desc-h, 20rem);
+          overflow: hidden;
+          transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+        }
+        .section-vehicle-gallery-tabs .vgt-sticky-header--on[data-vgt-collapse="true"].vgt-sticky-header--pinned .vehicle-gallery-tabs__description {
+          max-height: 0;
+          opacity: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+          pointer-events: none;
+        }
+
+        /* ------------------------------------------------------------------
+           Lookfy column offsets, stacked beneath the sticky block.
+           !important is required because the cross-origin lookfy.css rules
+           are not inspectable and win otherwise.
+           ------------------------------------------------------------------ */
+        @media (min-width: 769px) {
+          .section-vehicle-gallery-tabs .vgt-panel .kt-image-column {
+            position: sticky !important;
+            top: calc(var(--header-height, 0px) + var(--vgt-sticky-h, 10rem) + 1rem) !important;
+            height: fit-content !important;
+          }
+          .section-vehicle-gallery-tabs .vgt-panel .kt-products-column {
+            max-height: calc(100vh - var(--header-height, 0px) - var(--vgt-sticky-h, 10rem) - 3rem) !important;
+            overflow-y: auto !important;
+          }
+          /* Scroll padding so the last card can still reach the top of the
+             scroll box. Must track the max-height above, or scroll-to-card
+             overshoots. Migrated here from the Lookfy app Custom CSS, where it
+             was hardcoded to calc(100vh - 220px). */
+          .section-vehicle-gallery-tabs .vgt-panel .hotspot-item-products-list {
+            padding-bottom: calc(100vh - var(--header-height, 0px) - var(--vgt-sticky-h, 10rem) - 3rem) !important;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .section-vehicle-gallery-tabs .vgt-sticky-header--on,
+          .section-vehicle-gallery-tabs .vgt-sticky-header--on[data-vgt-collapse="true"] .vehicle-gallery-tabs__description {
+            transition: none;
+          }
+        }
     </style>
-  
+
   <script>
     (function () {
       var container = document.getElementById('vgt-{{ section.id }}');
       if (!container) return;
-  
+
       var sectionEl = container.closest('.color-{{ section.settings.color_scheme }}');
       if (!sectionEl) return;
-  
+
       var buttons = sectionEl.querySelectorAll('.vgt-tab-btn');
       var panels = container.querySelectorAll('.vgt-panel');
       var storageKey = 'vgt-tab-{{ collection.handle }}';
-  
+
       function activateTab(targetId) {
         buttons.forEach(function (b) {
           b.classList.remove('custom-tab--active');
           b.setAttribute('aria-selected', 'false');
         });
-  
+
         panels.forEach(function (panel) {
           panel.classList.add('vgt-panel--hidden');
         });
-  
+
         var targetPanel = document.getElementById(targetId);
         var targetBtn = sectionEl.querySelector('[data-target="' + targetId + '"]');
-  
+
         if (targetPanel) targetPanel.classList.remove('vgt-panel--hidden');
         if (targetBtn) {
           targetBtn.classList.add('custom-tab--active');
           targetBtn.setAttribute('aria-selected', 'true');
         }
       }
-  
+
       // Restore saved tab on page load
       var savedTab = localStorage.getItem(storageKey);
       if (savedTab && document.getElementById(savedTab)) {
         activateTab(savedTab);
       }
-  
+
       // Save tab selection on click
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -125,11 +208,75 @@
           localStorage.setItem(storageKey, targetId);
         });
       });
+
+      /* ----------------------------------------------------------------
+         Sticky heading + toggle
+         Publishes --vgt-sticky-h so the Lookfy diagram and product list
+         stack correctly beneath it, and toggles a --pinned class used for
+         the shadow and the optional description collapse.
+         ---------------------------------------------------------------- */
+      var wrapper = sectionEl.querySelector('.vgt-sticky-header--on');
+      if (!wrapper) return;
+
+      var desc = wrapper.querySelector('.vehicle-gallery-tabs__description');
+      var shouldCollapse = wrapper.getAttribute('data-vgt-collapse') === 'true';
+      var headerOffset = 0;
+      var ticking = false;
+
+      function readHeaderOffset() {
+        var raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+        headerOffset = parseFloat(raw) || 0;
+      }
+
+      function publishHeights() {
+        sectionEl.style.setProperty('--vgt-sticky-h', wrapper.offsetHeight + 'px');
+        // scrollHeight reports full content height even while max-height clips it,
+        // so this stays accurate whether or not the block is currently pinned.
+        if (shouldCollapse && desc) {
+          sectionEl.style.setProperty('--vgt-desc-h', desc.scrollHeight + 'px');
+        }
+      }
+
+      function updatePinned() {
+        var isPinned = wrapper.getBoundingClientRect().top <= headerOffset + 1;
+        wrapper.classList.toggle('vgt-sticky-header--pinned', isPinned);
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updatePinned);
+        }
+      }
+
+      readHeaderOffset();
+      publishHeights();
+      updatePinned();
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () {
+        readHeaderOffset();
+        publishHeights();
+        updatePinned();
+      });
+
+      // Keeps --vgt-sticky-h correct when the heading rewraps, when the
+      // description collapses, and while the collapse transition runs.
+      if (window.ResizeObserver) {
+        new ResizeObserver(function () {
+          sectionEl.style.setProperty('--vgt-sticky-h', wrapper.offsetHeight + 'px');
+        }).observe(wrapper);
+      }
+
+      // Lookfy renders asynchronously. Republish once after it settles so the
+      // first paint of the diagram uses the final offset.
+      window.setTimeout(publishHeights, 800);
     })();
   </script>
-  
+
   {% endif %}
-  
+
   {% schema %}
   {
     "name": "Vehicle Gallery Tabs",
@@ -141,7 +288,25 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Renders switchable Lookfy frame diagram galleries driven by the vehicle_config.variants collection metafield. No tab configuration needed here — manage variants via the collection metafield JSON."
+        "content": "Renders switchable Lookfy frame diagram galleries driven by the vehicle_config.variants collection metafield. No tab configuration needed here. Manage variants via the collection metafield JSON."
+      },
+      {
+        "type": "header",
+        "content": "Sticky behavior"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_header",
+        "default": true,
+        "label": "Keep heading and tabs in view",
+        "info": "Pins the heading, description and vehicle tabs beneath the site header while this section is on screen."
+      },
+      {
+        "type": "checkbox",
+        "id": "collapse_description_when_pinned",
+        "default": false,
+        "label": "Collapse description when pinned",
+        "info": "Hides the description once the block pins, keeping only the heading and tabs. Recovers roughly 58px on desktop and 108px on mobile."
       },
       {
         "type": "header",
