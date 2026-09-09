@@ -136,21 +136,28 @@
            are not inspectable and win otherwise.
            ------------------------------------------------------------------ */
         @media (min-width: 769px) {
+          .section-vehicle-gallery-tabs {
+            /* Single source of truth for the list box height. */
+            --vgt-list-h: calc(100vh - var(--header-height, 0px) - var(--vgt-sticky-h, 10rem) - 3rem);
+          }
           .section-vehicle-gallery-tabs .vgt-panel .kt-image-column {
             position: sticky !important;
             top: calc(var(--header-height, 0px) + var(--vgt-sticky-h, 10rem) + 1rem) !important;
             height: fit-content !important;
           }
           .section-vehicle-gallery-tabs .vgt-panel .kt-products-column {
-            max-height: calc(100vh - var(--header-height, 0px) - var(--vgt-sticky-h, 10rem) - 3rem) !important;
+            max-height: var(--vgt-list-h) !important;
             overflow-y: auto !important;
           }
-          /* Scroll padding so the last card can still reach the top of the
-             scroll box. Must track the max-height above, or scroll-to-card
-             overshoots. Migrated here from the Lookfy app Custom CSS, where it
-             was hardcoded to calc(100vh - 220px). */
+          /* Scroll padding so a clicked hotspot can bring its card to the top
+             of the scroll box. The amount needed is the box height minus one
+             card, not one card height. The previous version used the full box
+             height, which was one card too much and left a large blank area.
+             Verified: 261px tops out all 20 cards on this collection.
+             --vgt-list-pad is set to 0 by the script when the list is too
+             short to scroll, so short collections get no dead space. */
           .section-vehicle-gallery-tabs .vgt-panel .hotspot-item-products-list {
-            padding-bottom: calc(100vh - var(--header-height, 0px) - var(--vgt-sticky-h, 10rem) - 3rem) !important;
+            padding-bottom: var(--vgt-list-pad, calc(var(--vgt-list-h) - 12rem)) !important;
           }
         }
 
@@ -209,10 +216,43 @@
       });
 
       /* ----------------------------------------------------------------
+         Scroll padding on the product list
+         The padding exists only so a clicked hotspot can bring its card to
+         the top of the scroll box. A list too short to scroll does not need
+         it, and would otherwise show a large blank area, so zero it out in
+         that case. Otherwise clear the override and let the CSS default
+         apply, keeping the formula in one place.
+         ---------------------------------------------------------------- */
+      function syncListPadding() {
+        if (!window.matchMedia('(min-width: 769px)').matches) return;
+        sectionEl.querySelectorAll('.kt-products-column').forEach(function (colEl) {
+          var listEl = colEl.querySelector('.hotspot-item-products-list');
+          if (!listEl) return;
+          // Measure with the padding removed, so the check reflects content
+          // height rather than the padding we are deciding about.
+          listEl.style.setProperty('--vgt-list-pad', '0px');
+          var scrolls = colEl.scrollHeight > colEl.clientHeight + 4;
+          if (scrolls) {
+            listEl.style.removeProperty('--vgt-list-pad');
+          }
+        });
+      }
+
+      // Lookfy renders asynchronously, and switching tabs swaps in a panel
+      // whose list has never been measured.
+      window.setTimeout(syncListPadding, 900);
+      window.addEventListener('resize', syncListPadding);
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          window.setTimeout(syncListPadding, 300);
+        });
+      });
+
+      /* ----------------------------------------------------------------
          Sticky heading + toggle
          Publishes --vgt-sticky-h so the Lookfy diagram and product list
          stack correctly beneath it, and toggles a --pinned class used for
-         the shadow and the optional description collapse.
+         the optional description collapse.
          ---------------------------------------------------------------- */
       var wrapper = sectionEl.querySelector('.vgt-sticky-header--on');
       if (!wrapper) return;
