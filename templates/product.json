@@ -319,7 +319,7 @@
         "thumbnail_layout": "desktop",
         "thumbnail_radius": 8,
         "thumbnail_scale": 100,
-        "thumbnail_image_ratio": "landscape",
+        "thumbnail_image_ratio": "square",
         "thumbnail_cover": false,
         "section_color_scheme": "scheme-1",
         "media_color_scheme": "scheme-7c10a319-0c50-4838-8cde-ffe35ed77fe2",
