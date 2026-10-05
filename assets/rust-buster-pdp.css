@@ -1,0 +1,505 @@
+/* Two-column PDP, scoped to .rb-pdp (section setting). Values are ported from the browser prototype; rem base is 10px. */
+@media screen and (min-width: 750px) {
+  /* Also needs .product--three-grid. 1fr on row 2 stops a tall gallery opening a gap above the buy panel. */
+  .page-width .product.grid.product--three-grid.rb-pdp {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "media info" "media submedia";
+    gap: 1.2rem clamp(3.2rem, 4.2vw, 7rem);
+  }
+
+  .page-width .product.grid.product--three-grid.rb-pdp .product__media-wrapper,
+  .page-width .product.grid.product--three-grid.rb-pdp .product__info-wrapper,
+  .page-width .product.grid.product--three-grid.rb-pdp .product__media-submedia-wrapper {
+    padding: 0;
+    align-self: start;
+  }
+}
+
+.product.rb-pdp .product__info-wrapper .product__info-container,
+.product.rb-pdp .product__info-panel {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+}
+
+.product.rb-pdp .product__info-wrapper .product__info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* The price block renders price, tax and installments as siblings, so the pill and shipping note are placed with order. */
+.product.rb-pdp .product__info-panel {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.product.rb-pdp .product__info-panel > * {
+  flex: 0 0 100%;
+  order: 5;
+  margin: 0;
+}
+
+.product.rb-pdp .product__info-panel > [id^="price-"] {
+  flex: 0 1 auto;
+  order: 1;
+}
+
+.product.rb-pdp .product__info-panel > div:has(> .product__inventory) {
+  flex: 0 1 auto;
+  order: 2;
+}
+
+.product.rb-pdp .product__info-panel > .rb-shipping-note {
+  order: 3;
+}
+
+.product.rb-pdp .product__info-panel > div:has(> form.installment) {
+  order: 4;
+}
+
+/* Spacer blocks are hidden on purpose: they were the main source of loose vertical rhythm. */
+.product.rb-pdp .product__info-wrapper .spacer-container,
+.product.rb-pdp .product__info-panel .spacer-container {
+  display: none;
+}
+
+.product.rb-pdp .product__sku {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3A3A3A;
+  letter-spacing: .04em;
+  margin: 0 0 5px;
+}
+
+.product.rb-pdp .product__info-wrapper h1,
+.product.rb-pdp .product__info-wrapper .h1 {
+  font-size: clamp(30px, 2.6vw, 42px);
+  line-height: 1.0;
+  letter-spacing: -.01em;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.product.rb-pdp .product__info-wrapper .rte {
+  margin: 0;
+  padding: 0;
+}
+
+.product.rb-pdp .product__info-wrapper .rte:has(a):not(:has(li)) {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.product.rb-pdp .rb-fit {
+  background: #fff;
+  border: 1px solid #E4E4E4;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 16px 0 0;
+}
+
+.product.rb-pdp .rb-fit__hd {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.product.rb-pdp .rb-fit__check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2E9E4F;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.product.rb-pdp .rb-fit__title {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #1a1a1a;
+}
+
+.product.rb-pdp .rb-fit__sep {
+  color: #D6D6D6;
+}
+
+.product.rb-pdp .rb-fit__range {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #2E9E4F;
+  letter-spacing: .04em;
+  font-variant-numeric: tabular-nums;
+  margin-left: 2px;
+}
+
+.product.rb-pdp .rb-fit__count {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 12px;
+  color: #8A8A8A;
+  white-space: nowrap;
+}
+
+/* Multi-column, not grid: grid row bands stretch neighbouring entries and misalign the yellow rules. 220px fits the longest entry on one line. */
+.product.rb-pdp .rb-fit__grid {
+  columns: 220px 3;
+  column-gap: 18px;
+}
+
+.product.rb-pdp .rb-fit__row {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 0 4px 10px;
+  border-left: 3px solid #E1A525;
+  line-height: 1.35;
+  margin: 0 0 3px;
+}
+
+.product.rb-pdp .rb-fit__yr {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a1a1a;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.product.rb-pdp .rb-fit__mdl {
+  font-size: 13.5px;
+  color: #4A4A4A;
+}
+
+.product.rb-pdp .rb-fit__note {
+  margin: 11px 0 0;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.product.rb-pdp .rb-fit__cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F5C2A;
+  text-decoration: underline;
+}
+
+.product.rb-pdp .product__info-panel [id^="price-"] .price__container .price-item {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.product.rb-pdp .rb-shipping-note,
+.product.rb-pdp .product__info-panel > div:has(> form.installment) {
+  font-size: 13px;
+  color: #6B6B6B;
+  line-height: 1.5;
+  margin-top: -4px;
+}
+
+/* Cancels the row gap so installments sit directly under the shipping note. */
+.product.rb-pdp .product__info-panel:has(> .rb-shipping-note) > div:has(> form.installment) {
+  margin-top: -12px;
+}
+
+.product.rb-pdp .product__info-panel form.installment {
+  margin: 0;
+}
+
+/* !important: the message carries inline styles, and global.js toggles its display inline, so display is left alone here. */
+.product.rb-pdp .product__info-panel .variant-selection-message:empty {
+  display: none !important;
+}
+
+.product.rb-pdp .product__info-panel .variant-selection-message {
+  position: relative;
+  margin: 0 0 14px !important;
+  padding: 11px 14px 11px 44px !important;
+  background: #FFF6E5 !important;
+  border-left: 3px solid #E1A525;
+  border-radius: 0 8px 8px 0 !important;
+  color: #1a1a1a !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left !important;
+}
+
+.product.rb-pdp .product__info-panel .variant-selection-message::before {
+  content: '!';
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #E1A525;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.product.rb-pdp .product__info-panel variant-selects {
+  margin: -6px 0 0;
+  padding: 0 0 6px;
+}
+
+.product.rb-pdp .product__info-panel variant-selects fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.product.rb-pdp .product__info-panel variant-selects legend,
+.product.rb-pdp .product__info-panel variant-selects .form__label {
+  margin: 0 0 8px;
+}
+
+/* The message div sits before the first fieldset, which defeats Ignite's first-child reset of the label's 2em top padding. */
+.product.rb-pdp .product__info-panel variant-selects > .variant-selection-message + fieldset legend {
+  padding-top: 0;
+}
+
+.product.rb-pdp .product__info-panel .product-form__input {
+  margin: 0;
+}
+
+.product.rb-pdp .product__info-panel product-form .product-form__buttons {
+  margin-top: 0;
+}
+
+.product.rb-pdp .product__info-panel .product-form__quantity {
+  margin: 0 0 10px;
+}
+
+/* .rb-addons and .rb-addons-head are added by rust-buster-bundle-fix.js once offers render. */
+.product.rb-pdp .shopify-app-block.rb-addons {
+  background: #fff;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  padding: 16px 18px 8px;
+  margin: 0;
+}
+
+.product.rb-pdp .rb-addons-head__title {
+  margin: 0 0 3px;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.product.rb-pdp .rb-addons-head__text {
+  margin: 0;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.product.rb-pdp .rb-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.product.rb-pdp .rb-pill {
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.product.rb-pdp .rb-pill i {
+  color: #E1A525;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.product.rb-pdp .rb-installer {
+  background: #fff;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.product.rb-pdp .rb-installer__heading {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.product.rb-pdp .rb-installer__text {
+  margin: 0;
+  font-size: 15px;
+  color: #4A4A4A;
+  line-height: 1.4;
+}
+
+.product.rb-pdp .rb-installer__button {
+  border: 1.5px solid #1a1a1a;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 749px) {
+  .product.rb-pdp .product__info-panel {
+    column-gap: 10px;
+  }
+
+  .product.rb-pdp .product__info-panel [id^="price-"] .price__container .price-item {
+    font-size: 34px;
+  }
+
+  .product.rb-pdp .rb-shipping-note,
+  .product.rb-pdp .product__info-panel > div:has(> form.installment) {
+    font-size: 12.5px;
+  }
+
+  .product.rb-pdp .product__info-wrapper h1,
+  .product.rb-pdp .product__info-wrapper .h1 {
+    font-size: 28px;
+    line-height: 1.05;
+  }
+
+  .product.rb-pdp .rb-fit {
+    padding: 13px 14px;
+  }
+
+  .product.rb-pdp .rb-fit__hd {
+    flex-wrap: wrap;
+    gap: 7px;
+    row-gap: 4px;
+  }
+
+  .product.rb-pdp .rb-fit__grid {
+    column-width: auto;
+    column-count: 1;
+  }
+
+  .product.rb-pdp .rb-fit__row {
+    padding: 5px 0 5px 10px;
+  }
+
+  .product.rb-pdp .rb-fit__mdl {
+    font-size: 14px;
+  }
+
+  .product.rb-pdp .shopify-app-block.rb-addons {
+    padding: 14px 15px 6px;
+  }
+
+  .product.rb-pdp .rb-extras {
+    margin-top: 4px;
+  }
+
+  .product.rb-pdp .rb-pills {
+    margin-top: 0;
+  }
+
+  .product.rb-pdp .rb-installer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .product.rb-pdp .rb-installer__button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .product.rb-pdp .rb-fit--long .rb-fit__grid {
+    columns: auto 2;
+    column-gap: 14px;
+  }
+
+  .product.rb-pdp .rb-fit--long .rb-fit__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    padding: 4px 0 4px 9px;
+  }
+
+  .product.rb-pdp .rb-fit--long .rb-fit__yr {
+    font-size: 12px;
+  }
+
+  .product.rb-pdp .rb-fit--long .rb-fit__mdl {
+    font-size: 13.5px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .product.rb-pdp .rb-pills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flex/grid children default to min-width:auto, so the add-ons row would push past the viewport. */
+.product.rb-pdp .product__info-panel,
+.product.rb-pdp .product__info-wrapper .product__info-container {
+  min-width: 0;
+}
+
+.product.rb-pdp .product__info-panel > *,
+.product.rb-pdp .product__info-wrapper .product__info-container > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.product.rb-pdp mw-product-addons {
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .product.rb-pdp .product__info-panel,
+  .product.rb-pdp .product__info-wrapper > .product__info-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,125 @@
+{%- liquid
+  assign metafield_namespace = block.settings.metafield_namespace | strip | default: 'custom'
+  assign metafield_key = block.settings.metafield_key | strip | default: 'fitment'
+  assign entries = product.metafields[metafield_namespace][metafield_key].value
+
+  assign row_count = 0
+  assign first_year = ''
+  assign one_range = true
+  assign rows_with_year = ''
+  assign rows_models_only = ''
+  assign notes = ''
+-%}
+
+{%- for entry in entries -%}
+  {%- liquid
+    assign text = entry | strip
+    assign prefix = text | slice: 0, 5 | downcase
+    if prefix == 'fits '
+      assign text = text | slice: 5, text.size | strip
+    endif
+    assign text = text | replace: '–', '-' | replace: '—', '-'
+
+    # No regex in Liquid: a 4-character slice is a year only if it round-trips through a number unchanged.
+    assign year = ''
+    assign model = text
+    assign start_year = text | slice: 0, 4
+    assign start_year_check = start_year | plus: 0 | append: ''
+
+    if start_year.size == 4 and start_year_check == start_year
+      assign char_after_start = text | slice: 4, 1
+      assign after_start = text | slice: 4, text.size | lstrip
+      assign first_char = after_start | slice: 0, 1
+
+      if first_char == '-'
+        assign after_dash = after_start | slice: 1, after_start.size | lstrip
+        assign end_year = after_dash | slice: 0, 4
+        assign end_year_check = end_year | plus: 0 | append: ''
+        assign char_after_end = after_dash | slice: 4, 1
+
+        assign ends_cleanly = false
+        if char_after_end == '' or char_after_end == ' '
+          assign ends_cleanly = true
+        endif
+
+        if end_year.size == 4 and end_year_check == end_year and ends_cleanly
+          assign year = start_year | append: '-' | append: end_year
+          assign model = after_dash | slice: 4, after_dash.size | strip
+        endif
+      elsif char_after_start == '' or char_after_start == ' '
+        assign year = start_year
+        assign model = after_start | strip
+      endif
+    endif
+
+    if year != blank
+      assign row_count = row_count | plus: 1
+      if first_year == ''
+        assign first_year = year
+      elsif year != first_year
+        assign one_range = false
+      endif
+    endif
+  -%}
+
+  {%- if year != blank -%}
+    {%- capture rows_with_year -%}
+      {{- rows_with_year -}}
+      <li class="rb-fit__row"><span class="rb-fit__yr">{{ year }}</span><span class="rb-fit__mdl">{{ model | escape }}</span></li>
+    {%- endcapture -%}
+    {%- capture rows_models_only -%}
+      {{- rows_models_only -}}
+      <li class="rb-fit__row"><span class="rb-fit__mdl">{{ model | escape }}</span></li>
+    {%- endcapture -%}
+  {%- elsif text != blank -%}
+    {%- liquid
+      if notes != ''
+        assign notes = notes | append: ' &middot; '
+      endif
+      assign escaped_note = text | escape
+      assign notes = notes | append: escaped_note
+    -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- liquid
+  if row_count == 0
+    assign one_range = false
+  endif
+-%}
+
+{%- if row_count > 0 or notes != blank -%}
+  <div class="rb-fit{% if row_count >= 5 %} rb-fit--long{% endif %}{% if block.settings.show_in_quickbuy != true %} quick-add-hidden{% endif %}" {{ block.shopify_attributes }}>
+    <div class="rb-fit__hd">
+      <span class="rb-fit__check" aria-hidden="true">&#10003;</span>
+      {%- if block.settings.heading != blank -%}
+        <h2 class="rb-fit__title">{{ block.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if one_range -%}
+        <span class="rb-fit__sep" aria-hidden="true">|</span>
+        <b class="rb-fit__range">{{ first_year }}</b>
+      {%- endif -%}
+      {%- if row_count > 0 -%}
+        <em class="rb-fit__count">{{ row_count }} {% if row_count == 1 %}vehicle{% else %}vehicles{% endif %}</em>
+      {%- endif -%}
+    </div>
+
+    {%- if row_count > 0 -%}
+      <ul class="rb-fit__grid list-unstyled" role="list">
+        {%- if one_range -%}
+          {{- rows_models_only -}}
+        {%- else -%}
+          {{- rows_with_year -}}
+        {%- endif -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if notes != blank -%}
+      <p class="rb-fit__note">{{ notes }}</p>
+    {%- endif -%}
+
+    {%- if block.settings.cta_label != blank and block.settings.cta_url != blank -%}
+      <a class="rb-fit__cta" href="{{ block.settings.cta_url }}">{{ block.settings.cta_label | escape }} &rarr;</a>
+    {%- endif -%}
+  </div>
+{%- endif -%}

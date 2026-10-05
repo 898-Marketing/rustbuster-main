@@ -1,4 +1,117 @@
-<a href="#" class="pdp-back-btn" id="pdp-back-to-collection" style="display:none;"></a>
+{%- if style == 'bar' -%}
+  <a href="#" class="rb-back-bar" id="pdp-back-to-collection" hidden>
+    <span class="rb-back-bar__inner">
+      <span class="rb-back-bar__label"><span class="rb-back-bar__arrow" aria-hidden="true">&larr;</span> Back to</span>
+      <span class="rb-back-bar__title" data-rb-back-title></span>
+    </span>
+  </a>
+
+  <style>
+    .rb-back-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 52px;
+      background: #1a1a1a;
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .rb-back-bar[hidden] {
+      display: none;
+    }
+    .rb-back-bar::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: #E8A020;
+    }
+    .rb-back-bar:focus-visible {
+      outline: 2px solid #E8A020;
+      outline-offset: -2px;
+    }
+    .rb-back-bar__inner {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      min-width: 0;
+      padding: 0 48px;
+    }
+    .rb-back-bar__label {
+      font-family: var(--font-body-family);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #E8A020;
+      white-space: nowrap;
+    }
+    .rb-back-bar__arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .rb-back-bar__title {
+      font-family: var(--font-heading-family);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .rb-back-bar:hover .rb-back-bar__title {
+      color: #E8A020;
+    }
+    .rb-back-bar:hover .rb-back-bar__arrow {
+      transform: translateX(-3px);
+    }
+    @media screen and (max-width: 749px) {
+      .rb-back-bar {
+        min-height: 0;
+        padding: 10px 0;
+      }
+      .rb-back-bar__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        padding: 0 20px;
+      }
+      .rb-back-bar__title {
+        font-size: 15px;
+        white-space: normal;
+      }
+    }
+  </style>
+{%- else -%}
+  <a href="#" class="pdp-back-btn" id="pdp-back-to-collection" style="display:none;"></a>
+
+  <style>
+  .pdp-back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    color: rgba(var(--color-foreground), 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-left: 10em;
+  }
+  .pdp-back-btn:hover {
+    color: rgba(var(--color-foreground), 1);
+  }
+  @media screen and (max-width: 749px) {
+    .pdp-back-btn {
+      margin-left: 1rem;
+      font-size: 14px;
+    }
+  }
+  </style>
+{%- endif -%}
 
 <script type="application/json" id="pdp-back-collection-data">
 [
@@ -7,6 +120,7 @@
     {% assign variants = c.metafields.vehicle_config.variants.value %}
     {
       "title": {{ c.title | json }},
+      "display_title": {{ c.title | remove: 'Rust Buster Frame Repair Kits For ' | remove: 'Rust Buster Frame Repair Kits for ' | json }},
       "url": {{ c.url | json }},
       "single_gallery_id": {{ single_id | json }},
       "variant_gallery_ids": [
@@ -51,28 +165,14 @@
   var btn = document.getElementById('pdp-back-to-collection');
   if (!btn) return;
   btn.href = match.url;
-  btn.textContent = '\u2190 Back to ' + match.title;
-  btn.style.display = 'inline-block';
+
+  var title = btn.querySelector('[data-rb-back-title]');
+  if (title) {
+    title.textContent = match.display_title;
+    btn.hidden = false;
+  } else {
+    btn.textContent = '← Back to ' + match.title;
+    btn.style.display = 'inline-block';
+  }
 })();
 </script>
-
-<style>
-.pdp-back-btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-size: 16px;
-  color: rgba(var(--color-foreground), 0.7);
-  text-decoration: none;
-  transition: color 0.2s;
-  margin-left: 10em;
-}
-.pdp-back-btn:hover {
-  color: rgba(var(--color-foreground), 1);
-}
-@media screen and (max-width: 749px) {
-  .pdp-back-btn {
-    margin-left: 1rem;
-    font-size: 14px;
-  }
-}
-</style>

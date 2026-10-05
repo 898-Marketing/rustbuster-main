@@ -1,0 +1,15 @@
+{%- capture badges -%}
+  {%- for i in (1..6) -%}
+    {%- assign setting_id = 'badge_' | append: i -%}
+    {%- assign badge = block.settings[setting_id] -%}
+    {%- if badge != blank -%}
+      <li class="rb-pill"><i aria-hidden="true">&#10003;</i> {{ badge | escape }}</li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if badges != blank -%}
+  <ul class="rb-pills list-unstyled" role="list" {{ block.shopify_attributes }}>
+    {{- badges -}}
+  </ul>
+{%- endif -%}

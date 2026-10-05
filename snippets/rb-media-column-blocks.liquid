@@ -1,0 +1,28 @@
+{%- comment -%} Rendered twice by main-product.liquid (under the gallery, and after the buy panel on mobile); `class` hides the copy that doesn't apply. {%- endcomment -%}
+{%- capture rb_media_blocks -%}
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign is_hidden = false
+      if block.settings.stock_visibility == 'in_stock' and product.available != true
+        assign is_hidden = true
+      elsif block.settings.stock_visibility == 'out_of_stock' and product.available
+        assign is_hidden = true
+      endif
+    -%}
+
+    {%- unless is_hidden -%}
+      {%- case block.type -%}
+        {%- when 'trust_badges' -%}
+          {%- render 'rb-trust-badges', block: block -%}
+        {%- when 'installer_cta' -%}
+          {%- render 'rb-installer-cta', block: block -%}
+      {%- endcase -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if rb_media_blocks != blank -%}
+  <div class="rb-extras quick-add-hidden {{ class }}">
+    {{- rb_media_blocks -}}
+  </div>
+{%- endif -%}
