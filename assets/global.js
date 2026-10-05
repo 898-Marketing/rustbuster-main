@@ -2346,7 +2346,10 @@ class VariantSelects extends HTMLElement {
 
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    // Keep other query params (e.g. lfgid, which drives the back-to-collection bar) instead of replacing them.
+    const params = new URLSearchParams(window.location.search);
+    params.set('variant', this.currentVariant.id);
+    window.history.replaceState({}, '', `${this.dataset.url}?${params}`);
   }
 
   updateShareUrl() {

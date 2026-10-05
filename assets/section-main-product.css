@@ -1848,32 +1848,30 @@ a.product__text {
       "media info";
   }
 
-  /* Override the three-grid layout to create true 3-column layout */
-  .product.grid.product--three-grid {
+  /* 3-column layout for templates without the Rust Buster two-column toggle (rust-buster-pdp.css) */
+  .product.grid.product--three-grid:not(.rb-pdp) {
     grid-template-columns: 1fr 1.25fr 1fr;
     grid-template-areas:
       "media info submedia";
     gap: 1rem;
   }
 
-  /* Ensure the third column (submedia) appears to the right of info */
-  .product.grid.product--three-grid .product__media-submedia-wrapper {
+  .product.grid.product--three-grid:not(.rb-pdp) .product__media-submedia-wrapper {
     grid-area: submedia;
     width: 100%;
     max-width: 100%;
   }
 
-  /* Adjust spacing for the three-column layout */
-  .product.grid.product--three-grid .product__info-wrapper {
+  .product.grid.product--three-grid:not(.rb-pdp) .product__info-wrapper {
     padding-left: calc(var(--grid-desktop-horizontal-spacing) / 6);
     padding-right: calc(var(--grid-desktop-horizontal-spacing) / 6);
   }
 
-  .product.grid.product--three-grid .product__media-wrapper {
+  .product.grid.product--three-grid:not(.rb-pdp) .product__media-wrapper {
     padding-right: calc(var(--grid-desktop-horizontal-spacing) / 6);
   }
 
-  .product.grid.product--three-grid .product__media-submedia-wrapper {
+  .product.grid.product--three-grid:not(.rb-pdp) .product__media-submedia-wrapper {
     padding-left: calc(var(--grid-desktop-horizontal-spacing) / 6);
   }
 }

@@ -1,0 +1,16 @@
+{%- if block.settings.heading != blank or block.settings.body != blank -%}
+  <div class="rb-installer" {{ block.shopify_attributes }}>
+    <div>
+      {%- if block.settings.heading != blank -%}
+        <h2 class="rb-installer__heading">{{ block.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if block.settings.body != blank -%}
+        <p class="rb-installer__text">{{ block.settings.body }}</p>
+      {%- endif -%}
+    </div>
+
+    {%- if block.settings.button_label != blank and block.settings.button_url != blank -%}
+      <a class="rb-installer__button" href="{{ block.settings.button_url }}">{{ block.settings.button_label | escape }}</a>
+    {%- endif -%}
+  </div>
+{%- endif -%}

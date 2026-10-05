@@ -250,6 +250,13 @@
 {%- elsif block.type == 'custom_liquid' -%}
   {{ block.settings.custom_liquid }}
 
+{%- comment -%} 'trust_badges' and 'installer_cta' deliberately have no branch: rb-media-column-blocks renders them. {%- endcomment -%}
+{%- elsif block.type == 'fitment_card' -%}
+  {%- render 'rb-fitment-card', block: block, product: product -%}
+
+{%- elsif block.type == 'shipping_note' -%}
+  {%- render 'rb-shipping-note', block: block -%}
+
 {%- elsif block.type == 'collapsible_tab' -%}
   {%- if request.design_mode or block.settings.content != blank or block.settings.page.content != blank or block.settings.content_embed != blank -%}
     <custom-accordion class="product__accordion accordion {{ block.settings.line_separator }}{% if block.settings.show_in_quickbuy != true %} quick-add-hidden{% endif %}" {{ block.shopify_attributes }}>

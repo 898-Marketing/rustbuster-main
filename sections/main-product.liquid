@@ -28,6 +28,10 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+  {%- if section.settings.rb_two_column_layout -%}
+    {{ 'rust-buster-pdp.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
+
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
     {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
@@ -239,6 +243,10 @@
       {% if panels_below_media != blank %}
         product--three-grid
       {% endif %}
+      {%- comment -%} rust-buster-pdp.css also needs product--three-grid, which drops if the 'Position below media' buy panel is disabled or empty. {%- endcomment -%}
+      {% if section.settings.rb_two_column_layout %}
+        rb-pdp
+      {% endif %}
       product--mobile-{% if section.settings.thumbnail_layout == 'both' or section.settings.thumbnail_layout == 'mobile' %}show{% else %}hide{% endif %}
       {% if product.media.size > 0 %}grid--2-col-desktop{% else %}product--no-media{% endif %}"
       data-product-handle="{{ product.handle }}"
@@ -247,6 +255,9 @@
 
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images, gallery_layout: section.settings.gallery_layout, enable_sticky_info: enable_sticky_info %}
+        {%- if section.settings.rb_two_column_layout -%}
+          {%- render 'rb-media-column-blocks', section: section, product: product, class: 'small-hide' -%}
+        {%- endif -%}
       </div>
 
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
@@ -331,6 +342,10 @@
         >
           <div>{{- panels_below_media -}}</div>
         </product-info>
+      {%- endif -%}
+
+      {%- if section.settings.rb_two_column_layout -%}
+        {%- render 'rb-media-column-blocks', section: section, product: product, class: 'medium-hide large-up-hide' -%}
       {%- endif -%}
     </div>
 
@@ -22179,6 +22194,251 @@
           "label": "Show for products which are"
         }
       ]
+    },
+    {
+      "type": "fitment_card",
+      "name": "Fitment card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Lists the vehicles from a product metafield (a list of single line text, e.g. \"Fits 1976-1983 Jeep CJ5\"). Hidden when the metafield is empty."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Confirmed Fitment"
+        },
+        {
+          "type": "text",
+          "id": "metafield_namespace",
+          "label": "Metafield namespace",
+          "default": "custom"
+        },
+        {
+          "type": "text",
+          "id": "metafield_key",
+          "label": "Metafield key",
+          "default": "fitment"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Link label",
+          "default": "Check your year"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Link",
+          "info": "The link is hidden until this is set."
+        },
+        {
+          "type": "header",
+          "content": "Visibility"
+        },
+        {
+          "type": "select",
+          "id": "stock_visibility",
+          "options": [
+            {
+              "value": "in_stock",
+              "label": "In stock"
+            },
+            {
+              "value": "out_of_stock",
+              "label": "Out of stock"
+            },
+            {
+              "value": "either",
+              "label": "Either"
+            }
+          ],
+          "info": "Always shows in the Theme Editor.",
+          "default": "either",
+          "label": "Show for products which are"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_in_quickbuy",
+          "default": true,
+          "label": "Show in quick buy"
+        }
+      ]
+    },
+    {
+      "type": "shipping_note",
+      "name": "Buy panel: Shipping note",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shown under the price with the Rust Buster two-column layout."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "Free shipping over $99"
+        },
+        {
+          "type": "header",
+          "content": "Visibility"
+        },
+        {
+          "type": "select",
+          "id": "stock_visibility",
+          "options": [
+            {
+              "value": "in_stock",
+              "label": "In stock"
+            },
+            {
+              "value": "out_of_stock",
+              "label": "Out of stock"
+            },
+            {
+              "value": "either",
+              "label": "Either"
+            }
+          ],
+          "info": "Always shows in the Theme Editor.",
+          "default": "either",
+          "label": "Show for products which are"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_in_quickbuy",
+          "default": true,
+          "label": "Show in quick buy"
+        }
+      ]
+    },
+    {
+      "type": "trust_badges",
+      "name": "Gallery: Trust badges",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Always renders under the gallery (after the buy panel on mobile), wherever it sits in this list. Requires the Rust Buster two-column layout."
+        },
+        {
+          "type": "text",
+          "id": "badge_1",
+          "label": "Badge 1"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "label": "Badge 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "label": "Badge 3"
+        },
+        {
+          "type": "text",
+          "id": "badge_4",
+          "label": "Badge 4"
+        },
+        {
+          "type": "text",
+          "id": "badge_5",
+          "label": "Badge 5"
+        },
+        {
+          "type": "text",
+          "id": "badge_6",
+          "label": "Badge 6"
+        },
+        {
+          "type": "header",
+          "content": "Visibility"
+        },
+        {
+          "type": "select",
+          "id": "stock_visibility",
+          "options": [
+            {
+              "value": "in_stock",
+              "label": "In stock"
+            },
+            {
+              "value": "out_of_stock",
+              "label": "Out of stock"
+            },
+            {
+              "value": "either",
+              "label": "Either"
+            }
+          ],
+          "info": "Always shows in the Theme Editor.",
+          "default": "either",
+          "label": "Show for products which are"
+        }
+      ]
+    },
+    {
+      "type": "installer_cta",
+      "name": "Gallery: Installer CTA",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Always renders under the gallery (after the buy panel on mobile), wherever it sits in this list. Requires the Rust Buster two-column layout."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Not welding it yourself?"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "body",
+          "label": "Text",
+          "default": "Find a shop near you that has installed Rust Buster panels before."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Locate an installer"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button link"
+        },
+        {
+          "type": "header",
+          "content": "Visibility"
+        },
+        {
+          "type": "select",
+          "id": "stock_visibility",
+          "options": [
+            {
+              "value": "in_stock",
+              "label": "In stock"
+            },
+            {
+              "value": "out_of_stock",
+              "label": "Out of stock"
+            },
+            {
+              "value": "either",
+              "label": "Either"
+            }
+          ],
+          "info": "Always shows in the Theme Editor.",
+          "default": "either",
+          "label": "Show for products which are"
+        }
+      ]
     }
   ],
   "settings": [
@@ -22243,6 +22503,17 @@
       "id": "scroll_to_active_variant",
       "default": true,
       "label": "Scroll to the active media when the page loads"
+    },
+    {
+      "type": "header",
+      "content": "Rust Buster layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "rb_two_column_layout",
+      "default": false,
+      "label": "Use two-column layout",
+      "info": "Gallery on the left, everything else on the right. Needs a Panel block with 'Position below media' enabled to hold the buy panel. Shows the 'Gallery:' blocks under the gallery."
     },
     {
       "type": "header",

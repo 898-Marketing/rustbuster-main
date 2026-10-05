@@ -22,11 +22,11 @@
       "type": "custom-liquid",
       "name": "Custom Liquid",
       "settings": {
-        "custom_liquid": "{% render 'pdp-back-to-collection-btn' %}",
+        "custom_liquid": "{% render 'pdp-back-to-collection-btn', style: 'bar' %}",
         "full_width": true,
         "color_scheme": "",
         "line_separator": "",
-        "top_padding": "pt-s05",
+        "top_padding": "pt-0",
         "bottom_padding": "pb-s05",
         "visibility": ""
       }
@@ -62,38 +62,6 @@
             "stock_visibility": "either",
             "show_in_quickbuy": true,
             "line_color": ""
-          }
-        },
-        "richtext_wEDaLW": {
-          "type": "richtext",
-          "settings": {
-            "text": "<h6>Fitment:</h6>",
-            "text_size": "t3",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false
-          }
-        },
-        "spacer_Jx7Jqw": {
-          "type": "spacer",
-          "settings": {
-            "show_line_separator": false,
-            "full_width": true,
-            "line_separator_style": "solid",
-            "spacing_top": 1,
-            "spacing_bottom": 1,
-            "spacer_visibility": "both",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true,
-            "line_color": ""
-          }
-        },
-        "richtext_xtdgbK": {
-          "type": "richtext",
-          "settings": {
-            "text": "{{ product.metafields.custom.fitment | metafield_tag }}",
-            "text_size": "t3",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false
           }
         },
         "spacer_XCjAkL": {
@@ -209,15 +177,6 @@
           "type": "shopify://apps/mw-bundle-builder/blocks/addons-app-block/5bcb1a6d-53b5-4d9c-b4f9-19f6620da62b",
           "settings": {}
         },
-        "richtext_tFbfVL": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p>*These items are optional</p>",
-            "text_size": "t5",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false
-          }
-        },
         "spacer_mE94Fg": {
           "type": "spacer",
           "settings": {
@@ -244,7 +203,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "show_tax_info": true,
+            "show_tax_info": false,
             "price_color": "#ea0707",
             "text_size": "h5-size"
           }
@@ -262,33 +221,79 @@
             "show_price": false,
             "show_pickup_availability": false
           }
+        },
+        "sku_Rb7Qx2": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body",
+            "text_size": "t6"
+          }
+        },
+        "fitment_card_Rb3kLm": {
+          "type": "fitment_card",
+          "settings": {
+            "heading": "Confirmed Fitment",
+            "metafield_namespace": "custom",
+            "metafield_key": "fitment",
+            "cta_label": "Check your year",
+            "cta_url": "",
+            "stock_visibility": "either",
+            "show_in_quickbuy": false
+          }
+        },
+        "shipping_note_Rb9Tz4": {
+          "type": "shipping_note",
+          "settings": {
+            "text": "Free shipping over $99",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
+        "trust_badges_Rb5Hn8": {
+          "type": "trust_badges",
+          "settings": {
+            "badge_1": "Made in the USA",
+            "badge_2": "Laser-cut, CNC-formed",
+            "badge_3": "Fits factory location",
+            "badge_4": "30-day returns",
+            "badge_5": "",
+            "badge_6": "",
+            "stock_visibility": "either"
+          }
+        },
+        "installer_cta_Rb2Wc6": {
+          "type": "installer_cta",
+          "settings": {
+            "heading": "Not welding it yourself?",
+            "body": "Find a shop near you that has installed Rust Buster panels before.",
+            "button_label": "Locate an installer",
+            "button_url": "/pages/locate-an-installer",
+            "stock_visibility": "either"
+          }
         }
       },
       "block_order": [
+        "sku_Rb7Qx2",
         "richtext_V78c8D",
         "rating_PyGT9p",
         "spacer_hc8cw3",
-        "richtext_wEDaLW",
-        "spacer_Jx7Jqw",
-        "richtext_xtdgbK",
+        "fitment_card_Rb3kLm",
         "spacer_XCjAkL",
         "richtext_RUK8ME",
         "panel_KaqEVk",
         "description_VVj7PD",
         "panel_EbDytj",
+        "price",
+        "inventory_ADrHqA",
+        "shipping_note_Rb9Tz4",
         "richtext_XQtgFD",
         "variant_picker",
         "richtext_XXGLHa",
         "mw_bundle_builder_addons_app_block_4ArxPR",
-        "richtext_tFbfVL",
         "spacer_mE94Fg",
-        "inventory_ADrHqA",
-        "price",
-        "buy_buttons"
-      ],
-      "custom_css": [
-        ".rte h1 {margin-bottom: 30px; font-size: 30px;}",
-        ".metafield-single_line_text_field {font-weight: 600;}"
+        "buy_buttons",
+        "trust_badges_Rb5Hn8",
+        "installer_cta_Rb2Wc6"
       ],
       "settings": {
         "gallery_layout": "slider",
@@ -330,7 +335,8 @@
         "card_shadow": true,
         "image_replace_background": false,
         "top_padding": "pt-0",
-        "bottom_padding": "pb-0"
+        "bottom_padding": "pb-0",
+        "rb_two_column_layout": true
       }
     },
     "custom_liquid_GjMYMF": {
