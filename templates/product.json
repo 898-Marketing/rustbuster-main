@@ -34,6 +34,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "sku_Rb7Qx2": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body",
+            "text_size": "t6"
+          }
+        },
         "richtext_V78c8D": {
           "type": "richtext",
           "settings": {
@@ -62,6 +69,18 @@
             "stock_visibility": "either",
             "show_in_quickbuy": true,
             "line_color": ""
+          }
+        },
+        "fitment_card_Rb3kLm": {
+          "type": "fitment_card",
+          "settings": {
+            "heading": "Confirmed Fitment",
+            "metafield_namespace": "custom",
+            "metafield_key": "fitment",
+            "cta_label": "Check your year",
+            "cta_url": "",
+            "stock_visibility": "either",
+            "show_in_quickbuy": false
           }
         },
         "spacer_XCjAkL": {
@@ -129,6 +148,31 @@
             "color_scheme": "scheme-2"
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_info": false,
+            "price_color": "#ea0707",
+            "text_size": "h5-size"
+          }
+        },
+        "inventory_ADrHqA": {
+          "type": "inventory",
+          "settings": {
+            "show_inventory_quantity": false,
+            "show_as_badge": true,
+            "text_style": "body",
+            "text_size": "t7"
+          }
+        },
+        "shipping_note_Rb9Tz4": {
+          "type": "shipping_note",
+          "settings": {
+            "text": "Free shipping over $99",
+            "stock_visibility": "either",
+            "show_in_quickbuy": true
+          }
+        },
         "richtext_XQtgFD": {
           "type": "richtext",
           "disabled": true,
@@ -191,23 +235,6 @@
             "line_color": ""
           }
         },
-        "inventory_ADrHqA": {
-          "type": "inventory",
-          "settings": {
-            "show_inventory_quantity": false,
-            "show_as_badge": true,
-            "text_style": "body",
-            "text_size": "t7"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_tax_info": false,
-            "price_color": "#ea0707",
-            "text_size": "h5-size"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -220,33 +247,6 @@
             "show_quantity": true,
             "show_price": false,
             "show_pickup_availability": false
-          }
-        },
-        "sku_Rb7Qx2": {
-          "type": "sku",
-          "settings": {
-            "text_style": "body",
-            "text_size": "t6"
-          }
-        },
-        "fitment_card_Rb3kLm": {
-          "type": "fitment_card",
-          "settings": {
-            "heading": "Confirmed Fitment",
-            "metafield_namespace": "custom",
-            "metafield_key": "fitment",
-            "cta_label": "Check your year",
-            "cta_url": "",
-            "stock_visibility": "either",
-            "show_in_quickbuy": false
-          }
-        },
-        "shipping_note_Rb9Tz4": {
-          "type": "shipping_note",
-          "settings": {
-            "text": "Free shipping over $99",
-            "stock_visibility": "either",
-            "show_in_quickbuy": true
           }
         },
         "trust_badges_Rb5Hn8": {
@@ -266,7 +266,7 @@
           "settings": {
             "heading": "Not welding it yourself?",
             "body": "Find a shop near you that has installed Rust Buster panels before.",
-            "button_label": "Locate an installer",
+            "button_label": "Locate an Installer",
             "button_url": "/pages/locate-an-installer",
             "stock_visibility": "either"
           }
@@ -300,6 +300,7 @@
         "sticky_panel": "off",
         "info_fullwidth_mob": false,
         "scroll_to_active_variant": true,
+        "rb_two_column_layout": true,
         "page_title_enabled": false,
         "page_title_vendor": false,
         "page_title_price": false,
@@ -335,8 +336,7 @@
         "card_shadow": true,
         "image_replace_background": false,
         "top_padding": "pt-0",
-        "bottom_padding": "pb-0",
-        "rb_two_column_layout": true
+        "bottom_padding": "pb-0"
       }
     },
     "custom_liquid_GjMYMF": {
