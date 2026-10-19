@@ -1,46 +1,36 @@
 {%- comment -%}
-  Ignite version. Redirects exact brand-name searches to the brand hub collection.
-  Only bare brand terms redirect; multi-word queries fall through to normal search.
-  If a brand collection isn't assigned the hub template yet (pre-launch),
-  ?view= forces the hub layout. Once assigned, the clean URL is used automatically.
+  Ignite version. Redirects exact-match searches to a collection, using the hidden
+  "Search Brands" menu (Online Store > Navigation > search-brands).
+  Each menu item's name is a search term; its link is the destination collection.
+  Extra spellings (Chevy, Chevrolet, GMC) are separate items pointing to the same collection.
+  This menu is separate from the Meteor mega menu, which Liquid can't read.
+  Brand hubs get ?view= until the hub template is assigned (pre-launch only).
+  Multi-word or unmatched queries fall through to normal search.
 {%- endcomment -%}
 {%- liquid
-  assign rb_query = search.terms | downcase | strip
-  assign rb_handle = ''
+  assign rb_menu_handle = 'search-brands'
   assign rb_hub_template = 'vehicle-brand-template'
+  assign rb_query = search.terms | downcase | strip
+  assign rb_url = ''
 
-  case rb_query
-    when 'cadillac'
-      assign rb_handle = 'cadillac'
-    when 'chevy', 'chevrolet', 'gmc', 'gm'
-      assign rb_handle = 'chevy-gmc'
-    when 'dodge', 'ram'
-      assign rb_handle = 'dodge'
-    when 'ford'
-      assign rb_handle = 'ford'
-    when 'hummer'
-      assign rb_handle = 'hummer'
-    when 'jeep'
-      assign rb_handle = 'jeep'
-    when 'lexus'
-      assign rb_handle = 'rust-buster-frame-repair-kits-for-lexus-models'
-    when 'nissan'
-      assign rb_handle = 'nissan'
-    when 'toyota'
-      assign rb_handle = 'toyota'
-  endcase
+  if rb_query != blank
+    for rb_link in linklists[rb_menu_handle].links
+      if rb_link.type != 'collection_link'
+        continue
+      endif
 
-  if rb_handle != ''
-    assign rb_target = collections[rb_handle]
-  endif
-
-  if rb_target.id
-    assign rb_url = rb_target.url
-    if rb_target.template_suffix != rb_hub_template
-      assign rb_url = rb_url | append: '?view=' | append: rb_hub_template
-    endif
+      assign rb_title = rb_link.title | downcase | strip
+      if rb_title == rb_query
+        assign rb_collection = rb_link.object
+        assign rb_url = rb_collection.url
+        if rb_collection.template_suffix != rb_hub_template
+          assign rb_url = rb_url | append: '?view=' | append: rb_hub_template
+        endif
+        break
+      endif
+    endfor
   endif
 -%}
-{%- if rb_target.id -%}
+{%- if rb_url != '' -%}
   <script>window.location.replace({{ rb_url | json }});</script>
 {%- endif -%}
