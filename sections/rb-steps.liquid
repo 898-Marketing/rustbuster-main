@@ -23,7 +23,7 @@
       {%- if section.blocks.size > 0 -%}
         <ol class="rb-steps__list" role="list">
           {%- for block in section.blocks -%}
-            <li class="rb-step rb-step--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+            <li class="rb-step{% if block.settings.highlight %} rb-step--highlight{% endif %}" {{ block.shopify_attributes }}>
               <div class="rb-step__marker">
                 <span class="rb-step__number" aria-hidden="true">{{ forloop.index }}</span>
               </div>
@@ -96,7 +96,7 @@
       "id": "accent_color",
       "default": "#E1A525",
       "label": "Accent color",
-      "info": "Connector lines and Tech step numbers."
+      "info": "Connector lines and highlighted step numbers."
     },
     {
       "type": "color",
@@ -191,21 +191,11 @@
           "label": "Text"
         },
         {
-          "type": "select",
-          "id": "style",
-          "options": [
-            {
-              "value": "customer",
-              "label": "Customer"
-            },
-            {
-              "value": "tech",
-              "label": "Tech"
-            }
-          ],
-          "default": "customer",
-          "label": "Step type",
-          "info": "Customer steps show a light number, Tech steps an accent number."
+          "type": "checkbox",
+          "id": "highlight",
+          "default": false,
+          "label": "Highlight this step",
+          "info": "Shows the step number in the accent color."
         }
       ]
     }
@@ -219,8 +209,7 @@
           "settings": {
             "eyebrow": "You",
             "heading": "Shoot the Rust",
-            "text": "<p>Grab 4 to 6 photos with your phone. The shot list below shows which angles we need.</p>",
-            "style": "customer"
+            "text": "<p>Grab 4 to 6 photos with your phone. The shot list below shows which angles we need.</p>"
           }
         },
         {
@@ -228,8 +217,7 @@
           "settings": {
             "eyebrow": "You",
             "heading": "Email It to Us",
-            "text": "<p>Send the photos with your year, make, model and cab/bed. Our template lists what to include.</p>",
-            "style": "customer"
+            "text": "<p>Send the photos with your year, make, model and cab/bed. Our template lists what to include.</p>"
           }
         },
         {
@@ -237,8 +225,7 @@
           "settings": {
             "eyebrow": "Rust Buster Tech",
             "heading": "We Review It",
-            "text": "<p>A team member who knows these frames looks at every photo and flags what can be saved.</p>",
-            "style": "tech"
+            "text": "<p>A team member who knows these frames looks at every photo and flags what can be saved.</p>"
           }
         },
         {
@@ -247,7 +234,7 @@
             "eyebrow": "Rust Buster Tech",
             "heading": "Get Your Parts List",
             "text": "<p>You get a reply with the panels and kits to order, or an honest call if it needs more than parts.</p>",
-            "style": "tech"
+            "highlight": true
           }
         }
       ]

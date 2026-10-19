@@ -152,7 +152,7 @@
   line-height: 1;
 }
 
-.rb-step--tech .rb-step__number {
+.rb-step--highlight .rb-step__number {
   color: rgb(var(--rb-accent, var(--color-accent)));
 }
 
