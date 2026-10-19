@@ -1,0 +1,564 @@
+{{ 'rb-fixable.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rb-photo-review.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign photo_blocks = section.blocks | where: 'type', 'photo'
+  assign checklist_blocks = section.blocks | where: 'type', 'checklist_item'
+  assign photos_id = section.settings.photos_anchor | handleize
+  assign card_id = section.settings.card_anchor | handleize
+  assign email_to = section.settings.email_to | strip
+  assign email_id = 'RbEmail-' | append: section.id
+  assign container_scheme = section.settings.container_color_scheme
+  assign accent = section.settings.accent_color
+  assign accent_text = section.settings.accent_text_color
+  assign accent_label = section.settings.accent_button_label
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient isolate">
+  <div class="section__inner page-width {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
+    <div
+      class="rb-photo-review{% if accent != blank and accent_label != blank %} rb-photo-review--accent-button{% endif %}"
+      style="{% if accent != blank %}--rb-accent: {{ accent.red }}, {{ accent.green }}, {{ accent.blue }};{% endif %}{% if accent_text != blank %} --rb-accent-text: {{ accent_text.red }}, {{ accent_text.green }}, {{ accent_text.blue }};{% endif %}{% if accent_label != blank %} --rb-accent-label: {{ accent_label.red }}, {{ accent_label.green }}, {{ accent_label.blue }};{% endif %}"
+    >
+      <div
+        class="rb-photo-review__photos rb-scroll-target"
+        {% if photos_id != blank %}
+          id="{{ photos_id }}" tabindex="-1" data-rb-scroll-target
+        {% endif %}
+      >
+        {%- if section.settings.photos_heading != blank -%}
+          <h2 class="rb-photo-review__heading rb-heading h4 color-heading">{{ section.settings.photos_heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.photos_intro != blank -%}
+          <p class="rb-photo-review__intro t3">{{ section.settings.photos_intro | escape }}</p>
+        {%- endif -%}
+
+        {%- if photo_blocks.size > 0 -%}
+          <ol class="rb-photo-grid" role="list">
+            {%- for block in photo_blocks -%}
+              <li class="rb-photo-tile color-{{ container_scheme }}" {{ block.shopify_attributes }}>
+                <div class="rb-photo-tile__media">
+                  {%- if block.settings.image != blank -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 900
+                      | image_tag:
+                        widths: '300, 450, 600, 900',
+                        sizes: '(min-width: 990px) 330px, (min-width: 750px) 45vw, 50vw',
+                        loading: 'lazy',
+                        class: 'rb-photo-tile__image'
+                    }}
+                  {%- else -%}
+                    <div class="rb-photo-tile__placeholder" aria-hidden="true">
+                      {%- render 'icon', icon: 'images', size: 28 -%}
+                      {%- if block.settings.title != blank -%}
+                        <span class="rb-photo-tile__placeholder-label">{{ block.settings.title | escape }}</span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+                <div class="rb-photo-tile__body">
+                  <h3 class="rb-photo-tile__title">
+                    <span class="rb-photo-tile__number" aria-hidden="true">
+                      {%- if forloop.index < 10 -%}0{%- endif -%}
+                      {{- forloop.index -}}
+                    </span>
+                    {{ block.settings.title | escape }}
+                  </h3>
+                  {%- if block.settings.caption != blank -%}
+                    <p class="rb-photo-tile__caption">{{ block.settings.caption | escape }}</p>
+                  {%- endif -%}
+                </div>
+              </li>
+            {%- endfor -%}
+          </ol>
+        {%- endif -%}
+      </div>
+
+      <div class="rb-photo-review__aside"{% if section.settings.sticky_cards %} data-rb-sticky-aside{% endif %}>
+        <div
+          class="rb-card rb-card--send rb-scroll-target color-{{ container_scheme }}"
+          {% if card_id != blank %}
+            id="{{ card_id }}" tabindex="-1" data-rb-scroll-target
+          {% endif %}
+          data-rb-send-card
+        >
+          {%- if section.settings.card_heading != blank -%}
+            <h2 class="rb-card__heading rb-heading h5 color-heading">{{ section.settings.card_heading | escape }}</h2>
+          {%- endif -%}
+          {%- if section.settings.card_intro != blank -%}
+            <p class="rb-card__intro">{{ section.settings.card_intro | escape }}</p>
+          {%- endif -%}
+
+          {%- if checklist_blocks.size > 0 -%}
+            <ul class="rb-checklist" role="list">
+              {%- for block in checklist_blocks -%}
+                <li class="rb-checklist__item" {{ block.shopify_attributes }}>
+                  <span class="rb-checklist__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" focusable="false">
+                      <path d="M5 10.5l3.2 3.2L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>{{ block.settings.text | escape }}</span>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if email_to != blank -%}
+            <script type="application/json" data-rb-email-config>
+              {
+                "to": {{ email_to | json }},
+                "subject": {{ section.settings.email_subject | json }},
+                "body": {{ section.settings.email_body | json }}
+              }
+            </script>
+
+            {%- if section.settings.button_label != blank -%}
+              <a class="button button--primary button--full-width rb-card__button{% if settings.button_text_font_weight == 'bold' %} font-bold{% endif %}" href="mailto:{{ email_to | escape }}" data-rb-mailto>
+                {{- section.settings.button_label | escape -}}
+              </a>
+            {%- endif -%}
+
+            {%- if section.settings.show_gmail and section.settings.gmail_label != blank -%}
+              <a
+                class="rb-card__gmail link"
+                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={{ email_to | url_encode }}"
+                target="_blank"
+                rel="noopener"
+                data-rb-gmail
+              >
+                {{- section.settings.gmail_label | escape -}}
+                <span class="visually-hidden"> ({{ 'accessibility.link_messages.new_window' | t }})</span>
+              </a>
+            {%- endif -%}
+          {%- endif -%}
+
+          {%- if section.settings.size_note != blank -%}
+            <p class="rb-card__note">{{ section.settings.size_note | escape }}</p>
+          {%- endif -%}
+
+          {%- if email_to != blank -%}
+            <div class="rb-card__write-to">
+              <p class="rb-card__write-to-text">
+                {%- if section.settings.write_to_label != blank -%}
+                  <span class="rb-card__write-label">{{ section.settings.write_to_label | escape }}</span>
+                {%- endif -%}
+                <span class="rb-card__email" id="{{ email_id }}">{{ email_to | escape }}</span>
+              </p>
+              {%- if section.settings.copy_label != blank -%}
+                <button
+                  type="button"
+                  class="rb-card__copy no-js-hidden"
+                  aria-describedby="{{ email_id }}"
+                  data-rb-copy
+                  data-rb-copy-text="{{ email_to | escape }}"
+                  data-rb-copied-label="{{ section.settings.copied_label | escape }}"
+                >
+                  {{- section.settings.copy_label | escape -}}
+                </button>
+              {%- endif -%}
+            </div>
+            <p class="visually-hidden" aria-live="polite" data-rb-copy-status></p>
+          {%- endif -%}
+        </div>
+
+        {%- if section.settings.fallback_heading != blank or section.settings.fallback_text != blank -%}
+          <div class="rb-card rb-card--fallback color-{{ container_scheme }}">
+            {%- if section.settings.fallback_heading != blank -%}
+              <h2 class="rb-card__heading rb-heading h6 color-heading">{{ section.settings.fallback_heading | escape }}</h2>
+            {%- endif -%}
+            <div class="rb-card__body">
+              {%- if section.settings.fallback_text != blank -%}
+                <div class="rb-card__text rte">{{ section.settings.fallback_text }}</div>
+              {%- endif -%}
+              {%- if section.settings.fallback_link_label != blank and section.settings.fallback_link != blank -%}
+                <a class="rb-card__link link" href="{{ section.settings.fallback_link }}">
+                  {{- section.settings.fallback_link_label | escape -}}
+                  <span class="rb-card__link-icon" aria-hidden="true">{% render 'icon-arrow' %}</span>
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.footer_note != blank -%}
+          <div class="rb-photo-review__note rte">{{ section.settings.footer_note }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RB: Photo review",
+  "tag": "section",
+  "class": "section section-rb-photo-review",
+  "disabled_on": {
+    "groups": ["header", "footer", "aside"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photo list"
+    },
+    {
+      "type": "text",
+      "id": "photos_anchor",
+      "default": "what-to-photograph",
+      "label": "Photo list anchor ID",
+      "info": "Link to it with #what-to-photograph. Lowercase letters, numbers and dashes only."
+    },
+    {
+      "type": "text",
+      "id": "photos_heading",
+      "default": "What to Photograph",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "photos_intro",
+      "default": "Six shots cover almost every job. Daylight, no flash, phone held steady.",
+      "label": "Intro"
+    },
+    {
+      "type": "header",
+      "content": "Send It card"
+    },
+    {
+      "type": "text",
+      "id": "card_anchor",
+      "default": "send-it",
+      "label": "Card anchor ID",
+      "info": "Link to it with #send-it. Lowercase letters, numbers and dashes only."
+    },
+    {
+      "type": "text",
+      "id": "card_heading",
+      "default": "Send It to Our Techs",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "card_intro",
+      "default": "Attach your photos and include:",
+      "label": "Intro"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_cards",
+      "default": true,
+      "label": "Keep cards in view while scrolling",
+      "info": "Desktop only, and only on screens tall enough to show the whole card column."
+    },
+    {
+      "type": "header",
+      "content": "Email template"
+    },
+    {
+      "type": "text",
+      "id": "email_to",
+      "default": "support@rustbuster.com",
+      "label": "Send to"
+    },
+    {
+      "type": "text",
+      "id": "email_subject",
+      "default": "Photo Review Request: Is My Vehicle Fixable?",
+      "label": "Subject"
+    },
+    {
+      "type": "textarea",
+      "id": "email_body",
+      "default": "Hi Rust Buster team,\n\nI'd like a frame review. My photos are attached.\n\nYear:\nMake:\nModel:\nCab (regular, extended, crew):\nBed length:\n\nWhere I see rust:\n\nWhat I want (daily driver, restoration, inspection):\n\nZIP code (so you can suggest an installer):\nPhone (optional):\n\nPhotos attached:\n1. Full side view\n2. Frame rails\n3. Cab corners\n4. Floor from below\n5. Worst spot, close\n6. VIN or data plate\n\nThanks!",
+      "label": "Body",
+      "info": "Line breaks are kept in the email."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Open Email With Template",
+      "label": "Email button label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gmail",
+      "default": true,
+      "label": "Show Gmail link"
+    },
+    {
+      "type": "text",
+      "id": "gmail_label",
+      "default": "Open in Gmail",
+      "label": "Gmail link label"
+    },
+    {
+      "type": "text",
+      "id": "size_note",
+      "default": "Too big to send? Split them across two emails.",
+      "label": "Attachment size note"
+    },
+    {
+      "type": "text",
+      "id": "write_to_label",
+      "default": "Or write to",
+      "label": "Email address label"
+    },
+    {
+      "type": "text",
+      "id": "copy_label",
+      "default": "Copy",
+      "label": "Copy button label"
+    },
+    {
+      "type": "text",
+      "id": "copied_label",
+      "default": "Copied",
+      "label": "Copied confirmation"
+    },
+    {
+      "type": "header",
+      "content": "Too Far Gone card"
+    },
+    {
+      "type": "text",
+      "id": "fallback_heading",
+      "default": "What If It's Too Far Gone?",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "fallback_text",
+      "default": "<p>We'll say so. If a panel won't save it, we'll tell you what will, or point you to an installer who has seen worse.</p>",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "fallback_link_label",
+      "default": "Locate an installer",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "fallback_link",
+      "label": "Link"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_note",
+      "default": "<p>No account, no web form. Your photos go straight from your inbox to ours and aren't stored on this site.</p>",
+      "label": "Footer note"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-1",
+      "label": "Section color scheme"
+    },
+    {
+      "type": "color_scheme",
+      "id": "container_color_scheme",
+      "default": "scheme-2",
+      "label": "Card and tile color scheme"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "default": "#E1A525",
+      "label": "Accent color",
+      "info": "Email button and check marks."
+    },
+    {
+      "type": "color",
+      "id": "accent_text_color",
+      "default": "#8F6100",
+      "label": "Accent text color",
+      "info": "Photo numbers. Keep this dark enough to read on the cards."
+    },
+    {
+      "type": "color",
+      "id": "accent_button_label",
+      "default": "#121212",
+      "label": "Accent button text color"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "top_padding",
+      "options": [
+        {
+          "value": "pt-0",
+          "label": "0"
+        },
+        {
+          "value": "pt-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pt-s",
+          "label": "1"
+        },
+        {
+          "value": "pt-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pt-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pt-s",
+      "label": "Top section spacing"
+    },
+    {
+      "type": "select",
+      "id": "bottom_padding",
+      "options": [
+        {
+          "value": "pb-0",
+          "label": "0"
+        },
+        {
+          "value": "pb-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pb-s",
+          "label": "1"
+        },
+        {
+          "value": "pb-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pb-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pb-s",
+      "label": "Bottom section spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo tile",
+      "limit": 9,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Example photo",
+          "info": "Shown at 4:3. Leave blank to show a placeholder."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Photo title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Describe the shot.",
+          "label": "Caption"
+        }
+      ]
+    },
+    {
+      "type": "checklist_item",
+      "name": "Checklist item",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Checklist item",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB: Photo review",
+      "blocks": [
+        {
+          "type": "photo",
+          "settings": {
+            "title": "Full side view",
+            "caption": "Whole truck, driver side, from about 15 ft back."
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "title": "Frame rails",
+            "caption": "Under the cab and over the rear axle, both sides."
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "title": "Cab corners",
+            "caption": "Behind each door, low, where the cab meets the bed."
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "title": "Floor from below",
+            "caption": "Shoot up at the floor pans and cab mounts."
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "title": "Worst spot, close",
+            "caption": "Fill the frame. Push a screwdriver in if it's soft."
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "title": "VIN or data plate",
+            "caption": "Confirms year and configuration so we can match the right parts."
+          }
+        },
+        {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Year, make and model"
+          }
+        },
+        {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Cab and bed configuration"
+          }
+        },
+        {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Where you see rust"
+          }
+        },
+        {
+          "type": "checklist_item",
+          "settings": {
+            "text": "What you want: daily driver, restoration, inspection"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

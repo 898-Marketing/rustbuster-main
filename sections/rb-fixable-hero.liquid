@@ -1,0 +1,654 @@
+{{ 'rb-fixable.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign image = section.settings.image
+  assign accent = section.settings.accent_color
+  assign accent_label = section.settings.accent_button_label
+  assign media_vw = 100 | minus: section.settings.desktop_text_width
+
+  assign has_media = false
+  if image != blank or request.design_mode
+    assign has_media = true
+  endif
+
+  assign hero_classes = 'rb-fixable-hero'
+  if has_media
+    assign hero_classes = hero_classes | append: ' rb-fixable-hero--has-media rb-fixable-hero--mobile-' | append: section.settings.mobile_image_position
+  endif
+  if section.settings.show_fade
+    assign hero_classes = hero_classes | append: ' rb-fixable-hero--fade'
+  endif
+  if section.settings.button_color == 'accent' and accent != blank and accent_label != blank
+    assign hero_classes = hero_classes | append: ' rb-fixable-hero--accent-button'
+  endif
+-%}
+
+<div
+  class="{{ hero_classes }} color-{{ section.settings.color_scheme }} gradient isolate"
+  style="--rb-hero-text-width: {{ section.settings.desktop_text_width }};{% if accent != blank %} --rb-accent: {{ accent.red }}, {{ accent.green }}, {{ accent.blue }};{% endif %}{% if accent_label != blank %} --rb-accent-label: {{ accent_label.red }}, {{ accent_label.green }}, {{ accent_label.blue }};{% endif %}"
+  data-rb-fixable-hero
+>
+  {%- if has_media -%}
+    <div class="rb-fixable-hero__media">
+      {%- if image != blank -%}
+        {%- assign image_alt = section.settings.image_alt | default: image.alt -%}
+        {%- capture sizes -%}(min-width: 750px) {{ media_vw }}vw, 100vw{%- endcapture -%}
+        {{
+          image
+          | image_url: width: 2400
+          | image_tag:
+            widths: '600, 900, 1200, 1500, 1800, 2400',
+            sizes: sizes,
+            loading: 'eager',
+            fetchpriority: 'high',
+            alt: image_alt,
+            class: 'rb-fixable-hero__image'
+        }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'rb-fixable-hero__image placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="rb-fixable-hero__inner page-width {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
+    <div class="rb-fixable-hero__content section-content text-{{ section.settings.mobile_content_alignment }} md:text-{{ section.settings.desktop_content_alignment }}">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'heading' and block.settings.heading == blank -%}
+          {%- if page.title != blank -%}
+            <{{ block.settings.heading_tag }}
+              class="rb-fixable-hero__heading inline-richtext section-content__heading color-heading{% if block.settings.heading_size == 'custom' %} text-size-custom{% else %} {{ block.settings.heading_size }}{% endif %} self-{{ section.settings.mobile_content_alignment }} text-{{ section.settings.mobile_content_alignment }} md:self-{{ section.settings.desktop_content_alignment }} md:text-{{ section.settings.desktop_content_alignment }}"
+              {% if block.settings.heading_size == 'custom' %}
+                style="--custom-font-size: {{ block.settings.heading_size_custom }}em; line-height: {{ block.settings.heading_line_height_custom }}em;"
+              {% endif %}
+              {{ block.shopify_attributes }}
+            >
+              {{- page.title | escape -}}
+            </{{ block.settings.heading_tag }}>
+          {%- endif -%}
+        {%- else -%}
+          {%- render 'standard-blocks', section_name: 'rb-fixable-hero', block: block -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RB: Fixable hero",
+  "tag": "section",
+  "class": "section section-rb-fixable-hero",
+  "disabled_on": {
+    "groups": ["header", "footer", "aside"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Loads first on the page, so use a compressed photo around 2000px wide."
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "info": "Describe the photo for screen readers. Leave blank to use the alt text saved on the file."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_fade",
+      "default": true,
+      "label": "Fade image into background",
+      "info": "Desktop only."
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_position",
+      "options": [
+        {
+          "value": "above",
+          "label": "Above text"
+        },
+        {
+          "value": "below",
+          "label": "Below text"
+        },
+        {
+          "value": "hidden",
+          "label": "Hidden"
+        }
+      ],
+      "default": "above",
+      "label": "Image position on mobile"
+    },
+    {
+      "type": "range",
+      "id": "desktop_text_width",
+      "min": 40,
+      "max": 70,
+      "step": 1,
+      "unit": "%",
+      "default": 55,
+      "label": "Text column width on desktop"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text_alignment",
+      "id": "desktop_content_alignment",
+      "default": "left",
+      "label": "Text alignment on desktop"
+    },
+    {
+      "type": "text_alignment",
+      "id": "mobile_content_alignment",
+      "default": "left",
+      "label": "Text alignment on mobile"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-3",
+      "label": "Color scheme"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "default": "#E1A525",
+      "label": "Accent color",
+      "info": "Used for the caption, link-style buttons and, if selected below, the primary button."
+    },
+    {
+      "type": "select",
+      "id": "button_color",
+      "options": [
+        {
+          "value": "accent",
+          "label": "Accent color"
+        },
+        {
+          "value": "scheme",
+          "label": "Color scheme button color"
+        }
+      ],
+      "default": "accent",
+      "label": "Primary button color",
+      "info": "Choose 'Color scheme button color' to use the theme's button color instead (maroon in the dark scheme)."
+    },
+    {
+      "type": "color",
+      "id": "accent_button_label",
+      "default": "#121212",
+      "label": "Accent button text color"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "top_padding",
+      "options": [
+        {
+          "value": "pt-0",
+          "label": "0"
+        },
+        {
+          "value": "pt-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pt-s",
+          "label": "1"
+        },
+        {
+          "value": "pt-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pt-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pt-s15",
+      "label": "Top section spacing"
+    },
+    {
+      "type": "select",
+      "id": "bottom_padding",
+      "options": [
+        {
+          "value": "pb-0",
+          "label": "0"
+        },
+        {
+          "value": "pb-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pb-s",
+          "label": "1"
+        },
+        {
+          "value": "pb-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pb-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pb-s15",
+      "label": "Bottom section spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Add a tagline",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "caption_text_style",
+          "options": [
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "Uppercase"
+            }
+          ],
+          "default": "caption-with-letter-spacing",
+          "label": "Text style"
+        },
+        {
+          "type": "select",
+          "id": "caption_text_size",
+          "options": [
+            {
+              "value": "t7",
+              "label": "3XS"
+            },
+            {
+              "value": "t6",
+              "label": "2XS"
+            },
+            {
+              "value": "t5",
+              "label": "XS"
+            },
+            {
+              "value": "t4",
+              "label": "S"
+            },
+            {
+              "value": "t3",
+              "label": "M"
+            },
+            {
+              "value": "t2",
+              "label": "L"
+            },
+            {
+              "value": "t1",
+              "label": "XL"
+            },
+            {
+              "value": "t0",
+              "label": "2XL"
+            }
+          ],
+          "default": "t6",
+          "label": "Text size"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "info": "Leave blank to use the page title. Enter ++ for a line break."
+        },
+        {
+          "type": "select",
+          "id": "heading_italic_convert",
+          "options": [
+            {
+              "value": "",
+              "label": "Off (keep as italics)"
+            },
+            {
+              "value": "light",
+              "label": "Lighter"
+            },
+            {
+              "value": "accent_color",
+              "label": "Accent color"
+            },
+            {
+              "value": "accent",
+              "label": "Accent gradient color"
+            },
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "outline_accent",
+              "label": "Outline - Accent color"
+            },
+            {
+              "value": "glow",
+              "label": "Glow - Accent color"
+            },
+            {
+              "value": "glow_outline",
+              "label": "Glow with outline - Accent color"
+            },
+            {
+              "value": "glow_pulsating",
+              "label": "Glow - Pulsating accent color"
+            }
+          ],
+          "default": "",
+          "label": "Convert italic text to"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "XS"
+            },
+            {
+              "value": "h3",
+              "label": "S"
+            },
+            {
+              "value": "h2",
+              "label": "M"
+            },
+            {
+              "value": "h1",
+              "label": "L"
+            },
+            {
+              "value": "h0",
+              "label": "XL"
+            },
+            {
+              "value": "hxl",
+              "label": "2XL"
+            },
+            {
+              "value": "custom",
+              "label": "Custom (set below)"
+            }
+          ],
+          "default": "h1",
+          "label": "Heading size"
+        },
+        {
+          "type": "range",
+          "id": "heading_size_custom",
+          "min": 1,
+          "max": 9,
+          "step": 0.2,
+          "unit": "rem",
+          "default": 2.4,
+          "label": "Custom heading size"
+        },
+        {
+          "type": "range",
+          "id": "heading_line_height_custom",
+          "min": 0.4,
+          "max": 2,
+          "step": 0.1,
+          "unit": "em",
+          "default": 1.2,
+          "label": "Custom line height"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ],
+          "default": "h1",
+          "info": "For SEO purposes, there should only be one H1 tag on the page.",
+          "label": "Heading tag"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Add a short introduction.</p>",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "t6",
+              "label": "2XS"
+            },
+            {
+              "value": "t5",
+              "label": "XS"
+            },
+            {
+              "value": "t4",
+              "label": "S"
+            },
+            {
+              "value": "t3",
+              "label": "M"
+            },
+            {
+              "value": "t2",
+              "label": "L"
+            },
+            {
+              "value": "t1",
+              "label": "XL"
+            },
+            {
+              "value": "t0",
+              "label": "2XL"
+            }
+          ],
+          "default": "t1",
+          "label": "Text size"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "select",
+          "id": "button_text_size",
+          "options": [
+            {
+              "value": "t6",
+              "label": "2XS"
+            },
+            {
+              "value": "t5",
+              "label": "XS"
+            },
+            {
+              "value": "t4",
+              "label": "S"
+            },
+            {
+              "value": "t3",
+              "label": "M"
+            },
+            {
+              "value": "t2",
+              "label": "L"
+            },
+            {
+              "value": "t1",
+              "label": "XL"
+            },
+            {
+              "value": "t0",
+              "label": "2XL"
+            }
+          ],
+          "default": "t3",
+          "label": "Button size"
+        },
+        {
+          "type": "header",
+          "content": "First button"
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "Button label",
+          "info": "Leave the label blank to hide the button."
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "default": "/",
+          "label": "Button link",
+          "info": "Use #anchor to scroll to a section on this page, for example #send-it."
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
+          ],
+          "default": "primary",
+          "label": "Button style"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_1_show_arrow",
+          "default": false,
+          "label": "Show arrow"
+        },
+        {
+          "type": "header",
+          "content": "Second button"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Button label",
+          "info": "Leave the label blank to hide the button."
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
+          ],
+          "default": "secondary",
+          "label": "Button style"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_2_show_arrow",
+          "default": false,
+          "label": "Show arrow"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB: Fixable hero",
+      "blocks": [
+        {
+          "type": "caption"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

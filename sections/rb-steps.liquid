@@ -1,0 +1,257 @@
+{{ 'rb-fixable.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign accent = section.settings.accent_color
+  assign accent_text = section.settings.accent_text_color
+
+  assign show_connectors = false
+  if section.settings.show_connectors and section.blocks.size <= section.settings.columns_desktop
+    assign show_connectors = true
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient isolate">
+  <div class="section__inner page-width {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
+    <div
+      class="rb-steps{% if show_connectors %} rb-steps--connectors{% endif %}"
+      style="--rb-steps-columns: {{ section.settings.columns_desktop }};{% if accent != blank %} --rb-accent: {{ accent.red }}, {{ accent.green }}, {{ accent.blue }};{% endif %}{% if accent_text != blank %} --rb-accent-text: {{ accent_text.red }}, {{ accent_text.green }}, {{ accent_text.blue }};{% endif %}"
+    >
+      {%- if section.settings.heading != blank -%}
+        <h2 class="rb-steps__heading rb-heading h4 color-heading">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <ol class="rb-steps__list" role="list">
+          {%- for block in section.blocks -%}
+            <li class="rb-step rb-step--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+              <div class="rb-step__marker">
+                <span class="rb-step__number" aria-hidden="true">{{ forloop.index }}</span>
+              </div>
+              {%- if block.settings.eyebrow != blank -%}
+                <p class="rb-step__eyebrow">{{ block.settings.eyebrow | escape }}</p>
+              {%- endif -%}
+              {%- if block.settings.heading != blank -%}
+                <h3 class="rb-step__heading rb-heading h5 color-heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="rb-step__text rte t3">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ol>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RB: Steps",
+  "tag": "section",
+  "class": "section section-rb-steps",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": ["header", "footer", "aside"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "How It Works",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "Columns on desktop",
+      "info": "Tablet shows 2 columns and mobile shows 1."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_connectors",
+      "default": true,
+      "label": "Show connector lines",
+      "info": "Desktop only. Hidden when steps wrap onto a second row."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-2",
+      "label": "Color scheme"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "default": "#E1A525",
+      "label": "Accent color",
+      "info": "Connector lines and Tech step numbers."
+    },
+    {
+      "type": "color",
+      "id": "accent_text_color",
+      "default": "#8F6100",
+      "label": "Accent text color",
+      "info": "Step eyebrows. Keep this dark enough to read on the background."
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "top_padding",
+      "options": [
+        {
+          "value": "pt-0",
+          "label": "0"
+        },
+        {
+          "value": "pt-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pt-s",
+          "label": "1"
+        },
+        {
+          "value": "pt-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pt-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pt-s",
+      "label": "Top section spacing"
+    },
+    {
+      "type": "select",
+      "id": "bottom_padding",
+      "options": [
+        {
+          "value": "pb-0",
+          "label": "0"
+        },
+        {
+          "value": "pb-s05",
+          "label": "0.5"
+        },
+        {
+          "value": "pb-s",
+          "label": "1"
+        },
+        {
+          "value": "pb-s15",
+          "label": "1.5"
+        },
+        {
+          "value": "pb-s2",
+          "label": "2"
+        }
+      ],
+      "default": "pb-s",
+      "label": "Bottom section spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "default": "You",
+          "label": "Eyebrow",
+          "info": "For example: You, or Rust Buster Tech."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Step heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe this step.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "options": [
+            {
+              "value": "customer",
+              "label": "Customer"
+            },
+            {
+              "value": "tech",
+              "label": "Tech"
+            }
+          ],
+          "default": "customer",
+          "label": "Step type",
+          "info": "Customer steps show a light number, Tech steps an accent number."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB: Steps",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "eyebrow": "You",
+            "heading": "Shoot the Rust",
+            "text": "<p>Grab 4 to 6 photos with your phone. The shot list below shows which angles we need.</p>",
+            "style": "customer"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "eyebrow": "You",
+            "heading": "Email It to Us",
+            "text": "<p>Send the photos with your year, make, model and cab/bed. Our template lists what to include.</p>",
+            "style": "customer"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "eyebrow": "Rust Buster Tech",
+            "heading": "We Review It",
+            "text": "<p>A team member who knows these frames looks at every photo and flags what can be saved.</p>",
+            "style": "tech"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "eyebrow": "Rust Buster Tech",
+            "heading": "Get Your Parts List",
+            "text": "<p>You get a reply with the panels and kits to order, or an honest call if it needs more than parts.</p>",
+            "style": "tech"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

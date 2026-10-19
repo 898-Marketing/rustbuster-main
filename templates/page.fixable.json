@@ -1,0 +1,252 @@
+{
+  "sections": {
+    "hero": {
+      "type": "rb-fixable-hero",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Photo Review",
+            "caption_text_style": "caption-with-letter-spacing",
+            "caption_text_size": "t6"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_italic_convert": "",
+            "heading_size": "h1",
+            "heading_size_custom": 2.4,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which panels you need, or whether the rot has gone too far? Email us photos and a Rust Buster tech will tell you what it takes and which parts to order.</p>",
+            "text_size": "t1"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text_size": "t3",
+            "button_label_1": "Email Your Photos",
+            "button_link_1": "#send-it",
+            "button_style_1": "primary",
+            "button_style_1_show_arrow": true,
+            "button_label_2": "What should I photograph?",
+            "button_link_2": "#what-to-photograph",
+            "button_style_2": "link",
+            "button_style_2_show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "caption",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-05-28_100249.png",
+        "image_alt": "A technician welds a repair section into a rusted truck frame",
+        "show_fade": true,
+        "mobile_image_position": "above",
+        "desktop_text_width": 55,
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "accent_color": "#e1a525",
+        "button_color": "accent",
+        "accent_button_label": "#121212",
+        "top_padding": "pt-s15",
+        "bottom_padding": "pb-s15"
+      }
+    },
+    "how_it_works": {
+      "type": "rb-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "eyebrow": "You",
+            "heading": "Shoot the Rust",
+            "text": "<p>Grab 4 to 6 photos with your phone. The shot list below shows which angles we need.</p>",
+            "style": "customer"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "eyebrow": "You",
+            "heading": "Email It to Us",
+            "text": "<p>Send the photos with your year, make, model and cab/bed. Our template lists what to include.</p>",
+            "style": "customer"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "eyebrow": "Rust Buster Tech",
+            "heading": "We Review It",
+            "text": "<p>A team member who knows these frames looks at every photo and flags what can be saved.</p>",
+            "style": "tech"
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "eyebrow": "Rust Buster Tech",
+            "heading": "Get Your Parts List",
+            "text": "<p>You get a reply with the panels and kits to order, or an honest call if it needs more than parts.</p>",
+            "style": "tech"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4"
+      ],
+      "settings": {
+        "heading": "How It Works",
+        "columns_desktop": 4,
+        "show_connectors": true,
+        "color_scheme": "scheme-2",
+        "accent_color": "#e1a525",
+        "accent_text_color": "#8f6100",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s"
+      }
+    },
+    "photo_review": {
+      "type": "rb-photo-review",
+      "blocks": {
+        "photo_full_side": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "Full side view",
+            "caption": "Whole truck, driver side, from about 15 ft back."
+          }
+        },
+        "photo_frame_rails": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "Frame rails",
+            "caption": "Under the cab and over the rear axle, both sides."
+          }
+        },
+        "photo_cab_corners": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "Cab corners",
+            "caption": "Behind each door, low, where the cab meets the bed."
+          }
+        },
+        "photo_floor": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "Floor from below",
+            "caption": "Shoot up at the floor pans and cab mounts."
+          }
+        },
+        "photo_worst_spot": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "Worst spot, close",
+            "caption": "Fill the frame. Push a screwdriver in if it's soft."
+          }
+        },
+        "photo_vin": {
+          "type": "photo",
+          "settings": {
+            "image": "",
+            "title": "VIN or data plate",
+            "caption": "Confirms year and configuration so we can match the right parts."
+          }
+        },
+        "check_1": {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Year, make and model"
+          }
+        },
+        "check_2": {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Cab and bed configuration"
+          }
+        },
+        "check_3": {
+          "type": "checklist_item",
+          "settings": {
+            "text": "Where you see rust"
+          }
+        },
+        "check_4": {
+          "type": "checklist_item",
+          "settings": {
+            "text": "What you want: daily driver, restoration, inspection"
+          }
+        }
+      },
+      "block_order": [
+        "photo_full_side",
+        "photo_frame_rails",
+        "photo_cab_corners",
+        "photo_floor",
+        "photo_worst_spot",
+        "photo_vin",
+        "check_1",
+        "check_2",
+        "check_3",
+        "check_4"
+      ],
+      "settings": {
+        "photos_anchor": "what-to-photograph",
+        "photos_heading": "What to Photograph",
+        "photos_intro": "Six shots cover almost every job. Daylight, no flash, phone held steady.",
+        "card_anchor": "send-it",
+        "card_heading": "Send It to Our Techs",
+        "card_intro": "Attach your photos and include:",
+        "sticky_cards": true,
+        "email_to": "support@rustbuster.com",
+        "email_subject": "Photo Review Request: Is My Vehicle Fixable?",
+        "email_body": "Hi Rust Buster team,\n\nI'd like a frame review. My photos are attached.\n\nYear:\nMake:\nModel:\nCab (regular, extended, crew):\nBed length:\n\nWhere I see rust:\n\nWhat I want (daily driver, restoration, inspection):\n\nZIP code (so you can suggest an installer):\nPhone (optional):\n\nPhotos attached:\n1. Full side view\n2. Frame rails\n3. Cab corners\n4. Floor from below\n5. Worst spot, close\n6. VIN or data plate\n\nThanks!",
+        "button_label": "Open Email With Template",
+        "show_gmail": true,
+        "gmail_label": "Open in Gmail",
+        "size_note": "Too big to send? Split them across two emails.",
+        "write_to_label": "Or write to",
+        "copy_label": "Copy",
+        "copied_label": "Copied",
+        "fallback_heading": "What If It's Too Far Gone?",
+        "fallback_text": "<p>We'll say so. If a panel won't save it, we'll tell you what will, or point you to an installer who has seen worse.</p>",
+        "fallback_link_label": "Locate an installer",
+        "fallback_link": "/pages/locate-an-installer",
+        "footer_note": "<p>No account, no web form. Your photos go straight from your inbox to ours and aren't stored on this site.</p>",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-2",
+        "accent_color": "#e1a525",
+        "accent_text_color": "#8f6100",
+        "accent_button_label": "#121212",
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "how_it_works",
+    "photo_review"
+  ]
+}
