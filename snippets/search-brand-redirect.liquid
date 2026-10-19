@@ -1,6 +1,13 @@
+{%- comment -%}
+  Ignite version. Redirects exact brand-name searches to the brand hub collection.
+  Only bare brand terms redirect; multi-word queries fall through to normal search.
+  If a brand collection isn't assigned the hub template yet (pre-launch),
+  ?view= forces the hub layout. Once assigned, the clean URL is used automatically.
+{%- endcomment -%}
 {%- liquid
   assign rb_query = search.terms | downcase | strip
   assign rb_handle = ''
+  assign rb_hub_template = 'vehicle-brand-template'
 
   case rb_query
     when 'cadillac'
@@ -26,7 +33,14 @@
   if rb_handle != ''
     assign rb_target = collections[rb_handle]
   endif
+
+  if rb_target.id
+    assign rb_url = rb_target.url
+    if rb_target.template_suffix != rb_hub_template
+      assign rb_url = rb_url | append: '?view=' | append: rb_hub_template
+    endif
+  endif
 -%}
 {%- if rb_target.id -%}
-  <script>window.location.replace({{ rb_target.url | json }});</script>
+  <script>window.location.replace({{ rb_url | json }});</script>
 {%- endif -%}
