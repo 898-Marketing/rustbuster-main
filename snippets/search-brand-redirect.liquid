@@ -1,0 +1,32 @@
+{%- liquid
+  assign rb_query = search.terms | downcase | strip
+  assign rb_handle = ''
+
+  case rb_query
+    when 'cadillac'
+      assign rb_handle = 'cadillac'
+    when 'chevy', 'chevrolet', 'gmc', 'gm'
+      assign rb_handle = 'chevy-gmc'
+    when 'dodge', 'ram'
+      assign rb_handle = 'dodge'
+    when 'ford'
+      assign rb_handle = 'ford'
+    when 'hummer'
+      assign rb_handle = 'hummer'
+    when 'jeep'
+      assign rb_handle = 'jeep'
+    when 'lexus'
+      assign rb_handle = 'rust-buster-frame-repair-kits-for-lexus-models'
+    when 'nissan'
+      assign rb_handle = 'nissan'
+    when 'toyota'
+      assign rb_handle = 'toyota'
+  endcase
+
+  if rb_handle != ''
+    assign rb_target = collections[rb_handle]
+  endif
+-%}
+{%- if rb_target.id -%}
+  <script>window.location.replace({{ rb_target.url | json }});</script>
+{%- endif -%}
