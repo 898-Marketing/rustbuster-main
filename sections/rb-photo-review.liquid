@@ -27,7 +27,7 @@
         {% endif %}
       >
         {%- if section.settings.photos_heading != blank -%}
-          <h2 class="rb-photo-review__heading rb-heading h4 color-heading">{{ section.settings.photos_heading | escape }}</h2>
+          <h2 class="rb-photo-review__heading h4 color-heading">{{ section.settings.photos_heading | escape }}</h2>
         {%- endif -%}
         {%- if section.settings.photos_intro != blank -%}
           <p class="rb-photo-review__intro t3">{{ section.settings.photos_intro | escape }}</p>
@@ -84,7 +84,7 @@
           data-rb-send-card
         >
           {%- if section.settings.card_heading != blank -%}
-            <h2 class="rb-card__heading rb-heading h5 color-heading">{{ section.settings.card_heading | escape }}</h2>
+            <h2 class="rb-card__heading h5 color-heading">{{ section.settings.card_heading | escape }}</h2>
           {%- endif -%}
           {%- if section.settings.card_intro != blank -%}
             <p class="rb-card__intro">{{ section.settings.card_intro | escape }}</p>
@@ -166,7 +166,7 @@
         {%- if section.settings.fallback_heading != blank or section.settings.fallback_text != blank -%}
           <div class="rb-card rb-card--fallback color-{{ container_scheme }}">
             {%- if section.settings.fallback_heading != blank -%}
-              <h2 class="rb-card__heading rb-heading h6 color-heading">{{ section.settings.fallback_heading | escape }}</h2>
+              <h2 class="rb-card__heading h6 color-heading">{{ section.settings.fallback_heading | escape }}</h2>
             {%- endif -%}
             <div class="rb-card__body">
               {%- if section.settings.fallback_text != blank -%}

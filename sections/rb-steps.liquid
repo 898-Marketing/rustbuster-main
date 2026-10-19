@@ -17,7 +17,7 @@
       style="--rb-steps-columns: {{ section.settings.columns_desktop }};{% if accent != blank %} --rb-accent: {{ accent.red }}, {{ accent.green }}, {{ accent.blue }};{% endif %}{% if accent_text != blank %} --rb-accent-text: {{ accent_text.red }}, {{ accent_text.green }}, {{ accent_text.blue }};{% endif %}"
     >
       {%- if section.settings.heading != blank -%}
-        <h2 class="rb-steps__heading rb-heading h4 color-heading">{{ section.settings.heading | escape }}</h2>
+        <h2 class="rb-steps__heading h4 color-heading">{{ section.settings.heading | escape }}</h2>
       {%- endif -%}
 
       {%- if section.blocks.size > 0 -%}
@@ -31,7 +31,7 @@
                 <p class="rb-step__eyebrow">{{ block.settings.eyebrow | escape }}</p>
               {%- endif -%}
               {%- if block.settings.heading != blank -%}
-                <h3 class="rb-step__heading rb-heading h5 color-heading">{{ block.settings.heading | escape }}</h3>
+                <h3 class="rb-step__heading h5 color-heading">{{ block.settings.heading | escape }}</h3>
               {%- endif -%}
               {%- if block.settings.text != blank -%}
                 <div class="rb-step__text rte t3">{{ block.settings.text }}</div>

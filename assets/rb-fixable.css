@@ -1,10 +1,6 @@
 /* Rust Buster "Is My Vehicle Fixable?" page: rb-fixable-hero, rb-steps, rb-photo-review.
    Accent colors arrive as RGB triplets (--rb-accent, --rb-accent-text, --rb-accent-label) from section settings. */
 
-.rb-heading {
-  text-transform: uppercase;
-}
-
 .rb-scroll-target {
   scroll-margin-top: calc(var(--header-height, 0px) + 2rem);
 }
@@ -34,10 +30,6 @@
   --section-content-gap: 2rem;
   max-width: 68rem;
   padding: 0;
-}
-
-.rb-fixable-hero .section-content__heading {
-  text-transform: uppercase;
 }
 
 .rb-fixable-hero .section-content__caption {
@@ -302,12 +294,8 @@
 .rb-photo-tile__title {
   margin: 0 0 0.4rem;
   color: rgb(var(--color-heading));
-  font-family: var(--font-body-family);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-size: 1.6rem;
   line-height: 1.3;
-  text-transform: none;
 }
 
 .rb-photo-tile__number {
