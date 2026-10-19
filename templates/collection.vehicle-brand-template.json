@@ -107,6 +107,7 @@
         "collection_description_NzG3Qj",
         "spacer_imp6yn"
       ],
+      "disabled": true,
       "settings": {
         "show_collection_image": false,
         "show_product_image": false,
@@ -128,6 +129,19 @@
         "line_separator": "",
         "top_padding": "pt-s",
         "bottom_padding": "pb-s"
+      }
+    },
+    "custom_liquid_TC8N9W": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "{% assign vehicle_display = collection.title\n  | remove: 'Rust Buster Frame Repair Kits For '\n  | remove: 'Rust Buster Frame Repair Kits for ' %}\n\n<div class=\"rb-vehicle-strip\">\n  <div class=\"rb-vehicle-strip__accent\"></div>\n  <div class=\"rb-vehicle-strip__inner\">\n    <p class=\"rb-vehicle-strip__label\">Rust Buster</p>\n    <h1 class=\"rb-vehicle-strip__title\">{{ vehicle_display }}</h1>\n  </div>\n</div>\n<style>\n  .rb-vehicle-strip {\n    position: relative;\n    height: 104px;\n    background: #1a1a1a;\n    display: flex;\n    align-items: center;\n    overflow: hidden;\n  }\n  .rb-vehicle-strip__accent {\n    position: absolute;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    width: 8px;\n    background: #E8A020;\n    flex-shrink: 0;\n  }\n  .rb-vehicle-strip__inner {\n    padding: 0 48px;\n    position: relative;\n  }\n  .rb-vehicle-strip__label {\n    font-family: var(--font-body-family);\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 2.5px;\n    text-transform: uppercase;\n    color: #E8A020;\n    margin: 0 0 6px;\n  }\n  .rb-vehicle-strip__title {\nfont-family: var(--font-heading-family);\n    font-weight: 700;\n    font-size: 38px;\n    line-height: 1;\n    color: #ffffff;\n    text-transform: uppercase;\n    letter-spacing: 0.5px;\n    margin: 0;\n  }\n  @media screen and (max-width: 749px) {\n    .rb-vehicle-strip {\n      height: auto;\n      padding: 18px 0;\n    }\n    .rb-vehicle-strip__title {\n      font-size: 26px;\n    }\n  }\n</style>",
+        "full_width": true,
+        "color_scheme": "",
+        "line_separator": "",
+        "top_padding": "pt-0",
+        "bottom_padding": "pb-0",
+        "visibility": ""
       }
     },
     "banner-split": {
@@ -173,7 +187,7 @@
         "mobile_heading_alignment": "left",
         "title": "Select Your Year & Model",
         "italic_convert": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "text": "",
         "text_size": "t3",
         "show_view_all_link": false,
@@ -445,6 +459,7 @@
     "ribbon_banner_zkP4Bb",
     "breadcrumbs",
     "banner",
+    "custom_liquid_TC8N9W",
     "banner-split",
     "collection_list_bwnC4z",
     "product-grid",
