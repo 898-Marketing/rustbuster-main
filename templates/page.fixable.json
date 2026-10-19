@@ -62,8 +62,8 @@
         "accent_color": "#e1a525",
         "button_color": "accent",
         "accent_button_label": "#121212",
-        "top_padding": "pt-s15",
-        "bottom_padding": "pb-s15"
+        "top_padding": "pt-s",
+        "bottom_padding": "pb-s"
       }
     },
     "how_it_works": {

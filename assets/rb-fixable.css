@@ -29,9 +29,11 @@
   width: 100%;
 }
 
+/* Ignite's .section-content adds box padding; the section's spacing settings already handle it. */
 .rb-fixable-hero__content {
   --section-content-gap: 2rem;
   max-width: 68rem;
+  padding: 0;
 }
 
 .rb-fixable-hero .section-content__heading {
