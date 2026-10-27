@@ -217,6 +217,20 @@
             "show_in_quickbuy": true
           }
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "button_text_transform": "uppercase",
+            "button_text_font_weight": "bold",
+            "icon": "cart",
+            "icon_position": "left",
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_quantity": true,
+            "show_price": false,
+            "show_pickup_availability": false
+          }
+        },
         "mw_bundle_builder_addons_app_block_4ArxPR": {
           "type": "shopify://apps/mw-bundle-builder/blocks/addons-app-block/5bcb1a6d-53b5-4d9c-b4f9-19f6620da62b",
           "settings": {}
@@ -233,20 +247,6 @@
             "stock_visibility": "either",
             "show_in_quickbuy": true,
             "line_color": ""
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "button_text_transform": "uppercase",
-            "button_text_font_weight": "bold",
-            "icon": "cart",
-            "icon_position": "left",
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "show_quantity": true,
-            "show_price": false,
-            "show_pickup_availability": false
           }
         },
         "trust_badges_Rb5Hn8": {
@@ -289,9 +289,9 @@
         "richtext_XQtgFD",
         "variant_picker",
         "richtext_XXGLHa",
+        "buy_buttons",
         "mw_bundle_builder_addons_app_block_4ArxPR",
         "spacer_mE94Fg",
-        "buy_buttons",
         "trust_badges_Rb5Hn8",
         "installer_cta_Rb2Wc6"
       ],
