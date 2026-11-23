@@ -426,7 +426,7 @@
           "settings": {
             "heading": "What else you may need",
             "max_cards": 3,
-            "exclude_complementary": true,
+            "exclude_complementary": false,
             "hide_sold_out": false
           }
         },
