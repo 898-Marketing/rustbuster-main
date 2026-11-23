@@ -267,7 +267,7 @@
             "heading": "Not welding it yourself?",
             "body": "Find a shop near you that has installed Rust Buster panels before.",
             "button_label": "Locate an Installer",
-            "button_url": "/pages/locate-an-installer",
+            "button_url": "shopify://pages/store-locator",
             "stock_visibility": "either"
           }
         }
