@@ -384,75 +384,89 @@
         "heading_tag": "h2"
       }
     },
-    "rich_text_AqAAyx": {
-      "type": "rich-text",
+    "rb_product_description_dFbWFE": {
+      "type": "rb-product-description",
       "blocks": {
-        "heading_hJecJr": {
-          "type": "heading",
+        "title_hCW8e3": {
+          "type": "title",
           "settings": {
-            "heading": "{{ product.title }}",
-            "heading_italic_convert": "",
-            "heading_size": "custom",
-            "heading_size_custom": 2,
-            "heading_line_height_custom": 1.2,
-            "heading_tag": "h2"
+            "remove_brand_prefix": true,
+            "heading_tag": "h2",
+            "heading_size": "h3"
           }
         },
-        "text_9XKQ3N": {
+        "summary_LiAYkX": {
+          "type": "summary",
+          "settings": {
+            "text_size": "t2"
+          }
+        },
+        "platform_6j8b4w": {
+          "type": "platform",
+          "settings": {
+            "heading": "Why this area rusts"
+          }
+        },
+        "repair_diagram_DXmXrV": {
+          "type": "repair_diagram",
+          "settings": {
+            "heading": "What it repairs",
+            "show_caption": true
+          }
+        },
+        "description_GBaycD": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "heading": "Specs"
+          }
+        },
+        "needed_parts_ep7c3d": {
+          "type": "needed_parts",
+          "settings": {
+            "heading": "What else you may need",
+            "max_cards": 3,
+            "exclude_complementary": true,
+            "hide_sold_out": false
+          }
+        },
+        "text_E3MaH7": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.short_summary | metafield_tag }}</p>",
+            "heading": "Installation",
+            "text": "<p>Welding is required. The Install Guide tab has the tools list, printable instructions, and a video walkthrough. Not welding it yourself? <a href=\"/pages/locate-a-dealer\" title=\"Locate an installer\">Find an installer</a> who has worked with Rust Buster parts.</p>",
             "text_size": "t3"
           }
         },
-        "heading_tCq4rx": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why this area rusts",
-            "heading_italic_convert": "",
-            "heading_size": "custom",
-            "heading_size_custom": 1.6,
-            "heading_line_height_custom": 1.2,
-            "heading_tag": "h3"
-          }
-        },
-        "text_dyL3R9": {
+        "text_UDbgq6": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.platform.value.rust_context | metafield_tag }}",
+            "heading": "Warranty",
+            "text": "<p>Every Rust Buster frame section is backed by our Lifetime Warranty.</p>",
             "text_size": "t3"
-          }
-        },
-        "custom_liquid_zDkKNR": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": ""
           }
         }
       },
       "block_order": [
-        "heading_hJecJr",
-        "text_9XKQ3N",
-        "heading_tCq4rx",
-        "text_dyL3R9",
-        "custom_liquid_zDkKNR"
+        "title_hCW8e3",
+        "summary_LiAYkX",
+        "platform_6j8b4w",
+        "repair_diagram_DXmXrV",
+        "description_GBaycD",
+        "needed_parts_ep7c3d",
+        "text_E3MaH7",
+        "text_UDbgq6"
       ],
-      "custom_css": [
-        ".featured-description {display: none !important;}"
-      ],
+      "name": "RB Product Description",
       "settings": {
-        "desktop_content_position": "center",
+        "legacy_fallback": true,
         "content_max_width": "l",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-1",
-        "container_color_scheme": "scheme-1",
-        "show_content_shadow": false,
+        "subheading_size": "h4",
+        "section_color_scheme": "",
         "line_separator": "",
-        "top_padding": "pt-s05",
+        "top_padding": "pt-s",
         "bottom_padding": "pb-s",
-        "visibility": "",
-        "hide_when_empty": false
+        "visibility": ""
       }
     },
     "rich_text_BWWMaA": {
@@ -1137,7 +1151,7 @@
     "main",
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
-    "rich_text_AqAAyx",
+    "rb_product_description_dFbWFE",
     "rich_text_BWWMaA",
     "rich_text_qyDrRN",
     "1757957368402a8d5d",
