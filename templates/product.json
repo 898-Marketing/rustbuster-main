@@ -469,52 +469,64 @@
         "visibility": ""
       }
     },
-    "rich_text_BWWMaA": {
-      "type": "rich-text",
+    "rb_install_guide_GgaPHQ": {
+      "type": "rb-install-guide",
       "blocks": {
-        "heading_eYXUng": {
+        "heading_Hp8LeU": {
           "type": "heading",
           "settings": {
-            "heading": "Installation Guide for {{ product.title }}",
-            "heading_italic_convert": "",
-            "heading_size": "h3",
-            "heading_size_custom": 2.4,
-            "heading_line_height_custom": 1.2,
-            "heading_tag": "h2"
+            "heading_suffix": "Installation Guide",
+            "heading_tag": "h2",
+            "heading_size": "h3"
           }
         },
-        "text_TEjRVy": {
+        "text_qhyQXe": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.install_guide | metafield_tag }}",
+            "text": "<p>Read through the instructions and watch the video before you start, so you can plan the job and check the part against your vehicle before any steel comes out.</p>",
             "text_size": "t3"
           }
         },
-        "custom_liquid_6fHWjA": {
-          "type": "custom_liquid",
+        "glance_giWjDg": {
+          "type": "glance",
           "settings": {
-            "custom_liquid": "<div class=\"content-container\"> {{ product.metafields.custom.install_guide_video.value }} </div>"
+            "heading": "",
+            "welding_label": "Welding",
+            "welding_value": "Required",
+            "side_option": "Side",
+            "sold_label": "Sold",
+            "sold_value": "By side, L or R",
+            "skill_label": "Skill level",
+            "tools_label": "Tools needed"
+          }
+        },
+        "pdf_7Q39dQ": {
+          "type": "pdf",
+          "settings": {}
+        },
+        "video_xwibjW": {
+          "type": "video",
+          "settings": {
+            "video_width": "medium"
           }
         }
       },
       "block_order": [
-        "heading_eYXUng",
-        "text_TEjRVy",
-        "custom_liquid_6fHWjA"
+        "heading_Hp8LeU",
+        "text_qhyQXe",
+        "glance_giWjDg",
+        "pdf_7Q39dQ",
+        "video_xwibjW"
       ],
+      "name": "RB Install Guide",
       "settings": {
-        "desktop_content_position": "center",
         "content_max_width": "l",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-1",
-        "container_color_scheme": "scheme-1",
-        "show_content_shadow": false,
+        "subheading_size": "h4",
+        "section_color_scheme": "",
         "line_separator": "",
-        "top_padding": "pt-s05",
+        "top_padding": "pt-s",
         "bottom_padding": "pb-s",
-        "visibility": "",
-        "hide_when_empty": false
+        "visibility": ""
       }
     },
     "rich_text_qyDrRN": {
@@ -1152,7 +1164,7 @@
     "custom_liquid_GjMYMF",
     "section_tabs_wprPDx",
     "rb_product_description_dFbWFE",
-    "rich_text_BWWMaA",
+    "rb_install_guide_GgaPHQ",
     "rich_text_qyDrRN",
     "1757957368402a8d5d",
     "related-products",
