@@ -706,82 +706,15 @@
       "blocks": {
         "collapsible_row_UPgR8m": {
           "type": "collapsible_row",
+          "repeater": "{{ product.metafields.custom.faq_items.value }}",
           "settings": {
-            "row_open": true,
-            "heading": "What is the return window?",
-            "icon": "",
-            "image_width": 20,
-            "row_heading_tag": "h3",
-            "row_content": "<p>Returns must be initiated within 30 days of receiving your order. Requests made after this period may be declined or subject to a restocking fee.</p>",
-            "page": "",
-            "content_embed": "",
-            "button_text_size": "t3",
-            "button_label_1": "",
-            "button_link_1": "/",
-            "button_style_1": "primary",
-            "button_style_1_show_arrow": false
-          }
-        },
-        "collapsible_row_wzzmgF": {
-          "type": "collapsible_row",
-          "settings": {
-            "row_open": false,
-            "heading": "How do I start a return?",
-            "icon": "",
-            "image_width": 20,
-            "row_heading_tag": "h3",
-            "row_content": "<p>Email our customer service team at <a href=\"mailto:customerservice@rustbuster.com\">customerservice@rustbuster.com</a> to request a Return Goods Authorization (RGA) number. Have your original purchase invoice number ready when you reach out.</p>",
-            "page": "",
-            "content_embed": "",
-            "button_text_size": "t3",
-            "button_label_1": "",
-            "button_link_1": "/",
-            "button_style_1": "primary",
-            "button_style_1_show_arrow": false
-          }
-        },
-        "collapsible_row_y93qxH": {
-          "type": "collapsible_row",
-          "settings": {
-            "row_open": false,
-            "heading": "What condition does my item need to be in to qualify for a return?",
-            "icon": "",
-            "image_width": 20,
-            "row_heading_tag": "h3",
-            "row_content": "<p>Items must be returned in new condition with no surface rust or damage, and include all original packaging, components, and hardware. Please use a trackable, insured shipping method when sending your return. Return shipping costs are the responsibility of the customer.</p>",
-            "page": "",
-            "content_embed": "",
-            "button_text_size": "t3",
-            "button_label_1": "",
-            "button_link_1": "/",
-            "button_style_1": "primary",
-            "button_style_1_show_arrow": false
-          }
-        },
-        "collapsible_row_3zyzVG": {
-          "type": "collapsible_row",
-          "settings": {
-            "row_open": false,
-            "heading": "Are there any items that cannot be returned?",
-            "icon": "",
-            "image_width": 20,
-            "row_heading_tag": "h3",
-            "row_content": "<p>Yes. Consumables including paint, cut-off wheels, and maintenance items are non-returnable. Additionally, if your order qualified for free shipping, your refund will be issued minus the original shipping cost.</p>",
-            "page": "",
-            "content_embed": "",
-            "button_text_size": "t3",
-            "button_label_1": "",
-            "button_link_1": "/",
-            "button_style_1": "primary",
-            "button_style_1_show_arrow": false
+            "heading": "{{ block.repeater.question.value }}",
+            "row_content": "{{ block.repeater.answer | metafield_tag }}"
           }
         }
       },
       "block_order": [
-        "collapsible_row_UPgR8m",
-        "collapsible_row_wzzmgF",
-        "collapsible_row_y93qxH",
-        "collapsible_row_3zyzVG"
+        "collapsible_row_UPgR8m"
       ],
       "settings": {
         "one_row_at_a_time": true,
