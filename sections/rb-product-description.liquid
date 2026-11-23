@@ -141,7 +141,7 @@
 
                   {%- when 'needed_parts' -%}
                     {%- liquid
-                      assign needed = mf.needed_parts.value
+                      assign needed = mf.needed_part.value
                       assign skip_ids = ','
                       if block.settings.exclude_complementary
                         assign complementary = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
