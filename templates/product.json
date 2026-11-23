@@ -716,6 +716,9 @@
       "block_order": [
         "collapsible_row_UPgR8m"
       ],
+      "custom_css": [
+        ".accordion__image {display: none; }"
+      ],
       "settings": {
         "one_row_at_a_time": true,
         "show_line_separator": true,
