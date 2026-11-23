@@ -1,0 +1,28 @@
+{%- comment -%}
+  Needed part card for the RB Product Description section.
+
+  Accepts:
+  - part: {Object} the product to show
+  - note: {String} short note from the Needed part entry (optional)
+{%- endcomment -%}
+
+<li class="rb-pd__card">
+  <a href="{{ part.url }}" class="rb-pd__card-link">
+    <span class="rb-pd__card-media">
+      {%- if part.featured_image -%}
+        {{- part.featured_image
+          | image_url: width: 160
+          | image_tag: loading: 'lazy', widths: '80, 160', sizes: '76px', alt: ''
+        -}}
+      {%- endif -%}
+    </span>
+    <span class="rb-pd__card-body">
+      <span class="rb-pd__card-title">{{ part.title | escape }}</span>
+      {%- if note != blank -%}
+        <span class="rb-pd__card-note">{{ note | escape }}</span>
+      {%- endif -%}
+      {%- render 'price', product: part, price_class: 't4' -%}
+    </span>
+    <span class="rb-pd__card-arrow" aria-hidden="true">&rarr;</span>
+  </a>
+</li>
