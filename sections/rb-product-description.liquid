@@ -1,0 +1,686 @@
+{%- comment -%}
+  RB Product Description
+
+  Content for the "Product Description" tab. Place this section directly below
+  the Section tabs section, in the tab 1 slot (where the Rich text section is now).
+  Keep "Show on" set to Both, as Section tabs requires.
+
+  Sources:
+  - Heading:          product title, minus the trailing part number (and "Rust Buster " if enabled)
+  - Summary:          custom.short_summary
+  - Platform:         custom.platform > rust_context (Platform metaobject)
+  - Repair + diagram: custom.what_it_repairs, custom.location_diagram (caption = image alt text)
+  - Specs:            native product description
+  - Needed parts:     custom.needed_parts (Needed part metaobjects: product + note)
+  - Text:             theme editor rich text (Installation, Warranty)
+
+  Fallback: products without custom.short_summary show only the native
+  description, exactly like the current Rich text section.
+{%- endcomment -%}
+
+{%- liquid
+  assign mf = product.metafields.custom
+  assign is_migrated = false
+  if mf.short_summary != blank
+    assign is_migrated = true
+  endif
+
+  assign show_legacy = false
+  if is_migrated == false and section.settings.legacy_fallback
+    assign show_legacy = true
+  endif
+-%}
+
+<div class="color-{{ section.settings.section_color_scheme }} gradient isolate {{ section.settings.line_separator }} {{ section.settings.visibility }}">
+  <div class="section__inner page-width {{ section.settings.top_padding }} {{ section.settings.bottom_padding }}">
+    <div class="rich-text z-1 content-container content-container--full-width">
+      <div class="flex justify-center md:w-full">
+        <div class="w-full section-content max-w-{{ section.settings.content_max_width }} text-left p-0">
+
+          {%- if product == blank -%}
+            {%- if request.design_mode -%}
+              <p class="rb-pd__notice">Open a product in the theme editor to preview this section.</p>
+            {%- endif -%}
+
+          {%- elsif show_legacy -%}
+            {%- if request.design_mode -%}
+              <p class="rb-pd__notice">This product has no Short summary yet, so only the native description is shown (legacy view).</p>
+            {%- endif -%}
+            <div class="rte">{{ product.description }}</div>
+
+          {%- else -%}
+            <div class="rb-pd">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+
+                  {%- when 'title' -%}
+                    {%- liquid
+                      assign heading_text = product.title
+                      assign last_word = heading_text | split: ' ' | last
+                      assign last_prefix = last_word | slice: 0, 2 | upcase
+                      if last_prefix == 'RB'
+                        assign heading_text = heading_text | remove_last: last_word | strip
+                      endif
+                      if block.settings.remove_brand_prefix
+                        assign first_twelve = heading_text | slice: 0, 12
+                        if first_twelve == 'Rust Buster '
+                          assign heading_text = heading_text | remove_first: 'Rust Buster '
+                        endif
+                      endif
+                    -%}
+                    <{{ block.settings.heading_tag }} class="rb-pd__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                      {{- heading_text | escape -}}
+                    </{{ block.settings.heading_tag }}>
+
+                  {%- when 'summary' -%}
+                    {%- if mf.short_summary != blank -%}
+                      <p class="rb-pd__summary {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
+                        {{- mf.short_summary.value | escape | newline_to_br -}}
+                      </p>
+                    {%- endif -%}
+
+                  {%- when 'platform' -%}
+                    {%- assign platform = mf.platform.value -%}
+                    {%- if platform != blank and platform.rust_context != blank -%}
+                      <div class="rb-pd__block" {{ block.shopify_attributes }}>
+                        {%- if block.settings.heading != blank -%}
+                          <h3 class="rb-pd__heading {{ section.settings.subheading_size }}">{{ block.settings.heading | escape }}</h3>
+                        {%- endif -%}
+                        <div class="rte">{{ platform.rust_context | metafield_tag }}</div>
+                      </div>
+                    {%- endif -%}
+
+                  {%- when 'repair_diagram' -%}
+                    {%- liquid
+                      assign diagram = mf.location_diagram.value
+                      assign has_text = false
+                      if mf.what_it_repairs != blank
+                        assign has_text = true
+                      endif
+                      assign has_diagram = false
+                      if diagram != blank
+                        assign has_diagram = true
+                      endif
+                    -%}
+                    {%- if has_text or has_diagram -%}
+                      <div class="rb-pd__repair{% if has_text and has_diagram %} rb-pd__repair--split{% endif %}" {{ block.shopify_attributes }}>
+                        {%- if block.settings.heading != blank -%}
+                          <h3 class="rb-pd__heading {{ section.settings.subheading_size }}">{{ block.settings.heading | escape }}</h3>
+                        {%- endif -%}
+                        {%- if has_text -%}
+                          <p class="rb-pd__repair-copy">{{ mf.what_it_repairs.value | escape | newline_to_br }}</p>
+                        {%- endif -%}
+                        {%- if has_diagram -%}
+                          <figure class="rb-pd__diagram">
+                            {{- diagram
+                              | image_url: width: 1360
+                              | image_tag:
+                                loading: 'lazy',
+                                widths: '340, 510, 680, 1020, 1360',
+                                sizes: '(min-width: 750px) 340px, calc(100vw - 4rem)',
+                                alt: diagram.alt,
+                                class: 'rb-pd__diagram-img'
+                            -}}
+                            {%- if block.settings.show_caption and diagram.alt != blank -%}
+                              <figcaption class="rb-pd__caption">{{ diagram.alt | escape }}</figcaption>
+                            {%- endif -%}
+                          </figure>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+
+                  {%- when 'description' -%}
+                    {%- if product.description != blank -%}
+                      <div class="rb-pd__block" {{ block.shopify_attributes }}>
+                        {%- if block.settings.heading != blank -%}
+                          <h3 class="rb-pd__heading {{ section.settings.subheading_size }}">{{ block.settings.heading | escape }}</h3>
+                        {%- endif -%}
+                        <div class="rte rb-pd__specs">{{ product.description }}</div>
+                      </div>
+                    {%- endif -%}
+
+                  {%- when 'needed_parts' -%}
+                    {%- liquid
+                      assign needed = mf.needed_parts.value
+                      assign skip_ids = ','
+                      if block.settings.exclude_complementary
+                        assign complementary = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+                        for comp in complementary
+                          assign skip_ids = skip_ids | append: comp.id | append: ','
+                        endfor
+                      endif
+
+                      assign card_count = 0
+                      capture cards
+                        for entry in needed
+                          if card_count >= block.settings.max_cards
+                            break
+                          endif
+                          assign part = entry.product.value
+                          if part == blank
+                            continue
+                          endif
+                          assign needle = ',' | append: part.id | append: ','
+                          if skip_ids contains needle
+                            continue
+                          endif
+                          if block.settings.hide_sold_out and part.available == false
+                            continue
+                          endif
+                          assign card_count = card_count | plus: 1
+                          render 'rb-needed-part-card', part: part, note: entry.note.value
+                        endfor
+                      endcapture
+                    -%}
+                    {%- if card_count > 0 -%}
+                      <div class="rb-pd__block" {{ block.shopify_attributes }}>
+                        {%- if block.settings.heading != blank -%}
+                          <h3 class="rb-pd__heading {{ section.settings.subheading_size }}">{{ block.settings.heading | escape }}</h3>
+                        {%- endif -%}
+                        <ul class="rb-pd__cards" role="list">{{ cards }}</ul>
+                      </div>
+                    {%- endif -%}
+
+                  {%- when 'text' -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="rb-pd__block" {{ block.shopify_attributes }}>
+                        {%- if block.settings.heading != blank -%}
+                          <h3 class="rb-pd__heading {{ section.settings.subheading_size }}">{{ block.settings.heading | escape }}</h3>
+                        {%- endif -%}
+                        <div class="rte {{ block.settings.text_size }}">{{ block.settings.text }}</div>
+                      </div>
+                    {%- endif -%}
+
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-pd {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .rb-pd__title,
+  .rb-pd__heading,
+  .rb-pd__summary {
+    margin: 0;
+  }
+  .rb-pd__title {
+    margin-bottom: -16px;
+  }
+  .rb-pd__heading {
+    margin-bottom: 12px;
+  }
+  .rb-pd__notice {
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    border: 1px dashed currentColor;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  /* What it repairs + diagram: heading and copy centered against the image on desktop,
+     heading > image > copy on mobile */
+  .rb-pd__repair-copy {
+    margin: 0;
+  }
+  .rb-pd__repair--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "head" "fig" "copy";
+    row-gap: 16px;
+  }
+  .rb-pd__repair--split .rb-pd__heading { grid-area: head; margin: 0; }
+  .rb-pd__repair--split .rb-pd__diagram { grid-area: fig; }
+  .rb-pd__repair--split .rb-pd__repair-copy { grid-area: copy; }
+  @media screen and (min-width: 750px) {
+    .rb-pd__repair--split {
+      grid-template-columns: minmax(0, 1fr) 340px;
+      grid-template-areas: "head fig" "copy fig";
+      column-gap: 32px;
+      row-gap: 12px;
+    }
+    .rb-pd__repair--split .rb-pd__heading { align-self: end; }
+    .rb-pd__repair--split .rb-pd__repair-copy { align-self: start; }
+    .rb-pd__repair--split .rb-pd__diagram { align-self: center; }
+  }
+  .rb-pd__diagram {
+    margin: 0;
+  }
+  .rb-pd__repair:not(.rb-pd__repair--split) .rb-pd__diagram {
+    max-width: 340px;
+    margin-top: 12px;
+  }
+  .rb-pd__diagram-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+  }
+  .rb-pd__caption {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Specs table typed into the native description */
+  .rb-pd__specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .rb-pd__specs th,
+  .rb-pd__specs td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    vertical-align: top;
+  }
+  .rb-pd__specs tr > :first-child {
+    width: 34%;
+    font-weight: 400;
+  }
+  .rb-pd__specs tr > :last-child {
+    font-weight: 600;
+  }
+
+  /* Needed part cards */
+  .rb-pd__cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  @media screen and (min-width: 750px) {
+    .rb-pd__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  .rb-pd__card-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+    padding: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .rb-pd__card-link:hover,
+  .rb-pd__card-link:focus-visible {
+    border-color: currentColor;
+  }
+  .rb-pd__card-media {
+    flex: 0 0 76px;
+    height: 76px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .rb-pd__card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .rb-pd__card-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .rb-pd__card-title {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .rb-pd__card-note {
+    font-size: 14px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RB Product Description",
+  "tag": "section",
+  "class": "section section-rich-text section-rb-product-description",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Product Description tab content. Place directly below Section tabs, in the tab 1 slot."
+    },
+    {
+      "type": "checkbox",
+      "id": "legacy_fallback",
+      "default": true,
+      "label": "Legacy view for products without a Short summary",
+      "info": "Shows only the native description until the product's new fields are filled in."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_max_width",
+      "options": [
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" },
+        { "value": "xl", "label": "XL" }
+      ],
+      "default": "l",
+      "label": "Maximum content width",
+      "info": "Match the other tab sections so the tabs stay the same width."
+    },
+    {
+      "type": "select",
+      "id": "subheading_size",
+      "options": [
+        { "value": "h4", "label": "XS" },
+        { "value": "h3", "label": "S" },
+        { "value": "h2", "label": "M" }
+      ],
+      "default": "h4",
+      "label": "Subheading size"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "line_separator",
+      "options": [
+        { "value": "", "label": "Off" },
+        { "value": "border-top", "label": "Top" },
+        { "value": "border-bottom", "label": "Bottom" },
+        { "value": "border-top border-bottom", "label": "Both" }
+      ],
+      "default": "",
+      "label": "Line separator"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "select",
+      "id": "top_padding",
+      "options": [
+        { "value": "pt-0", "label": "0" },
+        { "value": "pt-s05", "label": "0.5" },
+        { "value": "pt-s", "label": "1" },
+        { "value": "pt-s15", "label": "1.5" },
+        { "value": "pt-s2", "label": "2" }
+      ],
+      "default": "pt-s",
+      "label": "Top section spacing"
+    },
+    {
+      "type": "select",
+      "id": "bottom_padding",
+      "options": [
+        { "value": "pb-0", "label": "0" },
+        { "value": "pb-s05", "label": "0.5" },
+        { "value": "pb-s", "label": "1" },
+        { "value": "pb-s15", "label": "1.5" },
+        { "value": "pb-s2", "label": "2" }
+      ],
+      "default": "pb-s",
+      "label": "Bottom section spacing"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "options": [
+        { "value": "visible-xs", "label": "Mobile" },
+        { "value": "hidden-xs", "label": "Desktop" },
+        { "value": "", "label": "Both" }
+      ],
+      "default": "",
+      "label": "Show on",
+      "info": "Must stay 'Both' when this section is a tab."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Product title heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shows the product title without the trailing part number (e.g. RB7423)."
+        },
+        {
+          "type": "checkbox",
+          "id": "remove_brand_prefix",
+          "default": true,
+          "label": "Remove leading \"Rust Buster\""
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" }
+          ],
+          "default": "h2",
+          "label": "Heading tag",
+          "info": "The product H1 is already in the buy panel."
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h3", "label": "S" },
+            { "value": "h2", "label": "M" },
+            { "value": "h1", "label": "L" }
+          ],
+          "default": "h2",
+          "label": "Heading size"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "name": "Short summary",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Source: custom.short_summary"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            { "value": "t4", "label": "S" },
+            { "value": "t3", "label": "M" },
+            { "value": "t2", "label": "L" },
+            { "value": "t1", "label": "XL" }
+          ],
+          "default": "t2",
+          "label": "Text size"
+        }
+      ]
+    },
+    {
+      "type": "platform",
+      "name": "Platform context",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Source: custom.platform > rust_context"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Why this area rusts",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "repair_diagram",
+      "name": "Repair + diagram",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Sources: custom.what_it_repairs and custom.location_diagram"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "What it repairs",
+          "label": "Heading"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_caption",
+          "default": true,
+          "label": "Show diagram caption",
+          "info": "The caption is the diagram image's alt text, set in Content > Files."
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Specs (description)",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Source: the product's own Description field."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Specs",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "needed_parts",
+      "name": "Needed parts",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Source: custom.needed_parts (Needed part entries: product + note)"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "What else you may need",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "max_cards",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 3,
+          "label": "Maximum cards"
+        },
+        {
+          "type": "checkbox",
+          "id": "exclude_complementary",
+          "default": true,
+          "label": "Skip products already in Finish the Job",
+          "info": "Hides parts listed as complementary products in Search & Discovery."
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_sold_out",
+          "default": false,
+          "label": "Hide sold out products"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Same text on every product (e.g. Installation, Warranty)."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            { "value": "t5", "label": "XS" },
+            { "value": "t4", "label": "S" },
+            { "value": "t3", "label": "M" },
+            { "value": "t2", "label": "L" }
+          ],
+          "default": "t3",
+          "label": "Text size"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB Product Description",
+      "blocks": [
+        { "type": "title" },
+        { "type": "summary" },
+        { "type": "platform" },
+        { "type": "repair_diagram" },
+        { "type": "description" },
+        { "type": "needed_parts" },
+        {
+          "type": "text",
+          "settings": {
+            "heading": "Installation",
+            "text": "<p>Welding is required. The Install Guide tab has the tools list, printable instructions, and a video walkthrough. Not welding it yourself? <a href=\"/pages/locate-a-dealer\" title=\"Locate an installer\">Find an installer</a> who has worked with Rust Buster parts.</p>"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "heading": "Warranty",
+            "text": "<p>Every Rust Buster frame section is backed by our Lifetime Warranty.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
