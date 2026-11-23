@@ -387,16 +387,55 @@
     "rich_text_AqAAyx": {
       "type": "rich-text",
       "blocks": {
+        "heading_hJecJr": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.title }}",
+            "heading_italic_convert": "",
+            "heading_size": "custom",
+            "heading_size_custom": 2,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h2"
+          }
+        },
+        "text_9XKQ3N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.short_summary | metafield_tag }}</p>",
+            "text_size": "t3"
+          }
+        },
+        "heading_tCq4rx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why this area rusts",
+            "heading_italic_convert": "",
+            "heading_size": "custom",
+            "heading_size_custom": 1.6,
+            "heading_line_height_custom": 1.2,
+            "heading_tag": "h3"
+          }
+        },
         "text_dyL3R9": {
           "type": "text",
           "settings": {
-            "text": "{{ product.description }}",
+            "text": "{{ product.metafields.custom.platform.value.rust_context | metafield_tag }}",
             "text_size": "t3"
+          }
+        },
+        "custom_liquid_zDkKNR": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
           }
         }
       },
       "block_order": [
-        "text_dyL3R9"
+        "heading_hJecJr",
+        "text_9XKQ3N",
+        "heading_tCq4rx",
+        "text_dyL3R9",
+        "custom_liquid_zDkKNR"
       ],
       "custom_css": [
         ".featured-description {display: none !important;}"
